@@ -1,0 +1,12 @@
+AbstractTextEditor.Color.SelectionForeground=157,157,157
+AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+bookmarkIndicationColor=111,117,118
+bookmarkIndicationHighlighting=true
+bookmarkTextStyle=NONE
+eclipse.preferences.version=1
+org.eclipse.cdt.ui.occurrenceIndicationColor=112,112,112
+org.eclipse.cdt.ui.writeOccurrenceHighlighting=false
+org.eclipse.cdt.ui.writeOccurrenceIndicationColor=120,127,123
+org.eclipse.cdt.ui.writeOccurrenceTextStyle=BOX
+org.eclipse.linecoverage.slice.textGreen=false
+overviewRuler_migration=migrated_3.1

@@ -1,0 +1,9 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:LM4F_TM4C_uart,org.eclipse.launchbar.core.descriptorType.default\:MPU_MPL_TM4C_uart,org.eclipse.launchbar.core.descriptorType.default\:uart_echo,org.eclipse.launchbar.core.descriptorType.default\:i2c,org.eclipse.launchbar.core.descriptorType.default\:i2c_1
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:LM4F_TM4C_uart/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:LM4F_TM4C_uart/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:MPU_MPL_LM4F_TM4C_uart/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:i2c/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:i2c/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

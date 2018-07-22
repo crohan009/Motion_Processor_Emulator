@@ -1,0 +1,27 @@
+name: ml
+channels:
+    - https://conda.anaconda.org/menpo
+    - conda-forge
+dependencies:
+    - python==3.5.2
+    - numpy
+    - matplotlib
+    - jupyter
+    - opencv3
+    - pillow
+    - scikit-learn
+    - scikit-image
+    - scipy
+    - h5py
+    - eventlet
+    - flask-socketio
+    - seaborn
+    - pandas
+    - imageio
+    - pytorch
+    - torchvision
+    - pip:
+	- moviepy
+        - tensorflow-gpu==1.1
+        - keras==1.2
+prefix: /scratch/rc3232/miniconda3/envs/ml

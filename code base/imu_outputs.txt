@@ -1,0 +1,1843 @@
+######################## MPU - 9150 ########################
+Who_am_I: 0068
+Self Test PASS
+MPU-9150 calibrated 
+MPU-9150 initialized 
+Who_am_I_Mag: 0048
+Mag initialized 
+######################## LSM9DS0 ########################
+Who_am_I: 0049
+LSM initialized 
+
+YAW_M :-12.60deg PITCH_M :0.0deg ROLL_M :0.0deg 
+YAW_L :0.55deg PITCH_L :9.30deg ROLL_L :12.4deg 
+
+YAW_M :-12.60deg PITCH_M :0.0deg ROLL_M :0.0deg 
+YAW_L :0.54deg PITCH_L :9.32deg ROLL_L :12.5deg 
+
+YAW_M :-12.60deg PITCH_M :0.0deg ROLL_M :0.0deg 
+YAW_L :0.53deg PITCH_L :9.34deg ROLL_L :12.6deg 
+
+YAW_M :-12.60deg PITCH_M :0.0deg ROLL_M :0.0deg 
+YAW_L :0.53deg PITCH_L :9.34deg ROLL_L :12.6deg 
+
+YAW_M :-12.64deg PITCH_M :0.5deg ROLL_M :0.4deg 
+YAW_L :0.52deg PITCH_L :9.36deg ROLL_L :12.7deg 
+
+YAW_M :-12.67deg PITCH_M :0.11deg ROLL_M :0.7deg 
+YAW_L :0.51deg PITCH_L :9.37deg ROLL_L :12.8deg 
+
+YAW_M :-12.70deg PITCH_M :0.17deg ROLL_M :0.10deg 
+YAW_L :0.50deg PITCH_L :9.39deg ROLL_L :12.9deg 
+
+YAW_M :-12.74deg PITCH_M :0.23deg ROLL_M :0.14deg 
+YAW_L :0.49deg PITCH_L :9.41deg ROLL_L :12.10deg 
+
+YAW_M :-12.78deg PITCH_M :0.29deg ROLL_M :0.18deg 
+YAW_L :0.49deg PITCH_L :9.42deg ROLL_L :12.10deg 
+
+YAW_M :-12.82deg PITCH_M :0.35deg ROLL_M :0.22deg 
+YAW_L :0.48deg PITCH_L :9.44deg ROLL_L :12.11deg 
+
+YAW_M :-12.86deg PITCH_M :0.41deg ROLL_M :0.26deg 
+YAW_L :0.47deg PITCH_L :9.45deg ROLL_L :12.12deg 
+
+YAW_M :-12.86deg PITCH_M :0.41deg ROLL_M :0.26deg 
+YAW_L :0.47deg PITCH_L :9.45deg ROLL_L :12.12deg 
+
+YAW_M :-12.89deg PITCH_M :0.47deg ROLL_M :0.29deg 
+YAW_L :0.46deg PITCH_L :9.47deg ROLL_L :12.13deg 
+
+YAW_M :-12.93deg PITCH_M :0.53deg ROLL_M :0.33deg 
+YAW_L :0.45deg PITCH_L :9.49deg ROLL_L :12.14deg 
+
+YAW_M :-12.96deg PITCH_M :0.58deg ROLL_M :0.36deg 
+YAW_L :0.44deg PITCH_L :9.50deg ROLL_L :12.15deg 
+
+YAW_M :-13.0deg PITCH_M :0.64deg ROLL_M :0.40deg 
+YAW_L :0.44deg PITCH_L :9.52deg ROLL_L :12.15deg 
+
+YAW_M :-13.4deg PITCH_M :0.70deg ROLL_M :0.44deg 
+YAW_L :0.43deg PITCH_L :9.53deg ROLL_L :12.16deg 
+
+YAW_M :-13.7deg PITCH_M :0.76deg ROLL_M :0.47deg 
+YAW_L :0.42deg PITCH_L :9.55deg ROLL_L :12.17deg 
+
+YAW_M :-13.7deg PITCH_M :0.76deg ROLL_M :0.47deg 
+YAW_L :0.42deg PITCH_L :9.55deg ROLL_L :12.17deg 
+
+YAW_M :-13.14deg PITCH_M :0.88deg ROLL_M :0.54deg 
+YAW_L :0.41deg PITCH_L :9.58deg ROLL_L :12.18deg 
+
+YAW_M :-13.14deg PITCH_M :0.88deg ROLL_M :0.54deg 
+YAW_L :0.41deg PITCH_L :9.58deg ROLL_L :12.18deg 
+
+YAW_M :-13.18deg PITCH_M :0.94deg ROLL_M :0.58deg 
+YAW_L :0.40deg PITCH_L :9.59deg ROLL_L :12.19deg 
+
+YAW_M :-13.21deg PITCH_M :-1.0deg ROLL_M :0.61deg 
+YAW_L :0.40deg PITCH_L :9.61deg ROLL_L :12.19deg 
+
+YAW_M :-13.25deg PITCH_M :-1.6deg ROLL_M :0.65deg 
+YAW_L :0.39deg PITCH_L :9.62deg ROLL_L :12.20deg 
+
+YAW_M :-13.29deg PITCH_M :-1.12deg ROLL_M :0.69deg 
+YAW_L :0.38deg PITCH_L :9.64deg ROLL_L :12.21deg 
+
+YAW_M :-13.32deg PITCH_M :-1.18deg ROLL_M :0.72deg 
+YAW_L :0.38deg PITCH_L :9.65deg ROLL_L :12.21deg 
+
+YAW_M :-13.35deg PITCH_M :-1.24deg ROLL_M :0.75deg 
+YAW_L :0.37deg PITCH_L :9.66deg ROLL_L :12.22deg 
+
+YAW_M :-13.39deg PITCH_M :-1.30deg ROLL_M :0.79deg 
+YAW_L :0.37deg PITCH_L :9.68deg ROLL_L :12.22deg 
+
+YAW_M :-13.39deg PITCH_M :-1.30deg ROLL_M :0.79deg 
+YAW_L :0.37deg PITCH_L :9.68deg ROLL_L :12.22deg 
+
+YAW_M :-13.43deg PITCH_M :-1.36deg ROLL_M :0.83deg 
+YAW_L :0.36deg PITCH_L :9.69deg ROLL_L :12.23deg 
+
+YAW_M :-13.46deg PITCH_M :-1.42deg ROLL_M :0.86deg 
+YAW_L :0.36deg PITCH_L :9.70deg ROLL_L :12.23deg 
+
+YAW_M :-13.50deg PITCH_M :-1.48deg ROLL_M :0.90deg 
+YAW_L :0.35deg PITCH_L :9.72deg ROLL_L :12.24deg 
+
+YAW_M :-13.52deg PITCH_M :-1.54deg ROLL_M :0.92deg 
+YAW_L :0.35deg PITCH_L :9.73deg ROLL_L :12.24deg 
+
+YAW_M :-13.56deg PITCH_M :-1.60deg ROLL_M :0.96deg 
+YAW_L :0.34deg PITCH_L :9.75deg ROLL_L :12.25deg 
+
+YAW_M :-13.60deg PITCH_M :-1.66deg ROLL_M :-1.0deg 
+YAW_L :0.34deg PITCH_L :9.76deg ROLL_L :12.25deg 
+
+YAW_M :-13.63deg PITCH_M :-1.72deg ROLL_M :-1.3deg 
+YAW_L :0.33deg PITCH_L :9.77deg ROLL_L :12.26deg 
+
+YAW_M :-13.66deg PITCH_M :-1.78deg ROLL_M :-1.6deg 
+YAW_L :0.33deg PITCH_L :9.79deg ROLL_L :12.26deg 
+
+YAW_M :-13.66deg PITCH_M :-1.78deg ROLL_M :-1.6deg 
+YAW_L :0.33deg PITCH_L :9.79deg ROLL_L :12.26deg 
+
+YAW_M :-13.70deg PITCH_M :-1.85deg ROLL_M :-1.10deg 
+YAW_L :0.32deg PITCH_L :9.80deg ROLL_L :12.27deg 
+
+YAW_M :-13.72deg PITCH_M :-1.91deg ROLL_M :-1.12deg 
+YAW_L :0.32deg PITCH_L :9.81deg ROLL_L :12.27deg 
+
+YAW_M :-13.76deg PITCH_M :-1.97deg ROLL_M :-1.16deg 
+YAW_L :0.32deg PITCH_L :9.82deg ROLL_L :12.27deg 
+
+YAW_M :-13.79deg PITCH_M :-2.3deg ROLL_M :-1.19deg 
+YAW_L :0.31deg PITCH_L :9.84deg ROLL_L :12.28deg 
+
+YAW_M :-13.82deg PITCH_M :-2.9deg ROLL_M :-1.22deg 
+YAW_L :0.31deg PITCH_L :9.85deg ROLL_L :12.28deg 
+
+YAW_M :-13.86deg PITCH_M :-2.15deg ROLL_M :-1.26deg 
+YAW_L :0.30deg PITCH_L :9.86deg ROLL_L :12.29deg 
+
+YAW_M :-13.89deg PITCH_M :-2.21deg ROLL_M :-1.29deg 
+YAW_L :0.30deg PITCH_L :9.87deg ROLL_L :12.29deg 
+
+YAW_M :-13.92deg PITCH_M :-2.27deg ROLL_M :-1.32deg 
+YAW_L :0.30deg PITCH_L :9.89deg ROLL_L :12.29deg 
+
+YAW_M :-13.92deg PITCH_M :-2.27deg ROLL_M :-1.32deg 
+YAW_L :0.30deg PITCH_L :9.89deg ROLL_L :12.29deg 
+
+YAW_M :-13.95deg PITCH_M :-2.34deg ROLL_M :-1.35deg 
+YAW_L :0.29deg PITCH_L :9.90deg ROLL_L :12.30deg 
+
+YAW_M :-13.99deg PITCH_M :-2.40deg ROLL_M :-1.39deg 
+YAW_L :0.29deg PITCH_L :9.91deg ROLL_L :12.30deg 
+
+YAW_M :-14.2deg PITCH_M :-2.46deg ROLL_M :-1.42deg 
+YAW_L :0.28deg PITCH_L :9.92deg ROLL_L :12.31deg 
+
+YAW_M :-14.5deg PITCH_M :-2.52deg ROLL_M :-1.45deg 
+YAW_L :0.28deg PITCH_L :9.93deg ROLL_L :12.31deg 
+
+YAW_M :-14.8deg PITCH_M :-2.58deg ROLL_M :-1.48deg 
+YAW_L :0.28deg PITCH_L :9.95deg ROLL_L :12.31deg 
+
+YAW_M :-14.11deg PITCH_M :-2.64deg ROLL_M :-1.51deg 
+YAW_L :0.28deg PITCH_L :9.96deg ROLL_L :12.31deg 
+
+YAW_M :-14.14deg PITCH_M :-2.71deg ROLL_M :-1.54deg 
+YAW_L :0.27deg PITCH_L :9.97deg ROLL_L :12.32deg 
+
+YAW_M :-14.17deg PITCH_M :-2.77deg ROLL_M :-1.57deg 
+YAW_L :0.27deg PITCH_L :9.98deg ROLL_L :12.32deg 
+
+YAW_M :-14.20deg PITCH_M :-2.83deg ROLL_M :-1.60deg 
+YAW_L :0.27deg PITCH_L :9.99deg ROLL_L :12.32deg 
+
+YAW_M :-14.20deg PITCH_M :-2.83deg ROLL_M :-1.60deg 
+YAW_L :0.27deg PITCH_L :9.99deg ROLL_L :12.32deg 
+
+YAW_M :-14.23deg PITCH_M :-2.89deg ROLL_M :-1.63deg 
+YAW_L :0.27deg PITCH_L :10.0deg ROLL_L :12.32deg 
+
+YAW_M :-14.26deg PITCH_M :-2.95deg ROLL_M :-1.66deg 
+YAW_L :0.26deg PITCH_L :10.1deg ROLL_L :12.33deg 
+
+YAW_M :-14.29deg PITCH_M :-3.1deg ROLL_M :-1.69deg 
+YAW_L :0.26deg PITCH_L :10.2deg ROLL_L :12.33deg 
+
+YAW_M :-14.33deg PITCH_M :-3.7deg ROLL_M :-1.73deg 
+YAW_L :0.26deg PITCH_L :10.3deg ROLL_L :12.33deg 
+
+YAW_M :-14.36deg PITCH_M :-3.13deg ROLL_M :-1.76deg 
+YAW_L :0.26deg PITCH_L :10.4deg ROLL_L :12.33deg 
+
+YAW_M :-14.39deg PITCH_M :-3.20deg ROLL_M :-1.79deg 
+YAW_L :0.26deg PITCH_L :10.5deg ROLL_L :12.33deg 
+
+YAW_M :-14.42deg PITCH_M :-3.26deg ROLL_M :-1.82deg 
+YAW_L :0.26deg PITCH_L :10.6deg ROLL_L :12.33deg 
+
+YAW_M :-14.45deg PITCH_M :-3.32deg ROLL_M :-1.85deg 
+YAW_L :0.26deg PITCH_L :10.7deg ROLL_L :12.33deg 
+
+YAW_M :-14.48deg PITCH_M :-3.38deg ROLL_M :-1.88deg 
+YAW_L :0.26deg PITCH_L :10.8deg ROLL_L :12.33deg 
+
+YAW_M :-14.48deg PITCH_M :-3.38deg ROLL_M :-1.88deg 
+YAW_L :0.26deg PITCH_L :10.8deg ROLL_L :12.33deg 
+
+YAW_M :-14.51deg PITCH_M :-3.44deg ROLL_M :-1.91deg 
+YAW_L :0.25deg PITCH_L :10.9deg ROLL_L :12.34deg 
+
+YAW_M :-14.54deg PITCH_M :-3.51deg ROLL_M :-1.94deg 
+YAW_L :0.25deg PITCH_L :10.10deg ROLL_L :12.34deg 
+
+YAW_M :-14.57deg PITCH_M :-3.57deg ROLL_M :-1.97deg 
+YAW_L :0.25deg PITCH_L :10.11deg ROLL_L :12.34deg 
+
+YAW_M :-14.60deg PITCH_M :-3.63deg ROLL_M :-2.0deg 
+YAW_L :0.25deg PITCH_L :10.12deg ROLL_L :12.34deg 
+
+YAW_M :-14.63deg PITCH_M :-3.69deg ROLL_M :-2.3deg 
+YAW_L :0.25deg PITCH_L :10.13deg ROLL_L :12.34deg 
+
+YAW_M :-14.66deg PITCH_M :-3.76deg ROLL_M :-2.6deg 
+YAW_L :0.25deg PITCH_L :10.14deg ROLL_L :12.34deg 
+
+YAW_M :-14.66deg PITCH_M :-3.76deg ROLL_M :-2.6deg 
+YAW_L :0.25deg PITCH_L :10.14deg ROLL_L :12.34deg 
+
+YAW_M :-14.74deg PITCH_M :-3.87deg ROLL_M :-2.14deg 
+YAW_L :0.25deg PITCH_L :10.16deg ROLL_L :12.34deg 
+
+YAW_M :-14.74deg PITCH_M :-3.87deg ROLL_M :-2.14deg 
+YAW_L :0.25deg PITCH_L :10.16deg ROLL_L :12.34deg 
+
+YAW_M :-14.76deg PITCH_M :-3.94deg ROLL_M :-2.16deg 
+YAW_L :0.25deg PITCH_L :10.16deg ROLL_L :12.34deg 
+
+YAW_M :-14.79deg PITCH_M :-4.0deg ROLL_M :-2.19deg 
+YAW_L :0.25deg PITCH_L :10.17deg ROLL_L :12.34deg 
+
+YAW_M :-14.82deg PITCH_M :-4.6deg ROLL_M :-2.22deg 
+YAW_L :0.25deg PITCH_L :10.18deg ROLL_L :12.34deg 
+
+YAW_M :-14.84deg PITCH_M :-4.12deg ROLL_M :-2.24deg 
+YAW_L :0.25deg PITCH_L :10.19deg ROLL_L :12.34deg 
+
+YAW_M :-14.87deg PITCH_M :-4.19deg ROLL_M :-2.27deg 
+YAW_L :0.25deg PITCH_L :10.20deg ROLL_L :12.34deg 
+
+YAW_M :-14.89deg PITCH_M :-4.25deg ROLL_M :-2.29deg 
+YAW_L :0.25deg PITCH_L :10.21deg ROLL_L :12.34deg 
+
+YAW_M :-14.92deg PITCH_M :-4.31deg ROLL_M :-2.32deg 
+YAW_L :0.25deg PITCH_L :10.22deg ROLL_L :12.34deg 
+
+YAW_M :-14.92deg PITCH_M :-4.31deg ROLL_M :-2.32deg 
+YAW_L :0.25deg PITCH_L :10.22deg ROLL_L :12.34deg 
+
+YAW_M :-14.97deg PITCH_M :-4.44deg ROLL_M :-2.37deg 
+YAW_L :0.25deg PITCH_L :10.23deg ROLL_L :12.34deg 
+
+YAW_M :-14.97deg PITCH_M :-4.44deg ROLL_M :-2.37deg 
+YAW_L :0.25deg PITCH_L :10.23deg ROLL_L :12.34deg 
+
+YAW_M :-15.0deg PITCH_M :-4.51deg ROLL_M :-2.40deg 
+YAW_L :0.25deg PITCH_L :10.24deg ROLL_L :12.34deg 
+
+YAW_M :-15.2deg PITCH_M :-4.57deg ROLL_M :-2.42deg 
+YAW_L :0.25deg PITCH_L :10.24deg ROLL_L :12.34deg 
+
+YAW_M :-15.4deg PITCH_M :-4.64deg ROLL_M :-2.44deg 
+YAW_L :0.25deg PITCH_L :10.25deg ROLL_L :12.34deg 
+
+YAW_M :-15.7deg PITCH_M :-4.70deg ROLL_M :-2.47deg 
+YAW_L :0.25deg PITCH_L :10.26deg ROLL_L :12.34deg 
+
+YAW_M :-15.10deg PITCH_M :-4.76deg ROLL_M :-2.50deg 
+YAW_L :0.25deg PITCH_L :10.27deg ROLL_L :12.34deg 
+
+YAW_M :-15.12deg PITCH_M :-4.82deg ROLL_M :-2.52deg 
+YAW_L :0.25deg PITCH_L :10.28deg ROLL_L :12.34deg 
+
+YAW_M :-15.15deg PITCH_M :-4.88deg ROLL_M :-2.55deg 
+YAW_L :0.25deg PITCH_L :10.29deg ROLL_L :12.34deg 
+
+YAW_M :-15.15deg PITCH_M :-4.88deg ROLL_M :-2.55deg 
+YAW_L :0.25deg PITCH_L :10.29deg ROLL_L :12.34deg 
+
+YAW_M :-15.18deg PITCH_M :-4.95deg ROLL_M :-2.58deg 
+YAW_L :0.26deg PITCH_L :10.29deg ROLL_L :12.33deg 
+
+YAW_M :-15.20deg PITCH_M :-5.1deg ROLL_M :-2.60deg 
+YAW_L :0.26deg PITCH_L :10.30deg ROLL_L :12.33deg 
+
+YAW_M :-15.22deg PITCH_M :-5.7deg ROLL_M :-2.62deg 
+YAW_L :0.26deg PITCH_L :10.31deg ROLL_L :12.33deg 
+
+YAW_M :-15.24deg PITCH_M :-5.14deg ROLL_M :-2.64deg 
+YAW_L :0.26deg PITCH_L :10.32deg ROLL_L :12.33deg 
+
+YAW_M :-15.27deg PITCH_M :-5.20deg ROLL_M :-2.67deg 
+YAW_L :0.26deg PITCH_L :10.32deg ROLL_L :12.33deg 
+
+YAW_M :-15.29deg PITCH_M :-5.27deg ROLL_M :-2.69deg 
+YAW_L :0.27deg PITCH_L :10.33deg ROLL_L :12.32deg 
+
+YAW_M :-15.31deg PITCH_M :-5.33deg ROLL_M :-2.71deg 
+YAW_L :0.27deg PITCH_L :10.34deg ROLL_L :12.32deg 
+
+YAW_M :-15.33deg PITCH_M :-5.40deg ROLL_M :-2.73deg 
+YAW_L :0.27deg PITCH_L :10.34deg ROLL_L :12.32deg 
+
+YAW_M :-15.33deg PITCH_M :-5.40deg ROLL_M :-2.73deg 
+YAW_L :0.27deg PITCH_L :10.34deg ROLL_L :12.32deg 
+
+YAW_M :-15.37deg PITCH_M :-5.45deg ROLL_M :-2.77deg 
+YAW_L :0.27deg PITCH_L :10.35deg ROLL_L :12.32deg 
+
+YAW_M :-15.40deg PITCH_M :-5.51deg ROLL_M :-2.80deg 
+YAW_L :0.28deg PITCH_L :10.36deg ROLL_L :12.31deg 
+
+YAW_M :-15.41deg PITCH_M :-5.58deg ROLL_M :-2.81deg 
+YAW_L :0.28deg PITCH_L :10.36deg ROLL_L :12.31deg 
+
+YAW_M :-15.43deg PITCH_M :-5.64deg ROLL_M :-2.83deg 
+YAW_L :0.28deg PITCH_L :10.37deg ROLL_L :12.31deg 
+
+YAW_M :-15.43deg PITCH_M :-5.71deg ROLL_M :-2.83deg 
+YAW_L :0.28deg PITCH_L :10.37deg ROLL_L :12.31deg 
+
+YAW_M :-15.45deg PITCH_M :-5.77deg ROLL_M :-2.85deg 
+YAW_L :0.28deg PITCH_L :10.38deg ROLL_L :12.31deg 
+
+YAW_M :-15.48deg PITCH_M :-5.83deg ROLL_M :-2.88deg 
+YAW_L :0.29deg PITCH_L :10.39deg ROLL_L :12.30deg 
+
+YAW_M :-15.49deg PITCH_M :-5.89deg ROLL_M :-2.89deg 
+YAW_L :0.29deg PITCH_L :10.39deg ROLL_L :12.30deg 
+
+YAW_M :-15.53deg PITCH_M :-5.95deg ROLL_M :-2.93deg 
+YAW_L :0.29deg PITCH_L :10.40deg ROLL_L :12.30deg 
+
+YAW_M :-15.53deg PITCH_M :-5.95deg ROLL_M :-2.93deg 
+YAW_L :0.29deg PITCH_L :10.40deg ROLL_L :12.30deg 
+
+YAW_M :-15.53deg PITCH_M :-6.1deg ROLL_M :-2.93deg 
+YAW_L :0.29deg PITCH_L :10.40deg ROLL_L :12.30deg 
+
+YAW_M :-15.54deg PITCH_M :-6.8deg ROLL_M :-2.94deg 
+YAW_L :0.30deg PITCH_L :10.41deg ROLL_L :12.29deg 
+
+YAW_M :-15.56deg PITCH_M :-6.14deg ROLL_M :-2.96deg 
+YAW_L :0.30deg PITCH_L :10.41deg ROLL_L :12.29deg 
+
+YAW_M :-15.57deg PITCH_M :-6.20deg ROLL_M :-2.97deg 
+YAW_L :0.30deg PITCH_L :10.42deg ROLL_L :12.29deg 
+
+YAW_M :-15.59deg PITCH_M :-6.26deg ROLL_M :-2.99deg 
+YAW_L :0.31deg PITCH_L :10.43deg ROLL_L :12.28deg 
+
+YAW_M :-15.60deg PITCH_M :-6.32deg ROLL_M :-3.0deg 
+YAW_L :0.31deg PITCH_L :10.43deg ROLL_L :12.28deg 
+
+YAW_M :-15.62deg PITCH_M :-6.38deg ROLL_M :-3.2deg 
+YAW_L :0.31deg PITCH_L :10.44deg ROLL_L :12.28deg 
+
+YAW_M :-15.64deg PITCH_M :-6.44deg ROLL_M :-3.4deg 
+YAW_L :0.32deg PITCH_L :10.44deg ROLL_L :12.27deg 
+
+YAW_M :-15.65deg PITCH_M :-6.50deg ROLL_M :-3.5deg 
+YAW_L :0.32deg PITCH_L :10.44deg ROLL_L :12.27deg 
+
+YAW_M :-15.65deg PITCH_M :-6.50deg ROLL_M :-3.5deg 
+YAW_L :0.32deg PITCH_L :10.44deg ROLL_L :12.27deg 
+
+YAW_M :-15.70deg PITCH_M :-6.52deg ROLL_M :-3.10deg 
+YAW_L :0.33deg PITCH_L :10.45deg ROLL_L :12.26deg 
+
+YAW_M :-15.70deg PITCH_M :-6.58deg ROLL_M :-3.10deg 
+YAW_L :0.33deg PITCH_L :10.46deg ROLL_L :12.26deg 
+
+YAW_M :-15.70deg PITCH_M :-6.64deg ROLL_M :-3.10deg 
+YAW_L :0.33deg PITCH_L :10.46deg ROLL_L :12.26deg 
+
+YAW_M :-15.74deg PITCH_M :-6.68deg ROLL_M :-3.14deg 
+YAW_L :0.34deg PITCH_L :10.47deg ROLL_L :12.25deg 
+
+YAW_M :-15.74deg PITCH_M :-6.74deg ROLL_M :-3.14deg 
+YAW_L :0.34deg PITCH_L :10.47deg ROLL_L :12.25deg 
+
+YAW_M :-15.75deg PITCH_M :-6.80deg ROLL_M :-3.15deg 
+YAW_L :0.34deg PITCH_L :10.47deg ROLL_L :12.25deg 
+
+YAW_M :-15.78deg PITCH_M :-6.84deg ROLL_M :-3.18deg 
+YAW_L :0.35deg PITCH_L :10.48deg ROLL_L :12.24deg 
+
+YAW_M :-15.78deg PITCH_M :-6.90deg ROLL_M :-3.18deg 
+YAW_L :0.35deg PITCH_L :10.48deg ROLL_L :12.24deg 
+
+YAW_M :-15.78deg PITCH_M :-6.90deg ROLL_M :-3.18deg 
+YAW_L :0.35deg PITCH_L :10.48deg ROLL_L :12.24deg 
+
+YAW_M :-15.78deg PITCH_M :-6.96deg ROLL_M :-3.18deg 
+YAW_L :0.36deg PITCH_L :10.49deg ROLL_L :12.23deg 
+
+YAW_M :-15.80deg PITCH_M :-7.0deg ROLL_M :-3.20deg 
+YAW_L :0.36deg PITCH_L :10.49deg ROLL_L :12.23deg 
+
+YAW_M :-15.78deg PITCH_M :-7.3deg ROLL_M :-3.18deg 
+YAW_L :0.37deg PITCH_L :10.49deg ROLL_L :12.22deg 
+
+YAW_M :-15.78deg PITCH_M :-7.8deg ROLL_M :-3.18deg 
+YAW_L :0.37deg PITCH_L :10.50deg ROLL_L :12.22deg 
+
+YAW_M :-15.83deg PITCH_M :-7.8deg ROLL_M :-3.23deg 
+YAW_L :0.37deg PITCH_L :10.50deg ROLL_L :12.22deg 
+
+YAW_M :-15.82deg PITCH_M :-7.13deg ROLL_M :-3.22deg 
+YAW_L :0.38deg PITCH_L :10.51deg ROLL_L :12.21deg 
+
+YAW_M :-15.83deg PITCH_M :-7.17deg ROLL_M :-3.23deg 
+YAW_L :0.38deg PITCH_L :10.51deg ROLL_L :12.21deg 
+
+YAW_M :-15.84deg PITCH_M :-7.21deg ROLL_M :-3.24deg 
+YAW_L :0.39deg PITCH_L :10.51deg ROLL_L :12.20deg 
+
+YAW_M :-15.86deg PITCH_M :-7.25deg ROLL_M :-3.26deg 
+YAW_L :0.39deg PITCH_L :10.52deg ROLL_L :12.20deg 
+
+YAW_M :-15.86deg PITCH_M :-7.25deg ROLL_M :-3.26deg 
+YAW_L :0.39deg PITCH_L :10.52deg ROLL_L :12.20deg 
+
+YAW_M :-15.89deg PITCH_M :-7.25deg ROLL_M :-3.29deg 
+YAW_L :0.40deg PITCH_L :10.52deg ROLL_L :12.19deg 
+
+YAW_M :-15.88deg PITCH_M :-7.28deg ROLL_M :-3.28deg 
+YAW_L :0.40deg PITCH_L :10.52deg ROLL_L :12.19deg 
+
+YAW_M :-15.90deg PITCH_M :-7.28deg ROLL_M :-3.30deg 
+YAW_L :0.41deg PITCH_L :10.53deg ROLL_L :12.18deg 
+
+YAW_M :-15.84deg PITCH_M :-7.30deg ROLL_M :-3.24deg 
+YAW_L :0.41deg PITCH_L :10.53deg ROLL_L :12.18deg 
+
+YAW_M :-15.84deg PITCH_M :-7.30deg ROLL_M :-3.24deg 
+YAW_L :0.42deg PITCH_L :10.53deg ROLL_L :12.17deg 
+
+YAW_M :-15.84deg PITCH_M :-7.32deg ROLL_M :-3.24deg 
+YAW_L :0.42deg PITCH_L :10.54deg ROLL_L :12.17deg 
+
+YAW_M :-15.86deg PITCH_M :-7.37deg ROLL_M :-3.26deg 
+YAW_L :0.43deg PITCH_L :10.54deg ROLL_L :12.16deg 
+
+YAW_M :-15.91deg PITCH_M :-7.37deg ROLL_M :-3.31deg 
+YAW_L :0.43deg PITCH_L :10.54deg ROLL_L :12.16deg 
+
+YAW_M :-15.92deg PITCH_M :-7.36deg ROLL_M :-3.32deg 
+YAW_L :0.44deg PITCH_L :10.54deg ROLL_L :12.15deg 
+
+YAW_M :-15.92deg PITCH_M :-7.36deg ROLL_M :-3.32deg 
+YAW_L :0.44deg PITCH_L :10.54deg ROLL_L :12.15deg 
+
+YAW_M :-15.91deg PITCH_M :-7.30deg ROLL_M :-3.31deg 
+YAW_L :0.45deg PITCH_L :10.55deg ROLL_L :12.14deg 
+
+YAW_M :-15.92deg PITCH_M :-7.30deg ROLL_M :-3.32deg 
+YAW_L :0.45deg PITCH_L :10.55deg ROLL_L :12.14deg 
+
+YAW_M :-15.95deg PITCH_M :-7.32deg ROLL_M :-3.35deg 
+YAW_L :0.46deg PITCH_L :10.55deg ROLL_L :12.13deg 
+
+YAW_M :-15.91deg PITCH_M :-7.30deg ROLL_M :-3.31deg 
+YAW_L :0.46deg PITCH_L :10.55deg ROLL_L :12.13deg 
+
+YAW_M :-15.93deg PITCH_M :-7.32deg ROLL_M :-3.33deg 
+YAW_L :0.47deg PITCH_L :10.56deg ROLL_L :12.12deg 
+
+YAW_M :-15.93deg PITCH_M :-7.32deg ROLL_M :-3.33deg 
+YAW_L :0.47deg PITCH_L :10.56deg ROLL_L :12.12deg 
+
+YAW_M :-15.92deg PITCH_M :-7.35deg ROLL_M :-3.32deg 
+YAW_L :0.48deg PITCH_L :10.56deg ROLL_L :12.11deg 
+
+YAW_M :-15.92deg PITCH_M :-7.36deg ROLL_M :-3.32deg 
+YAW_L :0.49deg PITCH_L :10.56deg ROLL_L :12.10deg 
+
+YAW_M :-15.92deg PITCH_M :-7.36deg ROLL_M :-3.32deg 
+YAW_L :0.49deg PITCH_L :10.56deg ROLL_L :12.10deg 
+
+YAW_M :-15.93deg PITCH_M :-7.41deg ROLL_M :-3.33deg 
+YAW_L :0.49deg PITCH_L :10.57deg ROLL_L :12.10deg 
+
+YAW_M :-15.93deg PITCH_M :-7.35deg ROLL_M :-3.33deg 
+YAW_L :0.50deg PITCH_L :10.57deg ROLL_L :12.9deg 
+
+YAW_M :-15.97deg PITCH_M :-7.37deg ROLL_M :-3.37deg 
+YAW_L :0.51deg PITCH_L :10.57deg ROLL_L :12.8deg 
+
+YAW_M :-15.96deg PITCH_M :-7.38deg ROLL_M :-3.36deg 
+YAW_L :0.51deg PITCH_L :10.57deg ROLL_L :12.8deg 
+
+YAW_M :-15.96deg PITCH_M :-7.43deg ROLL_M :-3.36deg 
+YAW_L :0.52deg PITCH_L :10.58deg ROLL_L :12.7deg 
+
+YAW_M :-16.0deg PITCH_M :-7.45deg ROLL_M :-3.40deg 
+YAW_L :0.52deg PITCH_L :10.58deg ROLL_L :12.7deg 
+
+YAW_M :-15.99deg PITCH_M :-7.38deg ROLL_M :-3.39deg 
+YAW_L :0.53deg PITCH_L :10.58deg ROLL_L :12.6deg 
+
+YAW_M :-15.99deg PITCH_M :-7.38deg ROLL_M :-3.39deg 
+YAW_L :0.53deg PITCH_L :10.58deg ROLL_L :12.6deg 
+
+YAW_M :-15.97deg PITCH_M :-7.39deg ROLL_M :-3.37deg 
+YAW_L :0.54deg PITCH_L :10.59deg ROLL_L :12.5deg 
+
+YAW_M :-15.97deg PITCH_M :-7.39deg ROLL_M :-3.37deg 
+YAW_L :0.54deg PITCH_L :10.59deg ROLL_L :12.5deg 
+
+YAW_M :-15.94deg PITCH_M :-7.38deg ROLL_M :-3.34deg 
+YAW_L :0.55deg PITCH_L :10.59deg ROLL_L :12.4deg 
+
+YAW_M :-15.92deg PITCH_M :-7.35deg ROLL_M :-3.32deg 
+YAW_L :0.56deg PITCH_L :10.59deg ROLL_L :12.3deg 
+
+YAW_M :-15.96deg PITCH_M :-7.34deg ROLL_M :-3.36deg 
+YAW_L :0.56deg PITCH_L :10.59deg ROLL_L :12.3deg 
+
+YAW_M :-15.98deg PITCH_M :-7.36deg ROLL_M :-3.38deg 
+YAW_L :0.57deg PITCH_L :10.59deg ROLL_L :12.2deg 
+
+YAW_M :-15.96deg PITCH_M :-7.34deg ROLL_M :-3.36deg 
+YAW_L :0.58deg PITCH_L :10.60deg ROLL_L :12.1deg 
+
+YAW_M :-15.98deg PITCH_M :-7.33deg ROLL_M :-3.38deg 
+YAW_L :0.59deg PITCH_L :10.60deg ROLL_L :12.0deg 
+
+YAW_M :-16.0deg PITCH_M :-7.32deg ROLL_M :-3.40deg 
+YAW_L :0.59deg PITCH_L :10.60deg ROLL_L :12.0deg 
+
+YAW_M :-16.0deg PITCH_M :-7.32deg ROLL_M :-3.40deg 
+YAW_L :0.59deg PITCH_L :10.60deg ROLL_L :12.0deg 
+
+YAW_M :-16.0deg PITCH_M :-7.35deg ROLL_M :-3.40deg 
+YAW_L :0.60deg PITCH_L :10.60deg ROLL_L :11.99deg 
+
+YAW_M :-16.1deg PITCH_M :-7.35deg ROLL_M :-3.41deg 
+YAW_L :0.61deg PITCH_L :10.60deg ROLL_L :11.98deg 
+
+YAW_M :-16.0deg PITCH_M :-7.40deg ROLL_M :-3.40deg 
+YAW_L :0.61deg PITCH_L :10.61deg ROLL_L :11.98deg 
+
+YAW_M :-15.98deg PITCH_M :-7.36deg ROLL_M :-3.38deg 
+YAW_L :0.62deg PITCH_L :10.61deg ROLL_L :11.97deg 
+
+YAW_M :-16.4deg PITCH_M :-7.34deg ROLL_M :-3.44deg 
+YAW_L :0.63deg PITCH_L :10.61deg ROLL_L :11.96deg 
+
+YAW_M :-16.7deg PITCH_M :-7.34deg ROLL_M :-3.47deg 
+YAW_L :0.63deg PITCH_L :10.61deg ROLL_L :11.96deg 
+
+YAW_M :-16.4deg PITCH_M :-7.35deg ROLL_M :-3.44deg 
+YAW_L :0.64deg PITCH_L :10.61deg ROLL_L :11.95deg 
+
+YAW_M :-16.3deg PITCH_M :-7.36deg ROLL_M :-3.43deg 
+YAW_L :0.65deg PITCH_L :10.61deg ROLL_L :11.94deg 
+
+YAW_M :-16.3deg PITCH_M :-7.36deg ROLL_M :-3.43deg 
+YAW_L :0.65deg PITCH_L :10.61deg ROLL_L :11.94deg 
+
+YAW_M :-15.98deg PITCH_M :-7.37deg ROLL_M :-3.38deg 
+YAW_L :0.66deg PITCH_L :10.61deg ROLL_L :11.93deg 
+
+YAW_M :-15.98deg PITCH_M :-7.38deg ROLL_M :-3.38deg 
+YAW_L :0.66deg PITCH_L :10.62deg ROLL_L :11.93deg 
+
+YAW_M :-16.0deg PITCH_M :-7.36deg ROLL_M :-3.40deg 
+YAW_L :0.67deg PITCH_L :10.62deg ROLL_L :11.92deg 
+
+YAW_M :-15.99deg PITCH_M :-7.36deg ROLL_M :-3.39deg 
+YAW_L :0.68deg PITCH_L :10.62deg ROLL_L :11.91deg 
+
+YAW_M :-15.97deg PITCH_M :-7.40deg ROLL_M :-3.37deg 
+YAW_L :0.68deg PITCH_L :10.62deg ROLL_L :11.91deg 
+
+YAW_M :-15.99deg PITCH_M :-7.43deg ROLL_M :-3.39deg 
+YAW_L :0.69deg PITCH_L :10.62deg ROLL_L :11.90deg 
+
+YAW_M :-15.98deg PITCH_M :-7.40deg ROLL_M :-3.38deg 
+YAW_L :0.70deg PITCH_L :10.62deg ROLL_L :11.89deg 
+
+YAW_M :-16.2deg PITCH_M :-7.38deg ROLL_M :-3.42deg 
+YAW_L :0.71deg PITCH_L :10.62deg ROLL_L :11.88deg 
+
+YAW_M :-16.3deg PITCH_M :-7.40deg ROLL_M :-3.43deg 
+YAW_L :0.71deg PITCH_L :10.62deg ROLL_L :11.88deg 
+
+YAW_M :-16.3deg PITCH_M :-7.40deg ROLL_M :-3.43deg 
+YAW_L :0.71deg PITCH_L :10.62deg ROLL_L :11.88deg 
+
+YAW_M :-16.2deg PITCH_M :-7.39deg ROLL_M :-3.42deg 
+YAW_L :0.72deg PITCH_L :10.62deg ROLL_L :11.87deg 
+
+YAW_M :-16.5deg PITCH_M :-7.43deg ROLL_M :-3.45deg 
+YAW_L :0.73deg PITCH_L :10.63deg ROLL_L :11.86deg 
+
+YAW_M :-16.10deg PITCH_M :-7.42deg ROLL_M :-3.50deg 
+YAW_L :0.74deg PITCH_L :10.63deg ROLL_L :11.85deg 
+
+YAW_M :-16.14deg PITCH_M :-7.42deg ROLL_M :-3.54deg 
+YAW_L :0.74deg PITCH_L :10.63deg ROLL_L :11.85deg 
+
+YAW_M :-16.17deg PITCH_M :-7.43deg ROLL_M :-3.57deg 
+YAW_L :0.75deg PITCH_L :10.63deg ROLL_L :11.84deg 
+
+YAW_M :-16.16deg PITCH_M :-7.39deg ROLL_M :-3.56deg 
+YAW_L :0.76deg PITCH_L :10.63deg ROLL_L :11.83deg 
+
+YAW_M :-16.18deg PITCH_M :-7.38deg ROLL_M :-3.58deg 
+YAW_L :0.77deg PITCH_L :10.63deg ROLL_L :11.82deg 
+
+YAW_M :-16.16deg PITCH_M :-7.35deg ROLL_M :-3.56deg 
+YAW_L :0.77deg PITCH_L :10.63deg ROLL_L :11.82deg 
+
+YAW_M :-16.18deg PITCH_M :-7.37deg ROLL_M :-3.58deg 
+YAW_L :0.78deg PITCH_L :10.63deg ROLL_L :11.81deg 
+
+YAW_M :-16.18deg PITCH_M :-7.37deg ROLL_M :-3.58deg 
+YAW_L :0.78deg PITCH_L :10.63deg ROLL_L :11.81deg 
+
+YAW_M :-16.18deg PITCH_M :-7.31deg ROLL_M :-3.58deg 
+YAW_L :0.79deg PITCH_L :10.63deg ROLL_L :11.80deg 
+
+YAW_M :-16.18deg PITCH_M :-7.26deg ROLL_M :-3.58deg 
+YAW_L :0.80deg PITCH_L :10.63deg ROLL_L :11.79deg 
+
+YAW_M :-16.15deg PITCH_M :-7.28deg ROLL_M :-3.55deg 
+YAW_L :0.80deg PITCH_L :10.63deg ROLL_L :11.79deg 
+
+YAW_M :-16.16deg PITCH_M :-7.27deg ROLL_M :-3.56deg 
+YAW_L :0.81deg PITCH_L :10.63deg ROLL_L :11.78deg 
+
+YAW_M :-16.15deg PITCH_M :-7.25deg ROLL_M :-3.55deg 
+YAW_L :0.82deg PITCH_L :10.63deg ROLL_L :11.77deg 
+
+YAW_M :-16.18deg PITCH_M :-7.30deg ROLL_M :-3.58deg 
+YAW_L :0.83deg PITCH_L :10.63deg ROLL_L :11.76deg 
+
+YAW_M :-16.16deg PITCH_M :-7.29deg ROLL_M :-3.56deg 
+YAW_L :0.83deg PITCH_L :10.63deg ROLL_L :11.76deg 
+
+YAW_M :-16.10deg PITCH_M :-7.30deg ROLL_M :-3.50deg 
+YAW_L :0.84deg PITCH_L :10.63deg ROLL_L :11.75deg 
+
+YAW_M :-16.10deg PITCH_M :-7.30deg ROLL_M :-3.50deg 
+YAW_L :0.84deg PITCH_L :10.63deg ROLL_L :11.75deg 
+
+YAW_M :-16.10deg PITCH_M :-7.29deg ROLL_M :-3.50deg 
+YAW_L :0.85deg PITCH_L :10.63deg ROLL_L :11.74deg 
+
+YAW_M :-16.14deg PITCH_M :-7.32deg ROLL_M :-3.54deg 
+YAW_L :0.86deg PITCH_L :10.63deg ROLL_L :11.73deg 
+
+YAW_M :-16.19deg PITCH_M :-7.33deg ROLL_M :-3.59deg 
+YAW_L :0.87deg PITCH_L :10.63deg ROLL_L :11.72deg 
+
+YAW_M :-16.17deg PITCH_M :-7.36deg ROLL_M :-3.57deg 
+YAW_L :0.87deg PITCH_L :10.63deg ROLL_L :11.72deg 
+
+YAW_M :-16.20deg PITCH_M :-7.33deg ROLL_M :-3.60deg 
+YAW_L :0.88deg PITCH_L :10.64deg ROLL_L :11.71deg 
+
+YAW_M :-16.20deg PITCH_M :-7.29deg ROLL_M :-3.60deg 
+YAW_L :0.89deg PITCH_L :10.64deg ROLL_L :11.70deg 
+
+YAW_M :-16.22deg PITCH_M :-7.29deg ROLL_M :-3.62deg 
+YAW_L :0.90deg PITCH_L :10.63deg ROLL_L :11.69deg 
+
+YAW_M :-16.26deg PITCH_M :-7.25deg ROLL_M :-3.66deg 
+YAW_L :0.91deg PITCH_L :10.63deg ROLL_L :11.68deg 
+
+YAW_M :-16.25deg PITCH_M :-7.21deg ROLL_M :-3.65deg 
+YAW_L :0.92deg PITCH_L :10.64deg ROLL_L :11.67deg 
+
+YAW_M :-16.25deg PITCH_M :-7.21deg ROLL_M :-3.65deg 
+YAW_L :0.92deg PITCH_L :10.64deg ROLL_L :11.67deg 
+
+YAW_M :-16.26deg PITCH_M :-7.24deg ROLL_M :-3.66deg 
+YAW_L :0.93deg PITCH_L :10.63deg ROLL_L :11.66deg 
+
+YAW_M :-16.27deg PITCH_M :-7.27deg ROLL_M :-3.67deg 
+YAW_L :0.94deg PITCH_L :10.63deg ROLL_L :11.65deg 
+
+YAW_M :-16.22deg PITCH_M :-7.26deg ROLL_M :-3.62deg 
+YAW_L :0.94deg PITCH_L :10.63deg ROLL_L :11.65deg 
+
+YAW_M :-16.24deg PITCH_M :-7.29deg ROLL_M :-3.64deg 
+YAW_L :0.95deg PITCH_L :10.63deg ROLL_L :11.64deg 
+
+YAW_M :-16.23deg PITCH_M :-7.26deg ROLL_M :-3.63deg 
+YAW_L :0.96deg PITCH_L :10.63deg ROLL_L :11.63deg 
+
+YAW_M :-16.22deg PITCH_M :-7.28deg ROLL_M :-3.62deg 
+YAW_L :0.97deg PITCH_L :10.63deg ROLL_L :11.62deg 
+
+YAW_M :-16.22deg PITCH_M :-7.33deg ROLL_M :-3.62deg 
+YAW_L :0.98deg PITCH_L :10.63deg ROLL_L :11.61deg 
+
+YAW_M :-16.26deg PITCH_M :-7.35deg ROLL_M :-3.66deg 
+YAW_L :0.99deg PITCH_L :10.63deg ROLL_L :11.60deg 
+
+YAW_M :-16.26deg PITCH_M :-7.30deg ROLL_M :-3.66deg 
+YAW_L :0.99deg PITCH_L :10.63deg ROLL_L :11.60deg 
+
+YAW_M :-16.26deg PITCH_M :-7.30deg ROLL_M :-3.66deg 
+YAW_L :0.99deg PITCH_L :10.63deg ROLL_L :11.60deg 
+
+YAW_M :-16.24deg PITCH_M :-7.34deg ROLL_M :-3.64deg 
+YAW_L :-1.0deg PITCH_L :10.63deg ROLL_L :11.59deg 
+
+YAW_M :-16.24deg PITCH_M :-7.35deg ROLL_M :-3.64deg 
+YAW_L :-1.1deg PITCH_L :10.63deg ROLL_L :11.58deg 
+
+YAW_M :-16.28deg PITCH_M :-7.38deg ROLL_M :-3.68deg 
+YAW_L :-1.2deg PITCH_L :10.63deg ROLL_L :11.57deg 
+
+YAW_M :-16.31deg PITCH_M :-7.37deg ROLL_M :-3.71deg 
+YAW_L :-1.3deg PITCH_L :10.63deg ROLL_L :11.56deg 
+
+YAW_M :-16.25deg PITCH_M :-7.37deg ROLL_M :-3.65deg 
+YAW_L :-1.4deg PITCH_L :10.63deg ROLL_L :11.55deg 
+
+YAW_M :-16.21deg PITCH_M :-7.36deg ROLL_M :-3.61deg 
+YAW_L :-1.5deg PITCH_L :10.63deg ROLL_L :11.54deg 
+
+YAW_M :-16.20deg PITCH_M :-7.36deg ROLL_M :-3.60deg 
+YAW_L :-1.5deg PITCH_L :10.63deg ROLL_L :11.54deg 
+
+YAW_M :-16.20deg PITCH_M :-7.40deg ROLL_M :-3.60deg 
+YAW_L :-1.6deg PITCH_L :10.63deg ROLL_L :11.53deg 
+
+YAW_M :-16.20deg PITCH_M :-7.40deg ROLL_M :-3.60deg 
+YAW_L :-1.6deg PITCH_L :10.63deg ROLL_L :11.53deg 
+
+YAW_M :-16.21deg PITCH_M :-7.44deg ROLL_M :-3.61deg 
+YAW_L :-1.7deg PITCH_L :10.63deg ROLL_L :11.52deg 
+
+YAW_M :-16.24deg PITCH_M :-7.42deg ROLL_M :-3.64deg 
+YAW_L :-1.8deg PITCH_L :10.62deg ROLL_L :11.51deg 
+
+YAW_M :-16.24deg PITCH_M :-7.46deg ROLL_M :-3.64deg 
+YAW_L :-1.9deg PITCH_L :10.62deg ROLL_L :11.50deg 
+
+YAW_M :-16.21deg PITCH_M :-7.47deg ROLL_M :-3.61deg 
+YAW_L :-1.10deg PITCH_L :10.62deg ROLL_L :11.49deg 
+
+YAW_M :-16.23deg PITCH_M :-7.46deg ROLL_M :-3.63deg 
+YAW_L :-1.11deg PITCH_L :10.62deg ROLL_L :11.48deg 
+
+YAW_M :-16.24deg PITCH_M :-7.43deg ROLL_M :-3.64deg 
+YAW_L :-1.12deg PITCH_L :10.62deg ROLL_L :11.47deg 
+
+YAW_M :-16.24deg PITCH_M :-7.43deg ROLL_M :-3.64deg 
+YAW_L :-1.13deg PITCH_L :10.62deg ROLL_L :11.46deg 
+
+YAW_M :-16.24deg PITCH_M :-7.43deg ROLL_M :-3.64deg 
+YAW_L :-1.13deg PITCH_L :10.62deg ROLL_L :11.46deg 
+
+YAW_M :-16.22deg PITCH_M :-7.35deg ROLL_M :-3.62deg 
+YAW_L :-1.14deg PITCH_L :10.62deg ROLL_L :11.45deg 
+
+YAW_M :-16.22deg PITCH_M :-7.35deg ROLL_M :-3.62deg 
+YAW_L :-1.14deg PITCH_L :10.62deg ROLL_L :11.45deg 
+
+YAW_M :-16.27deg PITCH_M :-7.36deg ROLL_M :-3.67deg 
+YAW_L :-1.15deg PITCH_L :10.61deg ROLL_L :11.44deg 
+
+YAW_M :-16.27deg PITCH_M :-7.33deg ROLL_M :-3.67deg 
+YAW_L :-1.16deg PITCH_L :10.61deg ROLL_L :11.43deg 
+
+YAW_M :-16.28deg PITCH_M :-7.37deg ROLL_M :-3.68deg 
+YAW_L :-1.17deg PITCH_L :10.61deg ROLL_L :11.42deg 
+
+YAW_M :-16.26deg PITCH_M :-7.34deg ROLL_M :-3.66deg 
+YAW_L :-1.18deg PITCH_L :10.61deg ROLL_L :11.41deg 
+
+YAW_M :-16.24deg PITCH_M :-7.33deg ROLL_M :-3.64deg 
+YAW_L :-1.19deg PITCH_L :10.61deg ROLL_L :11.40deg 
+
+YAW_M :-16.25deg PITCH_M :-7.35deg ROLL_M :-3.65deg 
+YAW_L :-1.20deg PITCH_L :10.61deg ROLL_L :11.39deg 
+
+YAW_M :-16.31deg PITCH_M :-7.37deg ROLL_M :-3.71deg 
+YAW_L :-1.21deg PITCH_L :10.60deg ROLL_L :11.38deg 
+
+YAW_M :-16.31deg PITCH_M :-7.37deg ROLL_M :-3.71deg 
+YAW_L :-1.21deg PITCH_L :10.60deg ROLL_L :11.38deg 
+
+YAW_M :-16.33deg PITCH_M :-7.28deg ROLL_M :-3.73deg 
+YAW_L :-1.23deg PITCH_L :10.60deg ROLL_L :11.36deg 
+
+YAW_M :-16.33deg PITCH_M :-7.28deg ROLL_M :-3.73deg 
+YAW_L :-1.23deg PITCH_L :10.60deg ROLL_L :11.36deg 
+
+YAW_M :-16.30deg PITCH_M :-7.30deg ROLL_M :-3.70deg 
+YAW_L :-1.24deg PITCH_L :10.60deg ROLL_L :11.35deg 
+
+YAW_M :-16.23deg PITCH_M :-7.31deg ROLL_M :-3.63deg 
+YAW_L :-1.25deg PITCH_L :10.59deg ROLL_L :11.34deg 
+
+YAW_M :-16.25deg PITCH_M :-7.25deg ROLL_M :-3.65deg 
+YAW_L :-1.26deg PITCH_L :10.59deg ROLL_L :11.33deg 
+
+YAW_M :-16.20deg PITCH_M :-7.25deg ROLL_M :-3.60deg 
+YAW_L :-1.26deg PITCH_L :10.59deg ROLL_L :11.33deg 
+
+YAW_M :-16.22deg PITCH_M :-7.28deg ROLL_M :-3.62deg 
+YAW_L :-1.27deg PITCH_L :10.59deg ROLL_L :11.32deg 
+
+YAW_M :-16.25deg PITCH_M :-7.27deg ROLL_M :-3.65deg 
+YAW_L :-1.28deg PITCH_L :10.59deg ROLL_L :11.31deg 
+
+YAW_M :-16.25deg PITCH_M :-7.28deg ROLL_M :-3.65deg 
+YAW_L :-1.29deg PITCH_L :10.58deg ROLL_L :11.30deg 
+
+YAW_M :-16.25deg PITCH_M :-7.28deg ROLL_M :-3.65deg 
+YAW_L :-1.29deg PITCH_L :10.58deg ROLL_L :11.30deg 
+
+YAW_M :-16.36deg PITCH_M :-7.29deg ROLL_M :-3.76deg 
+YAW_L :-1.31deg PITCH_L :10.58deg ROLL_L :11.28deg 
+
+YAW_M :-16.36deg PITCH_M :-7.29deg ROLL_M :-3.76deg 
+YAW_L :-1.31deg PITCH_L :10.58deg ROLL_L :11.28deg 
+
+YAW_M :-16.32deg PITCH_M :-7.30deg ROLL_M :-3.72deg 
+YAW_L :-1.32deg PITCH_L :10.58deg ROLL_L :11.27deg 
+
+YAW_M :-16.31deg PITCH_M :-7.28deg ROLL_M :-3.71deg 
+YAW_L :-1.33deg PITCH_L :10.58deg ROLL_L :11.26deg 
+
+YAW_M :-16.34deg PITCH_M :-7.27deg ROLL_M :-3.74deg 
+YAW_L :-1.34deg PITCH_L :10.57deg ROLL_L :11.25deg 
+
+YAW_M :-16.32deg PITCH_M :-7.30deg ROLL_M :-3.72deg 
+YAW_L :-1.35deg PITCH_L :10.57deg ROLL_L :11.24deg 
+
+YAW_M :-16.30deg PITCH_M :-7.33deg ROLL_M :-3.70deg 
+YAW_L :-1.35deg PITCH_L :10.57deg ROLL_L :11.24deg 
+
+YAW_M :-16.32deg PITCH_M :-7.30deg ROLL_M :-3.72deg 
+YAW_L :-1.36deg PITCH_L :10.57deg ROLL_L :11.23deg 
+
+YAW_M :-16.34deg PITCH_M :-7.28deg ROLL_M :-3.74deg 
+YAW_L :-1.37deg PITCH_L :10.56deg ROLL_L :11.22deg 
+
+YAW_M :-16.34deg PITCH_M :-7.28deg ROLL_M :-3.74deg 
+YAW_L :-1.37deg PITCH_L :10.56deg ROLL_L :11.22deg 
+
+YAW_M :-16.26deg PITCH_M :-7.30deg ROLL_M :-3.66deg 
+YAW_L :-1.39deg PITCH_L :10.56deg ROLL_L :11.20deg 
+
+YAW_M :-16.26deg PITCH_M :-7.30deg ROLL_M :-3.66deg 
+YAW_L :-1.39deg PITCH_L :10.56deg ROLL_L :11.20deg 
+
+YAW_M :-16.24deg PITCH_M :-7.31deg ROLL_M :-3.64deg 
+YAW_L :-1.40deg PITCH_L :10.56deg ROLL_L :11.19deg 
+
+YAW_M :-16.28deg PITCH_M :-7.32deg ROLL_M :-3.68deg 
+YAW_L :-1.41deg PITCH_L :10.55deg ROLL_L :11.18deg 
+
+YAW_M :-16.32deg PITCH_M :-7.29deg ROLL_M :-3.72deg 
+YAW_L :-1.42deg PITCH_L :10.55deg ROLL_L :11.17deg 
+
+YAW_M :-16.37deg PITCH_M :-7.33deg ROLL_M :-3.77deg 
+YAW_L :-1.43deg PITCH_L :10.55deg ROLL_L :11.16deg 
+
+YAW_M :-16.39deg PITCH_M :-7.29deg ROLL_M :-3.79deg 
+YAW_L :-1.44deg PITCH_L :10.55deg ROLL_L :11.15deg 
+
+YAW_M :-16.40deg PITCH_M :-7.34deg ROLL_M :-3.80deg 
+YAW_L :-1.45deg PITCH_L :10.54deg ROLL_L :11.14deg 
+
+YAW_M :-16.44deg PITCH_M :-7.37deg ROLL_M :-3.84deg 
+YAW_L :-1.46deg PITCH_L :10.54deg ROLL_L :11.13deg 
+
+YAW_M :-16.44deg PITCH_M :-7.37deg ROLL_M :-3.84deg 
+YAW_L :-1.46deg PITCH_L :10.54deg ROLL_L :11.13deg 
+
+YAW_M :-16.42deg PITCH_M :-7.42deg ROLL_M :-3.82deg 
+YAW_L :-1.47deg PITCH_L :10.54deg ROLL_L :11.12deg 
+
+YAW_M :-16.38deg PITCH_M :-7.43deg ROLL_M :-3.78deg 
+YAW_L :-1.48deg PITCH_L :10.54deg ROLL_L :11.11deg 
+
+YAW_M :-16.34deg PITCH_M :-7.42deg ROLL_M :-3.74deg 
+YAW_L :-1.49deg PITCH_L :10.53deg ROLL_L :11.10deg 
+
+YAW_M :-16.38deg PITCH_M :-7.41deg ROLL_M :-3.78deg 
+YAW_L :-1.50deg PITCH_L :10.53deg ROLL_L :11.9deg 
+
+YAW_M :-16.37deg PITCH_M :-7.39deg ROLL_M :-3.77deg 
+YAW_L :-1.51deg PITCH_L :10.53deg ROLL_L :11.8deg 
+
+YAW_M :-16.38deg PITCH_M :-7.36deg ROLL_M :-3.78deg 
+YAW_L :-1.51deg PITCH_L :10.53deg ROLL_L :11.8deg 
+
+YAW_M :-16.40deg PITCH_M :-7.39deg ROLL_M :-3.80deg 
+YAW_L :-1.53deg PITCH_L :10.52deg ROLL_L :11.6deg 
+
+YAW_M :-16.40deg PITCH_M :-7.39deg ROLL_M :-3.80deg 
+YAW_L :-1.54deg PITCH_L :10.52deg ROLL_L :11.5deg 
+
+YAW_M :-16.40deg PITCH_M :-7.39deg ROLL_M :-3.80deg 
+YAW_L :-1.54deg PITCH_L :10.52deg ROLL_L :11.5deg 
+
+YAW_M :-16.45deg PITCH_M :-7.41deg ROLL_M :-3.85deg 
+YAW_L :-1.54deg PITCH_L :10.52deg ROLL_L :11.5deg 
+
+YAW_M :-16.45deg PITCH_M :-7.40deg ROLL_M :-3.85deg 
+YAW_L :-1.55deg PITCH_L :10.52deg ROLL_L :11.4deg 
+
+YAW_M :-16.48deg PITCH_M :-7.38deg ROLL_M :-3.88deg 
+YAW_L :-1.56deg PITCH_L :10.51deg ROLL_L :11.3deg 
+
+YAW_M :-16.49deg PITCH_M :-7.40deg ROLL_M :-3.89deg 
+YAW_L :-1.57deg PITCH_L :10.51deg ROLL_L :11.2deg 
+
+YAW_M :-16.44deg PITCH_M :-7.38deg ROLL_M :-3.84deg 
+YAW_L :-1.58deg PITCH_L :10.51deg ROLL_L :11.1deg 
+
+YAW_M :-16.45deg PITCH_M :-7.35deg ROLL_M :-3.85deg 
+YAW_L :-1.59deg PITCH_L :10.50deg ROLL_L :11.0deg 
+
+YAW_M :-16.46deg PITCH_M :-7.37deg ROLL_M :-3.86deg 
+YAW_L :-1.60deg PITCH_L :10.50deg ROLL_L :10.99deg 
+
+YAW_M :-16.48deg PITCH_M :-7.38deg ROLL_M :-3.88deg 
+YAW_L :-1.61deg PITCH_L :10.50deg ROLL_L :10.98deg 
+
+YAW_M :-16.50deg PITCH_M :-7.40deg ROLL_M :-3.90deg 
+YAW_L :-1.62deg PITCH_L :10.49deg ROLL_L :10.97deg 
+
+YAW_M :-16.50deg PITCH_M :-7.40deg ROLL_M :-3.90deg 
+YAW_L :-1.62deg PITCH_L :10.49deg ROLL_L :10.97deg 
+
+YAW_M :-16.51deg PITCH_M :-7.42deg ROLL_M :-3.91deg 
+YAW_L :-1.63deg PITCH_L :10.49deg ROLL_L :10.96deg 
+
+YAW_M :-16.50deg PITCH_M :-7.40deg ROLL_M :-3.90deg 
+YAW_L :-1.64deg PITCH_L :10.49deg ROLL_L :10.95deg 
+
+YAW_M :-16.51deg PITCH_M :-7.37deg ROLL_M :-3.91deg 
+YAW_L :-1.65deg PITCH_L :10.49deg ROLL_L :10.94deg 
+
+YAW_M :-16.53deg PITCH_M :-7.32deg ROLL_M :-3.93deg 
+YAW_L :-1.66deg PITCH_L :10.48deg ROLL_L :10.93deg 
+
+YAW_M :-16.53deg PITCH_M :-7.35deg ROLL_M :-3.93deg 
+YAW_L :-1.67deg PITCH_L :10.48deg ROLL_L :10.92deg 
+
+YAW_M :-16.50deg PITCH_M :-7.38deg ROLL_M :-3.90deg 
+YAW_L :-1.68deg PITCH_L :10.48deg ROLL_L :10.91deg 
+
+YAW_M :-16.54deg PITCH_M :-7.33deg ROLL_M :-3.94deg 
+YAW_L :-1.69deg PITCH_L :10.47deg ROLL_L :10.90deg 
+
+YAW_M :-16.55deg PITCH_M :-7.37deg ROLL_M :-3.95deg 
+YAW_L :-1.70deg PITCH_L :10.47deg ROLL_L :10.89deg 
+
+YAW_M :-16.54deg PITCH_M :-7.31deg ROLL_M :-3.94deg 
+YAW_L :-1.71deg PITCH_L :10.47deg ROLL_L :10.88deg 
+
+YAW_M :-16.54deg PITCH_M :-7.31deg ROLL_M :-3.94deg 
+YAW_L :-1.71deg PITCH_L :10.47deg ROLL_L :10.88deg 
+
+YAW_M :-16.55deg PITCH_M :-7.30deg ROLL_M :-3.95deg 
+YAW_L :-1.72deg PITCH_L :10.46deg ROLL_L :10.87deg 
+
+YAW_M :-16.50deg PITCH_M :-7.29deg ROLL_M :-3.90deg 
+YAW_L :-1.73deg PITCH_L :10.46deg ROLL_L :10.86deg 
+
+YAW_M :-16.52deg PITCH_M :-7.22deg ROLL_M :-3.92deg 
+YAW_L :-1.74deg PITCH_L :10.46deg ROLL_L :10.85deg 
+
+YAW_M :-16.50deg PITCH_M :-7.18deg ROLL_M :-3.90deg 
+YAW_L :-1.75deg PITCH_L :10.45deg ROLL_L :10.84deg 
+
+YAW_M :-16.50deg PITCH_M :-7.15deg ROLL_M :-3.90deg 
+YAW_L :-1.76deg PITCH_L :10.45deg ROLL_L :10.83deg 
+
+YAW_M :-16.54deg PITCH_M :-7.20deg ROLL_M :-3.94deg 
+YAW_L :-1.77deg PITCH_L :10.45deg ROLL_L :10.82deg 
+
+YAW_M :-16.57deg PITCH_M :-7.21deg ROLL_M :-3.97deg 
+YAW_L :-1.78deg PITCH_L :10.44deg ROLL_L :10.81deg 
+
+YAW_M :-16.56deg PITCH_M :-7.26deg ROLL_M :-3.96deg 
+YAW_L :-1.79deg PITCH_L :10.44deg ROLL_L :10.80deg 
+
+YAW_M :-16.51deg PITCH_M :-7.27deg ROLL_M :-3.91deg 
+YAW_L :-1.80deg PITCH_L :10.43deg ROLL_L :10.79deg 
+
+YAW_M :-16.51deg PITCH_M :-7.27deg ROLL_M :-3.91deg 
+YAW_L :-1.80deg PITCH_L :10.43deg ROLL_L :10.79deg 
+
+YAW_M :-16.56deg PITCH_M :-7.26deg ROLL_M :-3.96deg 
+YAW_L :-1.81deg PITCH_L :10.43deg ROLL_L :10.78deg 
+
+YAW_M :-16.52deg PITCH_M :-7.25deg ROLL_M :-3.92deg 
+YAW_L :-1.82deg PITCH_L :10.43deg ROLL_L :10.77deg 
+
+YAW_M :-16.47deg PITCH_M :-7.26deg ROLL_M :-3.87deg 
+YAW_L :-1.83deg PITCH_L :10.42deg ROLL_L :10.76deg 
+
+YAW_M :-16.53deg PITCH_M :-7.27deg ROLL_M :-3.93deg 
+YAW_L :-1.84deg PITCH_L :10.42deg ROLL_L :10.75deg 
+
+YAW_M :-16.53deg PITCH_M :-7.33deg ROLL_M :-3.93deg 
+YAW_L :-1.85deg PITCH_L :10.42deg ROLL_L :10.74deg 
+
+YAW_M :-16.54deg PITCH_M :-7.34deg ROLL_M :-3.94deg 
+YAW_L :-1.86deg PITCH_L :10.41deg ROLL_L :10.73deg 
+
+YAW_M :-16.56deg PITCH_M :-7.33deg ROLL_M :-3.96deg 
+YAW_L :-1.87deg PITCH_L :10.41deg ROLL_L :10.72deg 
+
+YAW_M :-16.56deg PITCH_M :-7.36deg ROLL_M :-3.96deg 
+YAW_L :-1.88deg PITCH_L :10.41deg ROLL_L :10.71deg 
+
+YAW_M :-16.59deg PITCH_M :-7.38deg ROLL_M :-3.99deg 
+YAW_L :-1.89deg PITCH_L :10.40deg ROLL_L :10.70deg 
+
+YAW_M :-16.59deg PITCH_M :-7.38deg ROLL_M :-3.99deg 
+YAW_L :-1.89deg PITCH_L :10.40deg ROLL_L :10.70deg 
+
+YAW_M :-16.56deg PITCH_M :-7.44deg ROLL_M :-3.96deg 
+YAW_L :-1.90deg PITCH_L :10.40deg ROLL_L :10.69deg 
+
+YAW_M :-16.56deg PITCH_M :-7.40deg ROLL_M :-3.96deg 
+YAW_L :-1.90deg PITCH_L :10.39deg ROLL_L :10.69deg 
+
+YAW_M :-16.52deg PITCH_M :-7.37deg ROLL_M :-3.92deg 
+YAW_L :-1.91deg PITCH_L :10.39deg ROLL_L :10.68deg 
+
+YAW_M :-16.56deg PITCH_M :-7.36deg ROLL_M :-3.96deg 
+YAW_L :-1.92deg PITCH_L :10.39deg ROLL_L :10.67deg 
+
+YAW_M :-16.55deg PITCH_M :-7.31deg ROLL_M :-3.95deg 
+YAW_L :-1.93deg PITCH_L :10.38deg ROLL_L :10.66deg 
+
+YAW_M :-16.56deg PITCH_M :-7.34deg ROLL_M :-3.96deg 
+YAW_L :-1.94deg PITCH_L :10.38deg ROLL_L :10.65deg 
+
+YAW_M :-16.53deg PITCH_M :-7.33deg ROLL_M :-3.93deg 
+YAW_L :-1.95deg PITCH_L :10.37deg ROLL_L :10.64deg 
+
+YAW_M :-16.53deg PITCH_M :-7.37deg ROLL_M :-3.93deg 
+YAW_L :-1.96deg PITCH_L :10.37deg ROLL_L :10.63deg 
+
+YAW_M :-16.53deg PITCH_M :-7.37deg ROLL_M :-3.93deg 
+YAW_L :-1.96deg PITCH_L :10.37deg ROLL_L :10.63deg 
+
+YAW_M :-16.57deg PITCH_M :-7.40deg ROLL_M :-3.97deg 
+YAW_L :-1.98deg PITCH_L :10.37deg ROLL_L :10.61deg 
+
+YAW_M :-16.56deg PITCH_M :-7.44deg ROLL_M :-3.96deg 
+YAW_L :-1.98deg PITCH_L :10.36deg ROLL_L :10.61deg 
+
+YAW_M :-16.59deg PITCH_M :-7.43deg ROLL_M :-3.99deg 
+YAW_L :-1.99deg PITCH_L :10.36deg ROLL_L :10.60deg 
+
+YAW_M :-16.63deg PITCH_M :-7.45deg ROLL_M :-4.3deg 
+YAW_L :-2.1deg PITCH_L :10.36deg ROLL_L :10.58deg 
+
+YAW_M :-16.59deg PITCH_M :-7.44deg ROLL_M :-3.99deg 
+YAW_L :-2.2deg PITCH_L :10.35deg ROLL_L :10.57deg 
+
+YAW_M :-16.55deg PITCH_M :-7.41deg ROLL_M :-3.95deg 
+YAW_L :-2.3deg PITCH_L :10.35deg ROLL_L :10.56deg 
+
+YAW_M :-16.54deg PITCH_M :-7.41deg ROLL_M :-3.94deg 
+YAW_L :-2.4deg PITCH_L :10.34deg ROLL_L :10.55deg 
+
+YAW_M :-16.58deg PITCH_M :-7.39deg ROLL_M :-3.98deg 
+YAW_L :-2.5deg PITCH_L :10.34deg ROLL_L :10.54deg 
+
+YAW_M :-16.59deg PITCH_M :-7.42deg ROLL_M :-3.99deg 
+YAW_L :-2.6deg PITCH_L :10.33deg ROLL_L :10.53deg 
+
+YAW_M :-16.59deg PITCH_M :-7.42deg ROLL_M :-3.99deg 
+YAW_L :-2.6deg PITCH_L :10.33deg ROLL_L :10.53deg 
+
+YAW_M :-16.59deg PITCH_M :-7.48deg ROLL_M :-3.99deg 
+YAW_L :-2.7deg PITCH_L :10.33deg ROLL_L :10.52deg 
+
+YAW_M :-16.60deg PITCH_M :-7.49deg ROLL_M :-4.0deg 
+YAW_L :-2.8deg PITCH_L :10.33deg ROLL_L :10.51deg 
+
+YAW_M :-16.64deg PITCH_M :-7.45deg ROLL_M :-4.4deg 
+YAW_L :-2.9deg PITCH_L :10.32deg ROLL_L :10.50deg 
+
+YAW_M :-16.63deg PITCH_M :-7.45deg ROLL_M :-4.3deg 
+YAW_L :-2.10deg PITCH_L :10.32deg ROLL_L :10.49deg 
+
+YAW_M :-16.66deg PITCH_M :-7.45deg ROLL_M :-4.6deg 
+YAW_L :-2.11deg PITCH_L :10.31deg ROLL_L :10.48deg 
+
+YAW_M :-16.68deg PITCH_M :-7.47deg ROLL_M :-4.8deg 
+YAW_L :-2.12deg PITCH_L :10.31deg ROLL_L :10.47deg 
+
+YAW_M :-16.69deg PITCH_M :-7.45deg ROLL_M :-4.9deg 
+YAW_L :-2.13deg PITCH_L :10.31deg ROLL_L :10.46deg 
+
+YAW_M :-16.65deg PITCH_M :-7.48deg ROLL_M :-4.5deg 
+YAW_L :-2.14deg PITCH_L :10.30deg ROLL_L :10.45deg 
+
+YAW_M :-16.69deg PITCH_M :-7.53deg ROLL_M :-4.9deg 
+YAW_L :-2.15deg PITCH_L :10.30deg ROLL_L :10.44deg 
+
+YAW_M :-16.69deg PITCH_M :-7.53deg ROLL_M :-4.9deg 
+YAW_L :-2.15deg PITCH_L :10.30deg ROLL_L :10.44deg 
+
+YAW_M :-16.72deg PITCH_M :-7.53deg ROLL_M :-4.12deg 
+YAW_L :-2.16deg PITCH_L :10.29deg ROLL_L :10.43deg 
+
+YAW_M :-16.72deg PITCH_M :-7.49deg ROLL_M :-4.12deg 
+YAW_L :-2.17deg PITCH_L :10.29deg ROLL_L :10.42deg 
+
+YAW_M :-16.76deg PITCH_M :-7.51deg ROLL_M :-4.16deg 
+YAW_L :-2.18deg PITCH_L :10.28deg ROLL_L :10.41deg 
+
+YAW_M :-16.70deg PITCH_M :-7.48deg ROLL_M :-4.10deg 
+YAW_L :-2.19deg PITCH_L :10.28deg ROLL_L :10.40deg 
+
+YAW_M :-16.73deg PITCH_M :-7.45deg ROLL_M :-4.13deg 
+YAW_L :-2.20deg PITCH_L :10.27deg ROLL_L :10.39deg 
+
+YAW_M :-16.71deg PITCH_M :-7.41deg ROLL_M :-4.11deg 
+YAW_L :-2.21deg PITCH_L :10.27deg ROLL_L :10.38deg 
+
+YAW_M :-16.69deg PITCH_M :-7.44deg ROLL_M :-4.9deg 
+YAW_L :-2.22deg PITCH_L :10.26deg ROLL_L :10.37deg 
+
+YAW_M :-16.68deg PITCH_M :-7.49deg ROLL_M :-4.8deg 
+YAW_L :-2.23deg PITCH_L :10.26deg ROLL_L :10.36deg 
+
+YAW_M :-16.68deg PITCH_M :-7.49deg ROLL_M :-4.8deg 
+YAW_L :-2.23deg PITCH_L :10.26deg ROLL_L :10.36deg 
+
+YAW_M :-16.63deg PITCH_M :-7.49deg ROLL_M :-4.3deg 
+YAW_L :-2.24deg PITCH_L :10.26deg ROLL_L :10.35deg 
+
+YAW_M :-16.66deg PITCH_M :-7.48deg ROLL_M :-4.6deg 
+YAW_L :-2.25deg PITCH_L :10.25deg ROLL_L :10.34deg 
+
+YAW_M :-16.67deg PITCH_M :-7.52deg ROLL_M :-4.7deg 
+YAW_L :-2.26deg PITCH_L :10.25deg ROLL_L :10.33deg 
+
+YAW_M :-16.64deg PITCH_M :-7.49deg ROLL_M :-4.4deg 
+YAW_L :-2.27deg PITCH_L :10.24deg ROLL_L :10.32deg 
+
+YAW_M :-16.67deg PITCH_M :-7.43deg ROLL_M :-4.7deg 
+YAW_L :-2.28deg PITCH_L :10.24deg ROLL_L :10.31deg 
+
+YAW_M :-16.67deg PITCH_M :-7.43deg ROLL_M :-4.7deg 
+YAW_L :-2.29deg PITCH_L :10.23deg ROLL_L :10.30deg 
+
+YAW_M :-16.69deg PITCH_M :-7.43deg ROLL_M :-4.9deg 
+YAW_L :-2.31deg PITCH_L :10.23deg ROLL_L :10.28deg 
+
+YAW_M :-16.69deg PITCH_M :-7.43deg ROLL_M :-4.9deg 
+YAW_L :-2.31deg PITCH_L :10.23deg ROLL_L :10.28deg 
+
+YAW_M :-16.67deg PITCH_M :-7.37deg ROLL_M :-4.7deg 
+YAW_L :-2.33deg PITCH_L :10.22deg ROLL_L :10.26deg 
+
+YAW_M :-16.67deg PITCH_M :-7.37deg ROLL_M :-4.7deg 
+YAW_L :-2.33deg PITCH_L :10.22deg ROLL_L :10.26deg 
+
+YAW_M :-16.70deg PITCH_M :-7.42deg ROLL_M :-4.10deg 
+YAW_L :-2.34deg PITCH_L :10.22deg ROLL_L :10.25deg 
+
+YAW_M :-16.71deg PITCH_M :-7.36deg ROLL_M :-4.11deg 
+YAW_L :-2.35deg PITCH_L :10.21deg ROLL_L :10.24deg 
+
+YAW_M :-16.72deg PITCH_M :-7.31deg ROLL_M :-4.12deg 
+YAW_L :-2.36deg PITCH_L :10.21deg ROLL_L :10.23deg 
+
+YAW_M :-16.75deg PITCH_M :-7.35deg ROLL_M :-4.15deg 
+YAW_L :-2.37deg PITCH_L :10.20deg ROLL_L :10.22deg 
+
+YAW_M :-16.71deg PITCH_M :-7.32deg ROLL_M :-4.11deg 
+YAW_L :-2.38deg PITCH_L :10.20deg ROLL_L :10.21deg 
+
+YAW_M :-16.69deg PITCH_M :-7.35deg ROLL_M :-4.9deg 
+YAW_L :-2.39deg PITCH_L :10.19deg ROLL_L :10.20deg 
+
+YAW_M :-16.73deg PITCH_M :-7.38deg ROLL_M :-4.13deg 
+YAW_L :-2.40deg PITCH_L :10.19deg ROLL_L :10.19deg 
+
+YAW_M :-16.73deg PITCH_M :-7.38deg ROLL_M :-4.13deg 
+YAW_L :-2.40deg PITCH_L :10.19deg ROLL_L :10.19deg 
+
+YAW_M :-16.65deg PITCH_M :-7.34deg ROLL_M :-4.5deg 
+YAW_L :-2.42deg PITCH_L :10.18deg ROLL_L :10.17deg 
+
+YAW_M :-16.65deg PITCH_M :-7.34deg ROLL_M :-4.5deg 
+YAW_L :-2.42deg PITCH_L :10.18deg ROLL_L :10.17deg 
+
+YAW_M :-16.67deg PITCH_M :-7.38deg ROLL_M :-4.7deg 
+YAW_L :-2.43deg PITCH_L :10.17deg ROLL_L :10.16deg 
+
+YAW_M :-16.67deg PITCH_M :-7.33deg ROLL_M :-4.7deg 
+YAW_L :-2.44deg PITCH_L :10.17deg ROLL_L :10.15deg 
+
+YAW_M :-16.61deg PITCH_M :-7.34deg ROLL_M :-4.1deg 
+YAW_L :-2.45deg PITCH_L :10.16deg ROLL_L :10.14deg 
+
+YAW_M :-16.67deg PITCH_M :-7.36deg ROLL_M :-4.7deg 
+YAW_L :-2.46deg PITCH_L :10.16deg ROLL_L :10.13deg 
+
+YAW_M :-16.72deg PITCH_M :-7.35deg ROLL_M :-4.12deg 
+YAW_L :-2.47deg PITCH_L :10.15deg ROLL_L :10.12deg 
+
+YAW_M :-16.71deg PITCH_M :-7.41deg ROLL_M :-4.11deg 
+YAW_L :-2.48deg PITCH_L :10.15deg ROLL_L :10.11deg 
+
+YAW_M :-16.75deg PITCH_M :-7.43deg ROLL_M :-4.15deg 
+YAW_L :-2.49deg PITCH_L :10.14deg ROLL_L :10.10deg 
+
+YAW_M :-16.75deg PITCH_M :-7.43deg ROLL_M :-4.15deg 
+YAW_L :-2.49deg PITCH_L :10.14deg ROLL_L :10.10deg 
+
+YAW_M :-16.74deg PITCH_M :-7.38deg ROLL_M :-4.14deg 
+YAW_L :-2.51deg PITCH_L :10.13deg ROLL_L :10.8deg 
+
+YAW_M :-16.74deg PITCH_M :-7.38deg ROLL_M :-4.14deg 
+YAW_L :-2.51deg PITCH_L :10.13deg ROLL_L :10.8deg 
+
+YAW_M :-16.73deg PITCH_M :-7.37deg ROLL_M :-4.13deg 
+YAW_L :-2.52deg PITCH_L :10.13deg ROLL_L :10.7deg 
+
+YAW_M :-16.71deg PITCH_M :-7.41deg ROLL_M :-4.11deg 
+YAW_L :-2.53deg PITCH_L :10.12deg ROLL_L :10.6deg 
+
+YAW_M :-16.73deg PITCH_M :-7.35deg ROLL_M :-4.13deg 
+YAW_L :-2.54deg PITCH_L :10.12deg ROLL_L :10.5deg 
+
+YAW_M :-16.74deg PITCH_M :-7.33deg ROLL_M :-4.14deg 
+YAW_L :-2.55deg PITCH_L :10.11deg ROLL_L :10.4deg 
+
+YAW_M :-16.71deg PITCH_M :-7.36deg ROLL_M :-4.11deg 
+YAW_L :-2.56deg PITCH_L :10.11deg ROLL_L :10.3deg 
+
+YAW_M :-16.77deg PITCH_M :-7.38deg ROLL_M :-4.17deg 
+YAW_L :-2.57deg PITCH_L :10.10deg ROLL_L :10.2deg 
+
+YAW_M :-16.73deg PITCH_M :-7.39deg ROLL_M :-4.13deg 
+YAW_L :-2.58deg PITCH_L :10.10deg ROLL_L :10.1deg 
+
+YAW_M :-16.73deg PITCH_M :-7.39deg ROLL_M :-4.13deg 
+YAW_L :-2.58deg PITCH_L :10.10deg ROLL_L :10.1deg 
+
+YAW_M :-16.72deg PITCH_M :-7.32deg ROLL_M :-4.12deg 
+YAW_L :-2.59deg PITCH_L :10.9deg ROLL_L :10.0deg 
+
+YAW_M :-16.70deg PITCH_M :-7.37deg ROLL_M :-4.10deg 
+YAW_L :-2.60deg PITCH_L :10.9deg ROLL_L :9.99deg 
+
+YAW_M :-16.76deg PITCH_M :-7.39deg ROLL_M :-4.16deg 
+YAW_L :-2.61deg PITCH_L :10.8deg ROLL_L :9.98deg 
+
+YAW_M :-16.80deg PITCH_M :-7.38deg ROLL_M :-4.20deg 
+YAW_L :-2.62deg PITCH_L :10.8deg ROLL_L :9.97deg 
+
+YAW_M :-16.80deg PITCH_M :-7.44deg ROLL_M :-4.20deg 
+YAW_L :-2.63deg PITCH_L :10.7deg ROLL_L :9.96deg 
+
+YAW_M :-16.83deg PITCH_M :-7.41deg ROLL_M :-4.23deg 
+YAW_L :-2.65deg PITCH_L :10.7deg ROLL_L :9.94deg 
+
+YAW_M :-16.83deg PITCH_M :-7.42deg ROLL_M :-4.23deg 
+YAW_L :-2.66deg PITCH_L :10.6deg ROLL_L :9.93deg 
+
+YAW_M :-16.84deg PITCH_M :-7.37deg ROLL_M :-4.24deg 
+YAW_L :-2.67deg PITCH_L :10.5deg ROLL_L :9.92deg 
+
+YAW_M :-16.84deg PITCH_M :-7.37deg ROLL_M :-4.24deg 
+YAW_L :-2.67deg PITCH_L :10.5deg ROLL_L :9.92deg 
+
+YAW_M :-16.85deg PITCH_M :-7.39deg ROLL_M :-4.25deg 
+YAW_L :-2.68deg PITCH_L :10.5deg ROLL_L :9.91deg 
+
+YAW_M :-16.85deg PITCH_M :-7.43deg ROLL_M :-4.25deg 
+YAW_L :-2.69deg PITCH_L :10.4deg ROLL_L :9.90deg 
+
+YAW_M :-16.81deg PITCH_M :-7.45deg ROLL_M :-4.21deg 
+YAW_L :-2.70deg PITCH_L :10.4deg ROLL_L :9.89deg 
+
+YAW_M :-16.82deg PITCH_M :-7.41deg ROLL_M :-4.22deg 
+YAW_L :-2.71deg PITCH_L :10.3deg ROLL_L :9.88deg 
+
+YAW_M :-16.81deg PITCH_M :-7.45deg ROLL_M :-4.21deg 
+YAW_L :-2.72deg PITCH_L :10.2deg ROLL_L :9.87deg 
+
+YAW_M :-16.77deg PITCH_M :-7.47deg ROLL_M :-4.17deg 
+YAW_L :-2.73deg PITCH_L :10.2deg ROLL_L :9.86deg 
+
+YAW_M :-16.76deg PITCH_M :-7.51deg ROLL_M :-4.16deg 
+YAW_L :-2.74deg PITCH_L :10.1deg ROLL_L :9.85deg 
+
+YAW_M :-16.78deg PITCH_M :-7.49deg ROLL_M :-4.18deg 
+YAW_L :-2.75deg PITCH_L :10.1deg ROLL_L :9.84deg 
+
+YAW_M :-16.83deg PITCH_M :-7.47deg ROLL_M :-4.23deg 
+YAW_L :-2.76deg PITCH_L :10.0deg ROLL_L :9.83deg 
+
+YAW_M :-16.83deg PITCH_M :-7.47deg ROLL_M :-4.23deg 
+YAW_L :-2.76deg PITCH_L :10.0deg ROLL_L :9.83deg 
+
+YAW_M :-16.88deg PITCH_M :-7.44deg ROLL_M :-4.28deg 
+YAW_L :-2.77deg PITCH_L :10.0deg ROLL_L :9.82deg 
+
+YAW_M :-16.87deg PITCH_M :-7.49deg ROLL_M :-4.27deg 
+YAW_L :-2.78deg PITCH_L :9.99deg ROLL_L :9.81deg 
+
+YAW_M :-16.87deg PITCH_M :-7.55deg ROLL_M :-4.27deg 
+YAW_L :-2.79deg PITCH_L :9.98deg ROLL_L :9.80deg 
+
+YAW_M :-16.84deg PITCH_M :-7.51deg ROLL_M :-4.24deg 
+YAW_L :-2.80deg PITCH_L :9.98deg ROLL_L :9.79deg 
+
+YAW_M :-16.88deg PITCH_M :-7.51deg ROLL_M :-4.28deg 
+YAW_L :-2.81deg PITCH_L :9.97deg ROLL_L :9.78deg 
+
+YAW_M :-16.84deg PITCH_M :-7.50deg ROLL_M :-4.24deg 
+YAW_L :-2.82deg PITCH_L :9.97deg ROLL_L :9.77deg 
+
+YAW_M :-16.83deg PITCH_M :-7.45deg ROLL_M :-4.23deg 
+YAW_L :-2.83deg PITCH_L :9.96deg ROLL_L :9.76deg 
+
+YAW_M :-16.87deg PITCH_M :-7.40deg ROLL_M :-4.27deg 
+YAW_L :-2.84deg PITCH_L :9.96deg ROLL_L :9.75deg 
+
+YAW_M :-16.87deg PITCH_M :-7.40deg ROLL_M :-4.27deg 
+YAW_L :-2.84deg PITCH_L :9.96deg ROLL_L :9.75deg 
+
+YAW_M :-16.87deg PITCH_M :-7.38deg ROLL_M :-4.27deg 
+YAW_L :-2.85deg PITCH_L :9.95deg ROLL_L :9.74deg 
+
+YAW_M :-16.88deg PITCH_M :-7.34deg ROLL_M :-4.28deg 
+YAW_L :-2.86deg PITCH_L :9.95deg ROLL_L :9.73deg 
+
+YAW_M :-16.89deg PITCH_M :-7.37deg ROLL_M :-4.29deg 
+YAW_L :-2.87deg PITCH_L :9.94deg ROLL_L :9.72deg 
+
+YAW_M :-16.92deg PITCH_M :-7.36deg ROLL_M :-4.32deg 
+YAW_L :-2.88deg PITCH_L :9.94deg ROLL_L :9.71deg 
+
+YAW_M :-16.89deg PITCH_M :-7.40deg ROLL_M :-4.29deg 
+YAW_L :-2.89deg PITCH_L :9.93deg ROLL_L :9.70deg 
+
+YAW_M :-16.92deg PITCH_M :-7.39deg ROLL_M :-4.32deg 
+YAW_L :-2.90deg PITCH_L :9.93deg ROLL_L :9.69deg 
+
+YAW_M :-16.90deg PITCH_M :-7.43deg ROLL_M :-4.30deg 
+YAW_L :-2.92deg PITCH_L :9.92deg ROLL_L :9.67deg 
+
+YAW_M :-16.90deg PITCH_M :-7.42deg ROLL_M :-4.30deg 
+YAW_L :-2.93deg PITCH_L :9.91deg ROLL_L :9.66deg 
+
+YAW_M :-16.93deg PITCH_M :-7.42deg ROLL_M :-4.33deg 
+YAW_L :-2.94deg PITCH_L :9.91deg ROLL_L :9.65deg 
+
+YAW_M :-16.93deg PITCH_M :-7.42deg ROLL_M :-4.33deg 
+YAW_L :-2.94deg PITCH_L :9.91deg ROLL_L :9.65deg 
+
+YAW_M :-16.92deg PITCH_M :-7.46deg ROLL_M :-4.32deg 
+YAW_L :-2.95deg PITCH_L :9.91deg ROLL_L :9.64deg 
+
+YAW_M :-16.96deg PITCH_M :-7.47deg ROLL_M :-4.36deg 
+YAW_L :-2.96deg PITCH_L :9.90deg ROLL_L :9.63deg 
+
+YAW_M :-16.91deg PITCH_M :-7.46deg ROLL_M :-4.31deg 
+YAW_L :-2.97deg PITCH_L :9.89deg ROLL_L :9.62deg 
+
+YAW_M :-16.95deg PITCH_M :-7.48deg ROLL_M :-4.35deg 
+YAW_L :-2.98deg PITCH_L :9.89deg ROLL_L :9.61deg 
+
+YAW_M :-16.95deg PITCH_M :-7.42deg ROLL_M :-4.35deg 
+YAW_L :-2.99deg PITCH_L :9.88deg ROLL_L :9.60deg 
+
+YAW_M :-16.99deg PITCH_M :-7.38deg ROLL_M :-4.39deg 
+YAW_L :-3.0deg PITCH_L :9.88deg ROLL_L :9.59deg 
+
+YAW_M :-16.97deg PITCH_M :-7.43deg ROLL_M :-4.37deg 
+YAW_L :-3.1deg PITCH_L :9.87deg ROLL_L :9.58deg 
+
+YAW_M :-17.0deg PITCH_M :-7.45deg ROLL_M :-4.40deg 
+YAW_L :-3.2deg PITCH_L :9.87deg ROLL_L :9.57deg 
+
+YAW_M :-17.0deg PITCH_M :-7.45deg ROLL_M :-4.40deg 
+YAW_L :-3.2deg PITCH_L :9.87deg ROLL_L :9.57deg 
+
+YAW_M :-16.98deg PITCH_M :-7.41deg ROLL_M :-4.38deg 
+YAW_L :-3.3deg PITCH_L :9.86deg ROLL_L :9.56deg 
+
+YAW_M :-16.94deg PITCH_M :-7.38deg ROLL_M :-4.34deg 
+YAW_L :-3.4deg PITCH_L :9.86deg ROLL_L :9.55deg 
+
+YAW_M :-16.90deg PITCH_M :-7.41deg ROLL_M :-4.30deg 
+YAW_L :-3.5deg PITCH_L :9.85deg ROLL_L :9.54deg 
+
+YAW_M :-16.88deg PITCH_M :-7.36deg ROLL_M :-4.28deg 
+YAW_L :-3.6deg PITCH_L :9.84deg ROLL_L :9.53deg 
+
+YAW_M :-16.91deg PITCH_M :-7.40deg ROLL_M :-4.31deg 
+YAW_L :-3.7deg PITCH_L :9.84deg ROLL_L :9.52deg 
+
+YAW_M :-16.96deg PITCH_M :-7.43deg ROLL_M :-4.36deg 
+YAW_L :-3.8deg PITCH_L :9.84deg ROLL_L :9.51deg 
+
+YAW_M :-16.98deg PITCH_M :-7.50deg ROLL_M :-4.38deg 
+YAW_L :-3.9deg PITCH_L :9.83deg ROLL_L :9.50deg 
+
+YAW_M :-16.98deg PITCH_M :-7.50deg ROLL_M :-4.38deg 
+YAW_L :-3.9deg PITCH_L :9.83deg ROLL_L :9.50deg 
+
+YAW_M :-16.97deg PITCH_M :-7.38deg ROLL_M :-4.37deg 
+YAW_L :-3.11deg PITCH_L :9.82deg ROLL_L :9.48deg 
+
+YAW_M :-16.97deg PITCH_M :-7.38deg ROLL_M :-4.37deg 
+YAW_L :-3.11deg PITCH_L :9.82deg ROLL_L :9.48deg 
+
+YAW_M :-16.96deg PITCH_M :-7.40deg ROLL_M :-4.36deg 
+YAW_L :-3.12deg PITCH_L :9.81deg ROLL_L :9.47deg 
+
+YAW_M :-16.95deg PITCH_M :-7.34deg ROLL_M :-4.35deg 
+YAW_L :-3.13deg PITCH_L :9.81deg ROLL_L :9.46deg 
+
+YAW_M :-16.94deg PITCH_M :-7.39deg ROLL_M :-4.34deg 
+YAW_L :-3.14deg PITCH_L :9.80deg ROLL_L :9.45deg 
+
+YAW_M :-16.96deg PITCH_M :-7.42deg ROLL_M :-4.36deg 
+YAW_L :-3.15deg PITCH_L :9.79deg ROLL_L :9.44deg 
+
+YAW_M :-16.97deg PITCH_M :-7.43deg ROLL_M :-4.37deg 
+YAW_L :-3.16deg PITCH_L :9.79deg ROLL_L :9.43deg 
+
+YAW_M :-17.0deg PITCH_M :-7.44deg ROLL_M :-4.40deg 
+YAW_L :-3.17deg PITCH_L :9.78deg ROLL_L :9.42deg 
+
+YAW_M :-17.0deg PITCH_M :-7.44deg ROLL_M :-4.40deg 
+YAW_L :-3.17deg PITCH_L :9.78deg ROLL_L :9.42deg 
+
+YAW_M :-17.2deg PITCH_M :-7.48deg ROLL_M :-4.42deg 
+YAW_L :-3.18deg PITCH_L :9.78deg ROLL_L :9.41deg 
+
+YAW_M :-16.97deg PITCH_M :-7.48deg ROLL_M :-4.37deg 
+YAW_L :-3.19deg PITCH_L :9.77deg ROLL_L :9.40deg 
+
+YAW_M :-16.96deg PITCH_M :-7.48deg ROLL_M :-4.36deg 
+YAW_L :-3.20deg PITCH_L :9.76deg ROLL_L :9.39deg 
+
+YAW_M :-16.97deg PITCH_M :-7.43deg ROLL_M :-4.37deg 
+YAW_L :-3.21deg PITCH_L :9.76deg ROLL_L :9.38deg 
+
+YAW_M :-17.1deg PITCH_M :-7.43deg ROLL_M :-4.41deg 
+YAW_L :-3.22deg PITCH_L :9.75deg ROLL_L :9.37deg 
+
+YAW_M :-17.7deg PITCH_M :-7.39deg ROLL_M :-4.47deg 
+YAW_L :-3.24deg PITCH_L :9.74deg ROLL_L :9.35deg 
+
+YAW_M :-17.3deg PITCH_M :-7.37deg ROLL_M :-4.43deg 
+YAW_L :-3.25deg PITCH_L :9.74deg ROLL_L :9.34deg 
+
+YAW_M :-17.1deg PITCH_M :-7.39deg ROLL_M :-4.41deg 
+YAW_L :-3.26deg PITCH_L :9.73deg ROLL_L :9.33deg 
+
+YAW_M :-17.1deg PITCH_M :-7.38deg ROLL_M :-4.41deg 
+YAW_L :-3.27deg PITCH_L :9.73deg ROLL_L :9.32deg 
+
+YAW_M :-17.1deg PITCH_M :-7.38deg ROLL_M :-4.41deg 
+YAW_L :-3.27deg PITCH_L :9.73deg ROLL_L :9.32deg 
+
+YAW_M :-17.2deg PITCH_M :-7.39deg ROLL_M :-4.42deg 
+YAW_L :-3.28deg PITCH_L :9.72deg ROLL_L :9.31deg 
+
+YAW_M :-16.99deg PITCH_M :-7.39deg ROLL_M :-4.39deg 
+YAW_L :-3.29deg PITCH_L :9.71deg ROLL_L :9.30deg 
+
+YAW_M :-16.98deg PITCH_M :-7.40deg ROLL_M :-4.38deg 
+YAW_L :-3.30deg PITCH_L :9.71deg ROLL_L :9.29deg 
+
+YAW_M :-17.2deg PITCH_M :-7.43deg ROLL_M :-4.42deg 
+YAW_L :-3.31deg PITCH_L :9.70deg ROLL_L :9.28deg 
+
+YAW_M :-17.4deg PITCH_M :-7.36deg ROLL_M :-4.44deg 
+YAW_L :-3.32deg PITCH_L :9.70deg ROLL_L :9.27deg 
+
+YAW_M :-16.98deg PITCH_M :-7.38deg ROLL_M :-4.38deg 
+YAW_L :-3.33deg PITCH_L :9.69deg ROLL_L :9.26deg 
+
+YAW_M :-16.98deg PITCH_M :-7.37deg ROLL_M :-4.38deg 
+YAW_L :-3.34deg PITCH_L :9.68deg ROLL_L :9.25deg 
+
+YAW_M :-17.1deg PITCH_M :-7.41deg ROLL_M :-4.41deg 
+YAW_L :-3.35deg PITCH_L :9.68deg ROLL_L :9.24deg 
+
+YAW_M :-17.1deg PITCH_M :-7.41deg ROLL_M :-4.41deg 
+YAW_L :-3.35deg PITCH_L :9.68deg ROLL_L :9.24deg 
+
+YAW_M :-17.4deg PITCH_M :-7.45deg ROLL_M :-4.44deg 
+YAW_L :-3.36deg PITCH_L :9.67deg ROLL_L :9.23deg 
+
+YAW_M :-17.0deg PITCH_M :-7.46deg ROLL_M :-4.40deg 
+YAW_L :-3.37deg PITCH_L :9.66deg ROLL_L :9.22deg 
+
+YAW_M :-16.98deg PITCH_M :-7.41deg ROLL_M :-4.38deg 
+YAW_L :-3.38deg PITCH_L :9.66deg ROLL_L :9.21deg 
+
+YAW_M :-16.96deg PITCH_M :-7.45deg ROLL_M :-4.36deg 
+YAW_L :-3.39deg PITCH_L :9.65deg ROLL_L :9.20deg 
+
+YAW_M :-17.0deg PITCH_M :-7.50deg ROLL_M :-4.40deg 
+YAW_L :-3.40deg PITCH_L :9.64deg ROLL_L :9.19deg 
+
+YAW_M :-16.97deg PITCH_M :-7.45deg ROLL_M :-4.37deg 
+YAW_L :-3.41deg PITCH_L :9.64deg ROLL_L :9.18deg 
+
+YAW_M :-16.92deg PITCH_M :-7.49deg ROLL_M :-4.32deg 
+YAW_L :-3.42deg PITCH_L :9.63deg ROLL_L :9.17deg 
+
+YAW_M :-16.96deg PITCH_M :-7.54deg ROLL_M :-4.36deg 
+YAW_L :-3.43deg PITCH_L :9.63deg ROLL_L :9.16deg 
+
+YAW_M :-17.1deg PITCH_M :-7.50deg ROLL_M :-4.41deg 
+YAW_L :-3.44deg PITCH_L :9.62deg ROLL_L :9.15deg 
+
+YAW_M :-17.1deg PITCH_M :-7.50deg ROLL_M :-4.41deg 
+YAW_L :-3.44deg PITCH_L :9.62deg ROLL_L :9.15deg 
+
+YAW_M :-17.3deg PITCH_M :-7.53deg ROLL_M :-4.43deg 
+YAW_L :-3.45deg PITCH_L :9.61deg ROLL_L :9.14deg 
+
+YAW_M :-17.4deg PITCH_M :-7.57deg ROLL_M :-4.44deg 
+YAW_L :-3.46deg PITCH_L :9.61deg ROLL_L :9.13deg 
+
+YAW_M :-17.6deg PITCH_M :-7.53deg ROLL_M :-4.46deg 
+YAW_L :-3.47deg PITCH_L :9.60deg ROLL_L :9.12deg 
+
+YAW_M :-17.1deg PITCH_M :-7.49deg ROLL_M :-4.41deg 
+YAW_L :-3.49deg PITCH_L :9.60deg ROLL_L :9.10deg 
+
+YAW_M :-17.6deg PITCH_M :-7.51deg ROLL_M :-4.46deg 
+YAW_L :-3.50deg PITCH_L :9.59deg ROLL_L :9.9deg 
+
+YAW_M :-17.4deg PITCH_M :-7.47deg ROLL_M :-4.44deg 
+YAW_L :-3.51deg PITCH_L :9.59deg ROLL_L :9.8deg 
+
+YAW_M :-17.4deg PITCH_M :-7.52deg ROLL_M :-4.44deg 
+YAW_L :-3.52deg PITCH_L :9.58deg ROLL_L :9.7deg 
+
+YAW_M :-17.2deg PITCH_M :-7.53deg ROLL_M :-4.42deg 
+YAW_L :-3.53deg PITCH_L :9.57deg ROLL_L :9.6deg 
+
+YAW_M :-17.2deg PITCH_M :-7.53deg ROLL_M :-4.42deg 
+YAW_L :-3.53deg PITCH_L :9.57deg ROLL_L :9.6deg 
+
+YAW_M :-17.5deg PITCH_M :-7.49deg ROLL_M :-4.45deg 
+YAW_L :-3.54deg PITCH_L :9.56deg ROLL_L :9.5deg 
+
+YAW_M :-17.8deg PITCH_M :-7.54deg ROLL_M :-4.48deg 
+YAW_L :-3.55deg PITCH_L :9.56deg ROLL_L :9.4deg 
+
+YAW_M :-17.4deg PITCH_M :-7.59deg ROLL_M :-4.44deg 
+YAW_L :-3.56deg PITCH_L :9.55deg ROLL_L :9.3deg 
+
+YAW_M :-17.6deg PITCH_M :-7.65deg ROLL_M :-4.46deg 
+YAW_L :-3.57deg PITCH_L :9.54deg ROLL_L :9.2deg 
+
+YAW_M :-17.5deg PITCH_M :-7.68deg ROLL_M :-4.45deg 
+YAW_L :-3.58deg PITCH_L :9.54deg ROLL_L :9.1deg 
+
+YAW_M :-17.5deg PITCH_M :-7.62deg ROLL_M :-4.45deg 
+YAW_L :-3.59deg PITCH_L :9.53deg ROLL_L :9.0deg 
+
+YAW_M :-17.4deg PITCH_M :-7.57deg ROLL_M :-4.44deg 
+YAW_L :-3.60deg PITCH_L :9.53deg ROLL_L :8.99deg 
+
+YAW_M :-17.4deg PITCH_M :-7.57deg ROLL_M :-4.44deg 
+YAW_L :-3.60deg PITCH_L :9.53deg ROLL_L :8.99deg 
+
+YAW_M :-16.98deg PITCH_M :-7.51deg ROLL_M :-4.38deg 
+YAW_L :-3.62deg PITCH_L :9.51deg ROLL_L :8.97deg 
+
+YAW_M :-16.98deg PITCH_M :-7.51deg ROLL_M :-4.38deg 
+YAW_L :-3.62deg PITCH_L :9.51deg ROLL_L :8.97deg 
+
+YAW_M :-17.3deg PITCH_M :-7.52deg ROLL_M :-4.43deg 
+YAW_L :-3.63deg PITCH_L :9.50deg ROLL_L :8.96deg 
+
+YAW_M :-16.98deg PITCH_M :-7.48deg ROLL_M :-4.38deg 
+YAW_L :-3.64deg PITCH_L :9.50deg ROLL_L :8.95deg 
+
+YAW_M :-16.99deg PITCH_M :-7.43deg ROLL_M :-4.39deg 
+YAW_L :-3.65deg PITCH_L :9.49deg ROLL_L :8.94deg 
+
+YAW_M :-17.5deg PITCH_M :-7.45deg ROLL_M :-4.45deg 
+YAW_L :-3.66deg PITCH_L :9.48deg ROLL_L :8.93deg 
+
+YAW_M :-17.8deg PITCH_M :-7.41deg ROLL_M :-4.48deg 
+YAW_L :-3.67deg PITCH_L :9.48deg ROLL_L :8.92deg 
+
+YAW_M :-17.12deg PITCH_M :-7.42deg ROLL_M :-4.52deg 
+YAW_L :-3.68deg PITCH_L :9.47deg ROLL_L :8.91deg 
+
+YAW_M :-17.12deg PITCH_M :-7.42deg ROLL_M :-4.52deg 
+YAW_L :-3.68deg PITCH_L :9.47deg ROLL_L :8.91deg 
+
+YAW_M :-17.15deg PITCH_M :-7.42deg ROLL_M :-4.55deg 
+YAW_L :-3.69deg PITCH_L :9.46deg ROLL_L :8.90deg 
+
+YAW_M :-17.19deg PITCH_M :-7.45deg ROLL_M :-4.59deg 
+YAW_L :-3.70deg PITCH_L :9.46deg ROLL_L :8.89deg 
+
+YAW_M :-17.14deg PITCH_M :-7.44deg ROLL_M :-4.54deg 
+YAW_L :-3.71deg PITCH_L :9.45deg ROLL_L :8.88deg 
+
+YAW_M :-17.17deg PITCH_M :-7.50deg ROLL_M :-4.57deg 
+YAW_L :-3.72deg PITCH_L :9.44deg ROLL_L :8.87deg 
+
+YAW_M :-17.13deg PITCH_M :-7.54deg ROLL_M :-4.53deg 
+YAW_L :-3.73deg PITCH_L :9.44deg ROLL_L :8.86deg 
+
+YAW_M :-17.17deg PITCH_M :-7.49deg ROLL_M :-4.57deg 
+YAW_L :-3.74deg PITCH_L :9.43deg ROLL_L :8.85deg 
+
+YAW_M :-17.17deg PITCH_M :-7.56deg ROLL_M :-4.57deg 
+YAW_L :-3.75deg PITCH_L :9.42deg ROLL_L :8.84deg 
+
+YAW_M :-17.15deg PITCH_M :-7.58deg ROLL_M :-4.55deg 
+YAW_L :-3.76deg PITCH_L :9.42deg ROLL_L :8.83deg 
+
+YAW_M :-17.11deg PITCH_M :-7.54deg ROLL_M :-4.51deg 
+YAW_L :-3.77deg PITCH_L :9.41deg ROLL_L :8.82deg 
+
+YAW_M :-17.11deg PITCH_M :-7.54deg ROLL_M :-4.51deg 
+YAW_L :-3.77deg PITCH_L :9.41deg ROLL_L :8.82deg 
+
+YAW_M :-17.10deg PITCH_M :-7.47deg ROLL_M :-4.50deg 
+YAW_L :-3.78deg PITCH_L :9.40deg ROLL_L :8.81deg 
+
+YAW_M :-17.14deg PITCH_M :-7.52deg ROLL_M :-4.54deg 
+YAW_L :-3.79deg PITCH_L :9.39deg ROLL_L :8.80deg 
+
+YAW_M :-17.7deg PITCH_M :-7.50deg ROLL_M :-4.47deg 
+YAW_L :-3.80deg PITCH_L :9.39deg ROLL_L :8.79deg 
+
+YAW_M :-17.11deg PITCH_M :-7.47deg ROLL_M :-4.51deg 
+YAW_L :-3.81deg PITCH_L :9.38deg ROLL_L :8.78deg 
+
+YAW_M :-17.14deg PITCH_M :-7.42deg ROLL_M :-4.54deg 
+YAW_L :-3.82deg PITCH_L :9.37deg ROLL_L :8.77deg 
+
+YAW_M :-17.14deg PITCH_M :-7.48deg ROLL_M :-4.54deg 
+YAW_L :-3.83deg PITCH_L :9.37deg ROLL_L :8.76deg 
+
+YAW_M :-17.16deg PITCH_M :-7.48deg ROLL_M :-4.56deg 
+YAW_L :-3.84deg PITCH_L :9.36deg ROLL_L :8.75deg 
+
+YAW_M :-17.12deg PITCH_M :-7.51deg ROLL_M :-4.52deg 
+YAW_L :-3.85deg PITCH_L :9.35deg ROLL_L :8.74deg 
+
+YAW_M :-17.12deg PITCH_M :-7.51deg ROLL_M :-4.52deg 
+YAW_L :-3.85deg PITCH_L :9.35deg ROLL_L :8.74deg 
+
+YAW_M :-17.18deg PITCH_M :-7.51deg ROLL_M :-4.58deg 
+YAW_L :-3.86deg PITCH_L :9.34deg ROLL_L :8.73deg 
+
+YAW_M :-17.17deg PITCH_M :-7.49deg ROLL_M :-4.57deg 
+YAW_L :-3.87deg PITCH_L :9.34deg ROLL_L :8.72deg 
+
+YAW_M :-17.12deg PITCH_M :-7.49deg ROLL_M :-4.52deg 
+YAW_L :-3.88deg PITCH_L :9.33deg ROLL_L :8.71deg 
+
+YAW_M :-17.13deg PITCH_M :-7.53deg ROLL_M :-4.53deg 
+YAW_L :-3.89deg PITCH_L :9.32deg ROLL_L :8.70deg 
+
+YAW_M :-17.7deg PITCH_M :-7.54deg ROLL_M :-4.47deg 
+YAW_L :-3.90deg PITCH_L :9.32deg ROLL_L :8.69deg 
+
+YAW_M :-17.11deg PITCH_M :-7.56deg ROLL_M :-4.51deg 
+YAW_L :-3.91deg PITCH_L :9.31deg ROLL_L :8.68deg 
+
+YAW_M :-17.12deg PITCH_M :-7.62deg ROLL_M :-4.52deg 
+YAW_L :-3.92deg PITCH_L :9.30deg ROLL_L :8.67deg 
+
+YAW_M :-17.10deg PITCH_M :-7.68deg ROLL_M :-4.50deg 
+YAW_L :-3.93deg PITCH_L :9.30deg ROLL_L :8.66deg 
+
+YAW_M :-17.17deg PITCH_M :-7.68deg ROLL_M :-4.57deg 
+YAW_L :-3.94deg PITCH_L :9.29deg ROLL_L :8.65deg 
+
+YAW_M :-17.17deg PITCH_M :-7.68deg ROLL_M :-4.57deg 
+YAW_L :-3.94deg PITCH_L :9.29deg ROLL_L :8.65deg 
+
+YAW_M :-17.20deg PITCH_M :-7.64deg ROLL_M :-4.60deg 
+YAW_L :-3.96deg PITCH_L :9.28deg ROLL_L :8.63deg 
+
+YAW_M :-17.26deg PITCH_M :-7.63deg ROLL_M :-4.66deg 
+YAW_L :-3.97deg PITCH_L :9.28deg ROLL_L :8.62deg 
+
+YAW_M :-17.30deg PITCH_M :-7.59deg ROLL_M :-4.70deg 
+YAW_L :-3.98deg PITCH_L :9.27deg ROLL_L :8.61deg 
+
+YAW_M :-17.28deg PITCH_M :-7.56deg ROLL_M :-4.68deg 
+YAW_L :-3.98deg PITCH_L :9.26deg ROLL_L :8.61deg 
+
+YAW_M :-17.23deg PITCH_M :-7.51deg ROLL_M :-4.63deg 
+YAW_L :-3.99deg PITCH_L :9.26deg ROLL_L :8.60deg 
+
+YAW_M :-17.22deg PITCH_M :-7.53deg ROLL_M :-4.62deg 
+YAW_L :-4.0deg PITCH_L :9.25deg ROLL_L :8.59deg 
+
+YAW_M :-17.22deg PITCH_M :-7.46deg ROLL_M :-4.62deg 
+YAW_L :-4.1deg PITCH_L :9.24deg ROLL_L :8.58deg 
+
+YAW_M :-17.25deg PITCH_M :-7.51deg ROLL_M :-4.65deg 
+YAW_L :-4.2deg PITCH_L :9.23deg ROLL_L :8.57deg 
+
+YAW_M :-17.25deg PITCH_M :-7.51deg ROLL_M :-4.65deg 
+YAW_L :-4.2deg PITCH_L :9.23deg ROLL_L :8.57deg 
+
+YAW_M :-17.28deg PITCH_M :-7.51deg ROLL_M :-4.68deg 
+YAW_L :-4.3deg PITCH_L :9.23deg ROLL_L :8.56deg 
+
+YAW_M :-17.23deg PITCH_M :-7.54deg ROLL_M :-4.63deg 
+YAW_L :-4.4deg PITCH_L :9.22deg ROLL_L :8.55deg 
+
+YAW_M :-17.18deg PITCH_M :-7.50deg ROLL_M :-4.58deg 
+YAW_L :-4.5deg PITCH_L :9.21deg ROLL_L :8.54deg 
+
+YAW_M :-17.23deg PITCH_M :-7.52deg ROLL_M :-4.63deg 
+YAW_L :-4.6deg PITCH_L :9.20deg ROLL_L :8.53deg 
+
+YAW_M :-17.27deg PITCH_M :-7.56deg ROLL_M :-4.67deg 
+YAW_L :-4.7deg PITCH_L :9.20deg ROLL_L :8.52deg 
+
+YAW_M :-17.21deg PITCH_M :-7.54deg ROLL_M :-4.61deg 
+YAW_L :-4.9deg PITCH_L :9.19deg ROLL_L :8.50deg 
+
+YAW_M :-17.21deg PITCH_M :-7.47deg ROLL_M :-4.61deg 
+YAW_L :-4.10deg PITCH_L :9.18deg ROLL_L :8.49deg 
+
+YAW_M :-17.21deg PITCH_M :-7.47deg ROLL_M :-4.61deg 
+YAW_L :-4.10deg PITCH_L :9.18deg ROLL_L :8.49deg 
+
+YAW_M :-17.24deg PITCH_M :-7.40deg ROLL_M :-4.64deg 
+YAW_L :-4.12deg PITCH_L :9.17deg ROLL_L :8.47deg 
+
+YAW_M :-17.24deg PITCH_M :-7.40deg ROLL_M :-4.64deg 
+YAW_L :-4.12deg PITCH_L :9.17deg ROLL_L :8.47deg 
+
+YAW_M :-17.24deg PITCH_M :-7.45deg ROLL_M :-4.64deg 
+YAW_L :-4.13deg PITCH_L :9.16deg ROLL_L :8.46deg 
+
+YAW_M :-17.29deg PITCH_M :-7.45deg ROLL_M :-4.69deg 
+YAW_L :-4.14deg PITCH_L :9.15deg ROLL_L :8.45deg 
+
+YAW_M :-17.31deg PITCH_M :-7.50deg ROLL_M :-4.71deg 
+YAW_L :-4.15deg PITCH_L :9.15deg ROLL_L :8.44deg 
+
+YAW_M :-17.29deg PITCH_M :-7.54deg ROLL_M :-4.69deg 
+YAW_L :-4.16deg PITCH_L :9.14deg ROLL_L :8.43deg 
+
+YAW_M :-17.35deg PITCH_M :-7.51deg ROLL_M :-4.75deg 
+YAW_L :-4.17deg PITCH_L :9.13deg ROLL_L :8.42deg 
+
+YAW_M :-17.31deg PITCH_M :-7.57deg ROLL_M :-4.71deg 
+YAW_L :-4.18deg PITCH_L :9.12deg ROLL_L :8.41deg 
+
+YAW_M :-17.26deg PITCH_M :-7.58deg ROLL_M :-4.66deg 
+YAW_L :-4.19deg PITCH_L :9.12deg ROLL_L :8.40deg 
+
+YAW_M :-17.26deg PITCH_M :-7.58deg ROLL_M :-4.66deg 
+YAW_L :-4.19deg PITCH_L :9.12deg ROLL_L :8.40deg 
+
+YAW_M :-17.21deg PITCH_M :-7.56deg ROLL_M :-4.61deg 
+YAW_L :-4.20deg PITCH_L :9.11deg ROLL_L :8.39deg 
+
+YAW_M :-17.26deg PITCH_M :-7.57deg ROLL_M :-4.66deg 
+YAW_L :-4.21deg PITCH_L :9.10deg ROLL_L :8.38deg 
+
+YAW_M :-17.29deg PITCH_M :-7.53deg ROLL_M :-4.69deg 
+YAW_L :-4.21deg PITCH_L :9.9deg ROLL_L :8.38deg 
+
+YAW_M :-17.24deg PITCH_M :-7.50deg ROLL_M :-4.64deg 
+YAW_L :-4.22deg PITCH_L :9.9deg ROLL_L :8.37deg 
+
+YAW_M :-17.24deg PITCH_M :-7.50deg ROLL_M :-4.64deg 
+YAW_L :-4.23deg PITCH_L :9.8deg ROLL_L :8.36deg 
+
+YAW_M :-17.22deg PITCH_M :-7.55deg ROLL_M :-4.62deg 
+YAW_L :-4.24deg PITCH_L :9.7deg ROLL_L :8.35deg 
+
+YAW_M :-17.24deg PITCH_M :-7.49deg ROLL_M :-4.64deg 
+YAW_L :-4.25deg PITCH_L :9.6deg ROLL_L :8.34deg 
+
+YAW_M :-17.24deg PITCH_M :-7.55deg ROLL_M :-4.64deg 
+YAW_L :-4.26deg PITCH_L :9.6deg ROLL_L :8.33deg 
+
+YAW_M :-17.24deg PITCH_M :-7.55deg ROLL_M :-4.64deg 
+YAW_L :-4.26deg PITCH_L :9.6deg ROLL_L :8.33deg 
+
+YAW_M :-17.26deg PITCH_M :-7.60deg ROLL_M :-4.66deg 
+YAW_L :-4.27deg PITCH_L :9.5deg ROLL_L :8.32deg 
+
+YAW_M :-17.24deg PITCH_M :-7.54deg ROLL_M :-4.64deg 
+YAW_L :-4.28deg PITCH_L :9.4deg ROLL_L :8.31deg 
+
+YAW_M :-17.24deg PITCH_M :-7.51deg ROLL_M :-4.64deg 
+YAW_L :-4.29deg PITCH_L :9.3deg ROLL_L :8.30deg 
+
+YAW_M :-17.24deg PITCH_M :-7.45deg ROLL_M :-4.64deg 
+YAW_L :-4.30deg PITCH_L :9.3deg ROLL_L :8.29deg 
+
+YAW_M :-17.30deg PITCH_M :-7.42deg ROLL_M :-4.70deg 
+YAW_L :-4.31deg PITCH_L :9.2deg ROLL_L :8.28deg 
+
+YAW_M :-17.26deg PITCH_M :-7.45deg ROLL_M :-4.66deg 
+YAW_L :-4.32deg PITCH_L :9.1deg ROLL_L :8.27deg 
+
+YAW_M :-17.26deg PITCH_M :-7.51deg ROLL_M :-4.66deg 
+YAW_L :-4.33deg PITCH_L :9.0deg ROLL_L :8.26deg 
+
+YAW_M :-17.20deg PITCH_M :-7.54deg ROLL_M :
+Disconnected from /dev/tty.usbserial-DA00G3O1

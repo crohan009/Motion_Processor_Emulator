@@ -1,0 +1,6 @@
+1530816472886	Rename resource 'LM4F_TM4C_uart'
+1530816622377	Delete resource 'MPU9150_and_LSM9DS0_with_LM4F_TM4C_uart'
+1530816679221	Delete resource 'MPU_MPL_LM4F_TM4C_uart'
+1531006237543	Rename resource 'i2c'
+1531006594537	Delete resource 'i2c'
+1531006604153	Rename resource 'i2c_1'

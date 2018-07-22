@@ -1,0 +1,690 @@
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include "inc/hw_i2c.h"
+#include "inc/hw_ints.h"
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "inc/hw_gpio.h"
+#include "driverlib/i2c.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/interrupt.h"
+#include "driverlib/gpio.h"
+#include "driverlib/pin_map.h"
+#include "driverlib/uart.h"
+#include "include/uartstdio.h"
+#include "include/mpu_9150.h"
+#include "driverlib/systick.h"
+#include <math.h>
+#include "include/imu.h"
+
+uint32_t ic;
+uint32_t tst;
+uint32_t mm;
+uint32_t sx;
+uint32_t sy;
+uint32_t sz;
+uint32_t sa;
+
+uint32_t x_a;
+uint32_t y_a;
+uint32_t z_a;
+uint32_t x_g;
+uint32_t y_g;
+uint32_t z_g;
+int32_t temp;
+
+
+# define G          9.80665    // acceleration due to gravity
+
+float SelfTest[6];
+float gyroBias[3] = {0, 0, 0}, accelBias[3] = {0, 0, 0};      // Bias corrections for gyro and accelerometer
+float aRes, gRes, mRes, lsm_mRes; // scale resolutions per LSB for the sensors
+int16_t accelCount[3];  // Stores the 16-bit signed accelerometer sensor output
+int16_t gyroCount[3];
+int16_t magCount[3];    // Stores the 16-bit signed magnetometer sensor output
+float magCalibration[3] = {0, 0, 0};
+
+float gyro_offsets[3] = {0, 0, 0};
+
+uint32_t mcount = 0; // used to control magnetometer read rate
+uint32_t MagRate;    // read rate for magnetometer data
+
+float ax, ay, az, gx, gy, gz, mx, my, mz; // variables to hold latest sensor data values
+float lsm_gx, lsm_gy, lsm_gz, lsm_mx, lsm_my, lsm_mz;
+float q_m[4] = {1.0f, 0.0f, 0.0f, 0.0f}; // quaternion of MPU-9150
+float q_l[4] = {1.0f, 0.0f, 0.0f, 0.0f}; // quaternion of LSM9DS0
+float beta = 0.6045997881;   // compute beta
+float zeta = 0;   // compute zeta, the other free parameter in the Madgwick scheme usually set to a small or zero value
+
+float pitch_m, yaw_m, roll_m, pitch_l, yaw_l, roll_l;
+float deltat = 0.0f;
+
+uint32_t lastUpdate = 0, firstUpdate = 0; // used to calculate integration interval
+uint32_t Now = 0;        // used to calculate integration interval
+
+
+uint32_t i;
+imu_scaled_data b;
+
+char pres[20];
+volatile uint32_t systick_n,ty = 0;
+
+enum IMU
+{
+    MPU_9150,
+    LSM_9DS0
+};
+
+void UARTIntHandler(void)
+{
+    uint32_t ui32Status;
+    ui32Status = UARTIntStatus(UART0_BASE, true); //get interrupt status
+    UARTIntClear(UART0_BASE, ui32Status); //clear the asserted interrupts
+    while(UARTCharsAvail(UART0_BASE)) //loop while there are chars
+    {
+        UARTCharPutNonBlocking(UART0_BASE, UARTCharGetNonBlocking(UART0_BASE)); //echo character
+
+    }
+}
+
+
+void ConfigureUART(void)
+{
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA); // Enable the GPIO Peripheral used by the UART.
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0); // Enable UART0
+    GPIOPinConfigure(GPIO_PA0_U0RX); // Configure GPIO Pins for UART mode.
+    GPIOPinConfigure(GPIO_PA1_U0TX);
+    GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);   
+    UARTClockSourceSet(UART0_BASE, UART_CLOCK_PIOSC); // Use the internal 16MHz oscillator as the UART clock source.
+    UARTStdioConfig(0, 115200, 16000000); // Initialize the UART for console I/O.
+}
+
+void systick_int_handler(void)
+{
+    systick_n++;
+}
+
+void SysTickbegin()
+{
+    SysTickPeriodSet(160000);
+    SysTickIntEnable();
+    SysTickEnable();
+}
+
+long get_ms()
+{
+    return systick_n; // Returns the current time in milliseconds
+}
+
+void print_float(double v)
+{
+  int decimal = 2;
+  int i = 1;
+  int intPart, fractPart;
+  for (;decimal!=0; i*=10, decimal--);
+  intPart = (int)v;
+  fractPart = (int)((v-(double)(int)v)*i);
+  if(fractPart < 0) fractPart *= -1;
+  UARTprintf("%i.%i", intPart, fractPart);
+}
+
+// reverses a string 'str' of length 'len'
+void reverse(char *str, int len)
+{
+    int i=0, j=len-1, temp;
+    while (i<j)
+    {
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+        i++; j--;
+    }
+}
+
+ // Converts a given integer x to string str[].  d is the number
+ // of digits required in output. If d is more than the number
+ // of digits in x, then 0s are added at the beginning.
+int intToStr(int x, char str[], int d)
+{
+    int i = 0;
+    while (x)
+    {
+        str[i++] = (x%10) + '0';
+        x = x/10;
+    }
+
+    // If number of digits required is more, then
+    // add 0s at the beginning
+    while (i < d)
+        str[i++] = '0';
+
+    reverse(str, i);
+    str[i] = '\0';
+    return i;
+}
+
+// Converts a floating point number to string.
+void ftoa(float n, char *res, int afterpoint)
+{
+    // Extract integer part
+    int ipart = (int)n;
+
+    // Extract floating part
+    float fpart = n - (float)ipart;
+
+    // convert integer part to string
+    int i = intToStr(ipart, res, 0);
+
+    // check for display option after point
+    if (afterpoint != 0)
+    {
+        res[i] = '.';  // add dot
+
+        // Get the value of fraction part upto given no.
+        // of points after dot. The third parameter is needed
+        // to handle cases like 233.007
+        fpart = fpart * pow(10, afterpoint);
+
+        intToStr((int)fpart, res + i + 1, afterpoint);
+    }
+}
+
+void MadgwickQuaternionUpdate(float ax, float ay, float az, float gx, float gy, float gz, float mx, float my, float mz,enum IMU x)
+        {
+            float q1 , q2 , q3 , q4;
+            switch(x)
+            {
+                case MPU_9150:
+                    q1 = q_m[0]; q2 = q_m[1]; q3 = q_m[2]; q4 = q_m[3];
+                    break;
+                case LSM_9DS0:
+                    q1 = q_l[0]; q2 = q_l[1]; q3 = q_l[2]; q4 = q_l[3];
+                    break;
+                default:
+                    return;
+            }
+              // short name local variable for readability
+            float norm;
+            float hx, hy, _2bx, _2bz;
+            float s1, s2, s3, s4;
+            float qDot1, qDot2, qDot3, qDot4;
+//            float gerrx, gerry, gerrz, gbiasx, gbiasy, gbiasz;        // gyro bias error
+
+            // Auxiliary variables to avoid repeated arithmetic
+            float _2q1mx;
+            float _2q1my;
+            float _2q1mz;
+            float _2q2mx;
+            float _4bx;
+            float _4bz;
+            float _2q1 = 2.0f * q1;
+            float _2q2 = 2.0f * q2;
+            float _2q3 = 2.0f * q3;
+            float _2q4 = 2.0f * q4;
+            float _2q1q3 = 2.0f * q1 * q3;
+            float _2q3q4 = 2.0f * q3 * q4;
+            float q1q1 = q1 * q1;
+            float q1q2 = q1 * q2;
+            float q1q3 = q1 * q3;
+            float q1q4 = q1 * q4;
+            float q2q2 = q2 * q2;
+            float q2q3 = q2 * q3;
+            float q2q4 = q2 * q4;
+            float q3q3 = q3 * q3;
+            float q3q4 = q3 * q4;
+            float q4q4 = q4 * q4;
+
+            // Normalise accelerometer measurement
+            norm = sqrt(ax * ax + ay * ay + az * az);
+            if (norm == 0.0f) return; // handle NaN
+            norm = 1.0f/norm;
+            ax *= norm;
+            ay *= norm;
+            az *= norm;
+
+            // Normalise magnetometer measurement
+            norm = sqrt(mx * mx + my * my + mz * mz);
+            if (norm == 0.0f) return; // handle NaN
+            norm = 1.0f/norm;
+            mx *= norm;
+            my *= norm;
+            mz *= norm;
+
+            // Reference direction of Earth's magnetic field
+            _2q1mx = 2.0f * q1 * mx;
+            _2q1my = 2.0f * q1 * my;
+            _2q1mz = 2.0f * q1 * mz;
+            _2q2mx = 2.0f * q2 * mx;
+            hx = mx * q1q1 - _2q1my * q4 + _2q1mz * q3 + mx * q2q2 + _2q2 * my * q3 + _2q2 * mz * q4 - mx * q3q3 - mx * q4q4;
+            hy = _2q1mx * q4 + my * q1q1 - _2q1mz * q2 + _2q2mx * q3 - my * q2q2 + my * q3q3 + _2q3 * mz * q4 - my * q4q4;
+            _2bx = sqrt(hx * hx + hy * hy);
+            _2bz = -_2q1mx * q3 + _2q1my * q2 + mz * q1q1 + _2q2mx * q4 - mz * q2q2 + _2q3 * my * q4 - mz * q3q3 + mz * q4q4;
+            _4bx = 2.0f * _2bx;
+            _4bz = 2.0f * _2bz;
+
+            // Gradient decent algorithm corrective step
+            s1 = -_2q3 * (2.0f * q2q4 - _2q1q3 - ax) + _2q2 * (2.0f * q1q2 + _2q3q4 - ay) - _2bz * q3 * (_2bx * (0.5f - q3q3 - q4q4) + _2bz * (q2q4 - q1q3) - mx) + (-_2bx * q4 + _2bz * q2) * (_2bx * (q2q3 - q1q4) + _2bz * (q1q2 + q3q4) - my) + _2bx * q3 * (_2bx * (q1q3 + q2q4) + _2bz * (0.5f - q2q2 - q3q3) - mz);
+            s2 = _2q4 * (2.0f * q2q4 - _2q1q3 - ax) + _2q1 * (2.0f * q1q2 + _2q3q4 - ay) - 4.0f * q2 * (1.0f - 2.0f * q2q2 - 2.0f * q3q3 - az) + _2bz * q4 * (_2bx * (0.5f - q3q3 - q4q4) + _2bz * (q2q4 - q1q3) - mx) + (_2bx * q3 + _2bz * q1) * (_2bx * (q2q3 - q1q4) + _2bz * (q1q2 + q3q4) - my) + (_2bx * q4 - _4bz * q2) * (_2bx * (q1q3 + q2q4) + _2bz * (0.5f - q2q2 - q3q3) - mz);
+            s3 = -_2q1 * (2.0f * q2q4 - _2q1q3 - ax) + _2q4 * (2.0f * q1q2 + _2q3q4 - ay) - 4.0f * q3 * (1.0f - 2.0f * q2q2 - 2.0f * q3q3 - az) + (-_4bx * q3 - _2bz * q1) * (_2bx * (0.5f - q3q3 - q4q4) + _2bz * (q2q4 - q1q3) - mx) + (_2bx * q2 + _2bz * q4) * (_2bx * (q2q3 - q1q4) + _2bz * (q1q2 + q3q4) - my) + (_2bx * q1 - _4bz * q3) * (_2bx * (q1q3 + q2q4) + _2bz * (0.5f - q2q2 - q3q3) - mz);
+            s4 = _2q2 * (2.0f * q2q4 - _2q1q3 - ax) + _2q3 * (2.0f * q1q2 + _2q3q4 - ay) + (-_4bx * q4 + _2bz * q2) * (_2bx * (0.5f - q3q3 - q4q4) + _2bz * (q2q4 - q1q3) - mx) + (-_2bx * q1 + _2bz * q3) * (_2bx * (q2q3 - q1q4) + _2bz * (q1q2 + q3q4) - my) + _2bx * q2 * (_2bx * (q1q3 + q2q4) + _2bz * (0.5f - q2q2 - q3q3) - mz);
+            norm = sqrt(s1 * s1 + s2 * s2 + s3 * s3 + s4 * s4);    // normalise step magnitude
+            norm = 1.0f/norm;
+            s1 *= norm;
+            s2 *= norm;
+            s3 *= norm;
+            s4 *= norm;
+            // Compute rate of change of quaternion
+            qDot1 = 0.5f * (-q2 * gx - q3 * gy - q4 * gz) - beta * s1;
+            qDot2 = 0.5f * ( q1 * gx + q3 * gz - q4 * gy) - beta * s2;
+            qDot3 = 0.5f * ( q1 * gy - q2 * gz + q4 * gx) - beta * s3;
+            qDot4 = 0.5f * ( q1 * gz + q2 * gy - q3 * gx) - beta * s4;
+
+            // Integrate to yield quaternion
+//            print_float(deltat);
+//            UARTprintf(" - d ");
+            q1 += qDot1 * deltat;
+            q2 += qDot2 * deltat;
+            q3 += qDot3 * deltat;
+            q4 += qDot4 * deltat;
+            norm = sqrt(q1 * q1 + q2 * q2 + q3 * q3 + q4 * q4);    // normalise quaternion
+            norm = 1.0f/norm;
+//            print_float(q2 * norm);
+//            UARTprintf(" - q\n");
+
+
+            switch(x)
+            {
+                case MPU_9150:
+                    q_m[0] = q1 * norm;
+                    q_m[1] = q2 * norm;
+                    q_m[2] = q3 * norm;
+                    q_m[3] = q4 * norm;
+                    break;
+                case LSM_9DS0:
+                    q_l[0] = q1 * norm;
+                    q_l[1] = q2 * norm;
+                    q_l[2] = q3 * norm;
+                    q_l[3] = q4 * norm;
+                    break;
+                default:
+                    return;
+            }
+}
+
+float mag_sensitivity_scale_factor[3] = {0.94, 1.03, 1.03};
+float magbias[3] = {-8.04, -1.03, 8.64};
+
+float heading, heading_lsm;
+
+float lsm_mag_sensitivity_scale_factor[3] = {1.01, 0.98, 1.02};
+float lsm_magbias[3] = {-24.39, 30.70, -4.35};
+
+
+//offset_x = -24.39
+//offset_y = 30.70
+//offset_z = -4.35
+//
+//scale_x = 1.01
+//scale_y = 0.98
+//scale_z = 1.02
+
+
+//magbias[0] = 18.48;     // User environmental x-axis correction in microTesla
+//magbias[1] = 18.46;     // User environmental y-axis correction in microTesla
+//magbias[2] = 1.46;      // User environmental z-axis correction in microTesla
+
+
+void calibrate_lsm_gyro(float gyro_offsets[3]){        // Calibrates the LSM gyrometer data with 500 samples
+    for(i = 0; i<500; i++){
+        read_scaled_imu_data(&b);
+        gyro_offsets[0] += b.gyro_data[0];
+        gyro_offsets[1] += b.gyro_data[1];
+        gyro_offsets[2] += b.gyro_data[2];
+    }
+    gyro_offsets[0] /= 500;
+    gyro_offsets[1] /= 500;
+    gyro_offsets[2] /= 500;
+}
+
+int main(void) {
+
+    mRes = 1200./4096.;         // Conversion from  full scale +-4096 to +-1200 microTesla full scale.
+    lsm_mRes = 0.48;            // https://cdn-shop.adafruit.com/datasheets/LSM9DS0.pdf -> page 13/74
+
+//    SysCtlClockSet(SYSCTL_SYSDIV_4 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+    SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+
+    InitI2C0();
+    ConfigureUART();
+    SysTickbegin();
+
+    IntMasterEnable(); //enable processor interrupts
+//    IntEnable(INT_UART0); //enable the UART interrupt
+//    UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT); //only enable RX and TX interrupts
+//
+//    UARTprintf("######################## LPS25H ########################\n");
+//    begin(0X5D);
+//    whoAmI();
+//    cal_LPS25();
+//    float set_p = 0;
+//    int i = 0;
+//    float avg = 0;
+//    for(i=0;i<100;i++){
+//        avg = avg + readPressure();
+//        delay(10);
+//    }
+//    set_p = avg/100;
+//    delay(1000);
+//                print_float(set_p);
+//                UARTprintf("\r\n");
+
+//
+    UARTprintf("######################## MPU - 9150 ########################\n");
+    UARTprintf("Who_am_I: %04x\n",I2CReceive(MPU9150_ADDRESS, 117));
+    MPU9150SelfTest(SelfTest);
+    if(SelfTest[0] < 1.0f && SelfTest[1] < 1.0f && SelfTest[2] < 1.0f && SelfTest[3] < 1.0f && SelfTest[4] < 1.0f && SelfTest[5] < 1.0f) {
+         UARTprintf("Self Test PASS\n");
+     }
+
+    calibrateMPU9150(gyroBias, accelBias);
+    UARTprintf("MPU-9150 calibrated \n");
+    delay(1000);
+//
+    initMPU9150();
+    UARTprintf("MPU-9150 initialized \n");
+    delay(1000);
+
+    ic = I2CReceive(AK8975A_ADDRESS, WHO_AM_I_AK8975A);
+    UARTprintf("Who_am_I_Mag: %04x\n",ic);
+    delay(1000);
+
+    initAK8975A(magCalibration);
+
+//    UARTprintf("Mag xyz sensitivity values : ");
+//    print_float(magCalibration[0]);
+//    UARTprintf("\t");
+//    print_float(magCalibration[1]);
+//    UARTprintf("\t");
+//    print_float(magCalibration[2]);
+//    UARTprintf("\n");
+
+    UARTprintf("Mag initialized \n");
+    delay(1000);
+//
+    MagRate = 50; // set magnetometer read rate in Hz; 10 to 100 (max) Hz are reasonable values
+
+    UARTprintf("######################## LSM9DS0 ########################\n");
+    UARTprintf("Who_am_I: %04x\n",I2CReceive(ADDR_ACCEL_LSM9,0x0f));
+    delay(1000);
+
+    init_imu_scaledStruct(&b, SCALE_2G, SCALE_2GAUSS, SCALE_250_DPS, UNIT_M_SQUARED);
+    init_imu(&b);
+
+    calibrate_lsm_gyro(&gyro_offsets);
+
+    UARTprintf("LSM initialized \n");
+    delay(1000);
+
+    while (1) {
+
+
+//        if (I2CReceive(MPU9150_ADDRESS, INT_STATUS) & 0x01){
+//            readAccelData(accelCount);  // Read the x/y/z adc values
+//            aRes = getAres();
+//
+//            // Now we'll calculate the accleration value into actual g's
+//            ax = (float)accelCount[0]*aRes;  // get actual g value, this depends on scale being set
+//            ay = (float)accelCount[1]*aRes;
+//            az = (float)accelCount[2]*aRes;
+//
+//            readGyroData(gyroCount);  // Read the x/y/z adc values
+//            gRes = getGres();
+//
+//            // Calculate the gyro value into actual degrees per second
+//            gx = (float)gyroCount[0]*gRes;  // get actual gyro value, this depends on scale being set
+//            gy = (float)gyroCount[1]*gRes;
+//            gz = (float)gyroCount[2]*gRes;
+//
+////            gx = (float) ((gyroCount[0] - gyroBias) * gRes) ;  // get actual gyro value, this depends on scale being set
+////            gy = (float) ((gyroCount[1] - gyroBias) * gRes) ;
+////            gz = (float) ((gyroCount[2] - gyroBias) * gRes) ;
+//
+//            temp = ((float) readTempData()) / 340. + 36.53;
+//
+//            mcount++;
+//            if (mcount > 200/MagRate) {     // this is a poor man's way of setting the magnetometer read rate (see below)
+//////
+//                readMagData(magCount);      // Reading the xyz mag raw adc values
+//
+////                 So far, magnetometer bias is calculated and subtracted here manually, should construct an algorithm to do it automatically
+////                 like the gyro and accelerometer biases
+//
+////             Calculate the magnetometer values in milliGauss
+////             Include factory calibration per data sheet and user environmental corrections
+////                mx = (float)magCount[0]*mRes*magCalibration[0] - magbias[0];  // get actual magnetometer value, this depends on scale being set
+////                my = (float)magCount[1]*mRes*magCalibration[1] - magbias[1];
+////                mz = (float)magCount[2]*mRes*magCalibration[2] - magbias[2];
+//                mcount = 0;
+//
+//                mx = ((float)magCount[0]*mRes - magbias[0]) * mag_sensitivity_scale_factor[0];
+//                my = ((float)magCount[1]*mRes - magbias[1]) * mag_sensitivity_scale_factor[1];
+//                mz = ((float)magCount[2]*mRes - magbias[2]) * mag_sensitivity_scale_factor[2];
+//
+////                print_float(magCount[0] * mRes);
+////                UARTprintf("\t");
+////                print_float(magCount[1] * mRes);
+////                UARTprintf("\t");
+////                print_float(magCount[2] * mRes);
+////                UARTprintf("\n");
+//
+////                print_float(mx);
+////                UARTprintf("\t");
+////                print_float(my);
+////                UARTprintf("\t");
+////                print_float(mz);
+////                UARTprintf("   |   ");
+////
+////                heading  = atan2(my, mx) * 180/PI;
+////                UARTprintf("Heading : \t");
+////                print_float(heading);
+////                UARTprintf("\n");
+//            }
+//       }
+
+        Now = get_ms();
+
+//        UARTprintf("Now = ");
+//        print_float(Now);
+//        UARTprintf("\t");
+//        UARTprintf("LastUpdate = ");
+//        print_float(lastUpdate);
+//        UARTprintf("\t");
+
+        deltat = ((Now - lastUpdate)/1000.0f); // set integration time by time elapsed since last filter update
+        lastUpdate = Now;
+
+
+//        UARTprintf("Del t = ");
+//        print_float(deltat);
+//        UARTprintf("\n");
+
+
+        read_scaled_imu_data(&b);
+
+        // Hard + Soft Iron Calibration of LSM's magnetometer
+//        lsm_mx = (b.mag_data[0]*lsm_mRes - 10*lsm_magbias[0]) * lsm_mag_sensitivity_scale_factor[0];
+//        lsm_my = (b.mag_data[1]*lsm_mRes - 10*lsm_magbias[1]) * lsm_mag_sensitivity_scale_factor[1];
+//        lsm_mz = (b.mag_data[2]*lsm_mRes - 10*lsm_magbias[2]) * lsm_mag_sensitivity_scale_factor[2];
+
+        lsm_gx = b.gyro_data[0] - gyro_offsets[0];
+        lsm_gy = b.gyro_data[1] - gyro_offsets[1];
+        lsm_gz = b.gyro_data[2] - gyro_offsets[2];
+
+        lsm_mx = (b.mag_data[0]*100 - lsm_magbias[0]) * lsm_mag_sensitivity_scale_factor[0];                     // mag x, y, z in micro-Tesla
+        lsm_my = (b.mag_data[1]*100 - lsm_magbias[1]) * lsm_mag_sensitivity_scale_factor[1];
+        lsm_mz = (b.mag_data[2]*100 - lsm_magbias[2]) * lsm_mag_sensitivity_scale_factor[2];
+
+
+//        MadgwickQuaternionUpdate(ax, ay, az, gx*PI/180.0f, gy*PI/180.0f, gz*PI/180.0f,  my,  mx, mz, MPU_9150);
+        MadgwickQuaternionUpdate(b.acc1_data[0] / G, b.acc1_data[1] / G, b.acc1_data[2] / G,
+                                 lsm_gx*PI/180.0f, lsm_gy*PI/180.0f, lsm_gz*PI/180.0f,
+                                 lsm_mx*10,  lsm_my*10, lsm_mz*10, LSM_9DS0);                                      // acc in Gs , gyr in rad/s , mag in milligauss
+
+//        yaw_m   = atan2(2.0f * (q_m[0] * q_m[1] + q_m[2] * q_m[3]), 1.0f - 2.0f*(q_m[1] * q_m[1] + q_m[2] * q_m[2]));
+//        pitch_m = asin(2.0f * (q_m[0] * q_m[2] - q_m[3] * q_m[1]));
+//        roll_m  = atan2(2.0f * (q_m[0] * q_m[1] + q_m[2] * q_m[3]), 1.0f - 2.0f*(q_m[1] * q_m[1] + q_m[2] * q_m[2]));
+//        pitch_m *= 180.0f / PI;
+//        yaw_m   *= 180.0f / PI;
+//        yaw_m   -= 12.6; // Declination at Danville
+//        roll_m  *= 180.0f / PI;
+////
+
+        // Define output variables from updated quaternion---these are Tait-Bryan angles, commonly used in aircraft orientation.
+        // In this coordinate system, the positive z-axis is down toward Earth.
+        // Yaw is the angle between Sensor x-axis and Earth magnetic North (or true North if corrected for local declination, looking down on the sensor positive yaw is counterclockwise.
+        // Pitch is angle between sensor x-axis and Earth ground plane, toward the Earth is positive, up toward the sky is negative.
+        // Roll is angle between sensor y-axis and Earth ground plane, y-axis up is positive roll.
+        // These arise from the definition of the homogeneous rotation matrix constructed from quaternions.
+        // Tait-Bryan angles as well as Euler angles are non-commutative; that is, the get the correct orientation the rotations must be
+        // applied in the correct order which for this configuration is yaw, pitch, and then roll.
+        // For more see http://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles which has additional links.
+
+
+        yaw_l  = atan2(2.0f * (q_l[0] * q_l[3] + q_l[1] * q_l[2]),
+                                1.0f - 2.0f*(q_l[2] * q_l[2] + q_l[3] * q_l[3]));
+        pitch_l = asin(2.0f * (q_l[0] * q_l[2] - q_l[3] * q_l[1]));
+        roll_l   = atan2(2.0f * (q_l[0] * q_l[1] + q_l[2] * q_l[3]),
+                                1.0f - 2.0f*(q_l[1] * q_l[1] + q_l[2] * q_l[2]));
+
+
+
+//        yaw_l   = atan2(2.0f * (q_l[1] * q_l[2] + q_l[0] * q_l[3]),
+//                        q_l[0] * q_l[0] + q_l[1] * q_l[1] - q_l[2] * q_l[2] - q_l[3] * q_l[3]);
+//        pitch_l = -asin(2.0f * (q_l[1] * q_l[3] - q_l[0] * q_l[2]));
+//        roll_l  = atan2(2.0f * (q_l[0] * q_l[1] + q_l[2] * q_l[3]),
+//                        q_l[0] * q_l[0] - q_l[1] * q_l[1] - q_l[2] * q_l[2] + q_l[3] * q_l[3]);
+
+//
+        pitch_l *= 180.0f / PI;
+        yaw_l   *= 180.0f / PI;
+//        yaw_l   -= 12.6; // Declination at New York
+        roll_l  *= 180.0f / PI;
+//
+//        pitch = 180 * atan (ax/sqrt(ay*ay + az*az))/PI;
+//        roll = 180 * atan (ay/sqrt(ax*ax + az*az))/PI;
+//        yaw = 180 * atan (az/sqrt(ax*ax + az*az))/PI;
+//
+
+//        UARTprintf("MPU_ypr: \t");
+//        print_float(yaw_m);
+//        UARTprintf("\t");
+//        print_float(pitch_m);
+//        UARTprintf("\t");
+//        print_float(roll_m);
+//        UARTprintf("\n");
+
+        heading_lsm  = atan2(lsm_my, lsm_mx) * 180/PI;
+        //        UARTprintf("Heading : \t");
+//                print_float(heading_lsm);
+        //        UARTprintf("\n");
+//
+//
+
+//        UARTprintf("LSM_raw_mag: \t");
+//        print_float(b.acc1_data[0]);
+//        UARTprintf("\t");
+//        print_float(b.acc1_data[1]);
+//        UARTprintf("\t");
+//        print_float(b.acc1_data[2]);
+//        UARTprintf("\t");
+
+//        print_float(b.gyro_data[0]);
+//        UARTprintf("\t");
+//        print_float(b.gyro_data[1]);
+//        UARTprintf("\t");
+//        print_float(b.gyro_data[2]);
+//        UARTprintf("\n");
+
+//        print_float(b.mag_data[0] * 100);               // in micro-Tesla
+//        UARTprintf("\t");
+//        print_float(b.mag_data[1] * 100);
+//        UARTprintf("\t");
+//        print_float(b.mag_data[2] * 100);
+//        UARTprintf("\n");
+
+
+
+
+//        print_float(lsm_mx);
+//        UARTprintf("\t");
+//        print_float(lsm_my);
+//        UARTprintf("\t");
+//        print_float(lsm_mz);
+//        UARTprintf("\n");
+
+
+
+//            UARTprintf("MPU_raw: \t");
+//            print_float(ax);
+//            UARTprintf("\t");
+//            print_float(ay);
+//            UARTprintf("\t");
+//            print_float(az);
+//            UARTprintf("   |   ");
+//            print_float(gx);
+//            UARTprintf("\t");
+//            print_float(gy);
+//            UARTprintf("\t");
+//            print_float(gz);
+//            UARTprintf("   |   ");
+//            print_float(mx);
+//            UARTprintf("\t");
+//            print_float(my);
+//            UARTprintf("\t");
+//            print_float(mz);
+//            UARTprintf("\n");
+
+
+//               UARTprintf("LSM_raw: \t");
+//               print_float(b.acc1_data[0] / G);
+//               UARTprintf("\t");
+//               print_float(b.acc1_data[1] / G);
+//               UARTprintf("\t");
+//               print_float(b.acc1_data[2] / G);
+//               UARTprintf("\t");
+//               print_float(lsm_gx);
+//               UARTprintf("\t");
+//               print_float(lsm_gy);
+//               UARTprintf("\t");
+//               print_float(lsm_gz);
+//               UARTprintf("\t");
+//               print_float(lsm_mx);
+//               UARTprintf("\t");
+//               print_float(lsm_my);
+//               UARTprintf("\t");
+//               print_float(lsm_mz);
+//               UARTprintf("\n");
+
+               UARTprintf("LSM_ypr: \t");
+               print_float(heading_lsm);
+               UARTprintf("\t");
+               print_float(pitch_l);
+               UARTprintf("\t");
+               print_float(roll_l);
+               UARTprintf("\n");
+
+//               print_float(q_l[0] );
+//               UARTprintf("\t");
+//               print_float(q_l[1]  );
+//               UARTprintf("\t");
+//               print_float( q_l[2]  );
+//               UARTprintf("\t");
+//               print_float(q_l[3]  );
+//               UARTprintf("\n");
+
+    }
+}
+
+

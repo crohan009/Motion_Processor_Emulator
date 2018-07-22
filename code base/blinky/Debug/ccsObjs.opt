@@ -1,0 +1,1 @@
+"./blinky.obj" "./startup_ccs.obj" "../blinky_ccs.cmd" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -llibc.a -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" 

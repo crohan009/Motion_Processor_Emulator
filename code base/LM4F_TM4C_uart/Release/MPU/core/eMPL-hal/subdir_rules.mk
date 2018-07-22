@@ -1,0 +1,13 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Each subdirectory must supply rules for building sources it contributes
+MPU/core/eMPL-hal/eMPL_outputs.obj: ../MPU/core/eMPL-hal/eMPL_outputs.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: "$<"'
+	@echo 'Invoking: ARM Compiler'
+	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -O2 --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="../Debug/A:/ti/StellarisWare" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --include_path="C:/StellarisWare/boards/ek-lm4f232" --include_path="C:/StellarisWare/inc" --include_path="C:/StellarisWare" --gcc --define=ccs="ccs" --define=EMPL_TARGET_TM4C --define=MPU9150 --define=EMPL --define=MPL_LOG_NDEBUG=1 --define=USE_DMP --define=ARM_MATH_CM4 --define=__FPU_PRESENT=1 --define=PART_LM4F232H5QD --define=TARGET_IS_BLIZZARD_RA1 --define=PART_TM4C123GE6PM --diag_warning=225 --display_error_number --gen_func_subsections=on --ual --preproc_with_compile --preproc_dependency="MPU/core/eMPL-hal/eMPL_outputs.d_raw" --obj_directory="MPU/core/eMPL-hal" $(GEN_OPTS__FLAG) "$<"
+	@echo 'Finished building: "$<"'
+	@echo ' '
+
+

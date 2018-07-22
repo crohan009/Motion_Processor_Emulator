@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="Assembly Source File">
+<includepath>/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/include</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/eMPL-hal</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/mllite</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/mpl</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/stm32L</includepath>
+<includepath workspace_path="true">/${ProjName}/i2c_functions</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/eMPL</includepath>
+<includepath workspace_path="true">/${ProjName}/include</includepath>
+<includepath>Debug/A:/ti/StellarisWare</includepath>
+<includepath>/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart</includepath>
+<includepath>/Applications/ti/TivaWare_C_Series-2.1.4.178</includepath>
+<includepath>/Applications/ti/TivaWare_C_Series-2.1.4.178/utils</includepath>
+
+</language>
+<language name="C++ Source File">
+<includepath>/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/include</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/eMPL-hal</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/mllite</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/mpl</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/stm32L</includepath>
+<includepath workspace_path="true">/${ProjName}/i2c_functions</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/eMPL</includepath>
+<includepath workspace_path="true">/${ProjName}/include</includepath>
+<includepath>Debug/A:/ti/StellarisWare</includepath>
+<includepath>/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart</includepath>
+<includepath>/Applications/ti/TivaWare_C_Series-2.1.4.178</includepath>
+<includepath>/Applications/ti/TivaWare_C_Series-2.1.4.178/utils</includepath>
+
+</language>
+<language name="Assembly Source File">
+<includepath>/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/include</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/eMPL-hal</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/mllite</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/mpl</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/stm32L</includepath>
+<includepath workspace_path="true">/${ProjName}/i2c_functions</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/eMPL</includepath>
+<includepath workspace_path="true">/${ProjName}/include</includepath>
+<includepath>Debug/A:/ti/StellarisWare</includepath>
+<includepath>/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart</includepath>
+<includepath>/Applications/ti/TivaWare_C_Series-2.1.4.178</includepath>
+<includepath>/Applications/ti/TivaWare_C_Series-2.1.4.178/utils</includepath>
+
+</language>
+<language name="C Source File">
+<includepath>/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/include</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/eMPL-hal</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/mllite</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/mpl</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/stm32L</includepath>
+<includepath workspace_path="true">/${ProjName}/i2c_functions</includepath>
+<includepath workspace_path="true">/${ProjName}/MPU/core/driver/eMPL</includepath>
+<includepath workspace_path="true">/${ProjName}/include</includepath>
+<includepath>Debug/A:/ti/StellarisWare</includepath>
+<includepath>/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart</includepath>
+<includepath>/Applications/ti/TivaWare_C_Series-2.1.4.178</includepath>
+<includepath>/Applications/ti/TivaWare_C_Series-2.1.4.178/utils</includepath>
+
+</language>
+<language name="Linker Command File">
+
+</language>
+<language name="Linker Command File">
+
+</language>
+<language name="Linker Command File">
+
+</language>
+</section>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.Macros">
+<language name="Assembly Source File">
+<macro>
+<name>ccs</name><value>"ccs"</value>
+</macro>
+<macro>
+<name>EMPL_TARGET_TM4C</name><value/>
+</macro>
+<macro>
+<name>MPU9150</name><value/>
+</macro>
+<macro>
+<name>EMPL</name><value/>
+</macro>
+<macro>
+<name>MPL_LOG_NDEBUG</name><value>1</value>
+</macro>
+<macro>
+<name>USE_DMP</name><value/>
+</macro>
+<macro>
+<name>ARM_MATH_CM4</name><value/>
+</macro>
+<macro>
+<name>__FPU_PRESENT</name><value>1</value>
+</macro>
+<macro>
+<name>PART_LM4F232H5QD</name><value/>
+</macro>
+<macro>
+<name>TARGET_IS_BLIZZARD_RA1</name><value/>
+</macro>
+<macro>
+<name>PART_TM4C123GE6PM</name><value/>
+</macro>
+
+</language>
+<language name="C++ Source File">
+<macro>
+<name>ccs</name><value>"ccs"</value>
+</macro>
+<macro>
+<name>EMPL_TARGET_TM4C</name><value/>
+</macro>
+<macro>
+<name>MPU9150</name><value/>
+</macro>
+<macro>
+<name>EMPL</name><value/>
+</macro>
+<macro>
+<name>MPL_LOG_NDEBUG</name><value>1</value>
+</macro>
+<macro>
+<name>USE_DMP</name><value/>
+</macro>
+<macro>
+<name>ARM_MATH_CM4</name><value/>
+</macro>
+<macro>
+<name>__FPU_PRESENT</name><value>1</value>
+</macro>
+<macro>
+<name>PART_LM4F232H5QD</name><value/>
+</macro>
+<macro>
+<name>TARGET_IS_BLIZZARD_RA1</name><value/>
+</macro>
+<macro>
+<name>PART_TM4C123GE6PM</name><value/>
+</macro>
+
+</language>
+<language name="Assembly Source File">
+<macro>
+<name>ccs</name><value>"ccs"</value>
+</macro>
+<macro>
+<name>EMPL_TARGET_TM4C</name><value/>
+</macro>
+<macro>
+<name>MPU9150</name><value/>
+</macro>
+<macro>
+<name>EMPL</name><value/>
+</macro>
+<macro>
+<name>MPL_LOG_NDEBUG</name><value>1</value>
+</macro>
+<macro>
+<name>USE_DMP</name><value/>
+</macro>
+<macro>
+<name>ARM_MATH_CM4</name><value/>
+</macro>
+<macro>
+<name>__FPU_PRESENT</name><value>1</value>
+</macro>
+<macro>
+<name>PART_LM4F232H5QD</name><value/>
+</macro>
+<macro>
+<name>TARGET_IS_BLIZZARD_RA1</name><value/>
+</macro>
+<macro>
+<name>PART_TM4C123GE6PM</name><value/>
+</macro>
+
+</language>
+<language name="C Source File">
+<macro>
+<name>ccs</name><value>"ccs"</value>
+</macro>
+<macro>
+<name>EMPL_TARGET_TM4C</name><value/>
+</macro>
+<macro>
+<name>MPU9150</name><value/>
+</macro>
+<macro>
+<name>EMPL</name><value/>
+</macro>
+<macro>
+<name>MPL_LOG_NDEBUG</name><value>1</value>
+</macro>
+<macro>
+<name>USE_DMP</name><value/>
+</macro>
+<macro>
+<name>ARM_MATH_CM4</name><value/>
+</macro>
+<macro>
+<name>__FPU_PRESENT</name><value>1</value>
+</macro>
+<macro>
+<name>PART_LM4F232H5QD</name><value/>
+</macro>
+<macro>
+<name>TARGET_IS_BLIZZARD_RA1</name><value/>
+</macro>
+<macro>
+<name>PART_TM4C123GE6PM</name><value/>
+</macro>
+
+</language>
+<language name="Linker Command File">
+
+</language>
+<language name="Linker Command File">
+
+</language>
+<language name="Linker Command File">
+
+</language>
+</section>
+</cdtprojectproperties>

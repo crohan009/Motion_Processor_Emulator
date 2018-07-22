@@ -1,0 +1,481 @@
+//*****************************************************************************
+//
+// uart_echo.c - Example for reading data from and writing data to the UART in
+//               an interrupt driven fashion.
+//
+// Copyright (c) 2011-2012 Texas Instruments Incorporated.  All rights reserved.
+// Software License Agreement
+//
+// Texas Instruments (TI) is supplying this software for use solely and
+// exclusively on TI's microcontroller products. The software is owned by
+// TI and/or its suppliers, and is protected under applicable copyright
+// laws. You may not combine this software with "viral" open-source
+// software in order to form a larger program.
+//
+// THIS SOFTWARE IS PROVIDED "AS IS" AND WITH ALL FAULTS.
+// NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT
+// NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. TI SHALL NOT, UNDER ANY
+// CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+// DAMAGES, FOR ANY REASON WHATSOEVER.
+//
+// This is part of revision 9453 of the EK-LM4F232 Firmware Package.
+//
+//*****************************************************************************
+# define PI           3.14159265358979323846  /* pi */
+
+#include <stdio.h>
+#include <string.h>
+#include <errno.h>
+#include <stdbool.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <math.h>
+#include "inc/hw_ints.h"
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "inc/hw_i2c.h"
+#include "driverlib/debug.h"
+#include "driverlib/fpu.h"
+#include "driverlib/gpio.h"
+#include "driverlib/interrupt.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/uart.h"
+#include "driverlib/rom.h"
+#include "driverlib/systick.h"
+#include "driverlib/pin_map.h"
+#include "driverlib/uart.h"
+#include "driverlib/i2c.h"
+#include "include/uartstdio.h"
+//#include "grlib/grlib.h"
+//#include "drivers/cfal96x64x16.h"
+
+
+//#include "LM4F_TM4C_libs.h"
+//#include "systick.h"
+#include "MPU_interface/mpu_interface.h"
+#include "i2c_functions/i2c_TM4C.h"
+#include "include/imu.h"
+
+#include "include/mpu_9150.h"
+
+int *f;
+uint8_t *data = 0;
+imu_scaled_data b;
+
+int data_ctr = 0;
+
+// --------Data buffering variables---------
+//#define MAX_BUFFER 20000
+//
+//char BUFFER[MAX_BUFFER];
+//char* buff;
+//char buff2[100];
+//------------------------------------------
+
+typedef unsigned char uint8;
+
+#define USE_PLL_CLOCK
+
+#define AP_UART UART1_BASE
+
+// send n bytes to the RM48
+//void AP_send(int n, char *s)
+//{
+//	int i;
+//	for (i=0; i<n; i++)
+//	{
+//		ROM_UARTCharPut(AP_UART,s[i]);
+//	}
+//}
+
+// some simple delay functions
+//double delay()
+//{
+//	double _s = 0;
+//	int k;
+//	for (k=0; k<50000; k++) _s += 1./k;
+//	return _s;
+//}
+//double delay2(int k1)
+//{
+//	double _s = 0;
+//	int k;
+//	for (k=0; k<500*k1; k++) _s += 1./k;
+//	return _s;
+//}
+
+
+// system tick (systick)
+
+//static volatile int systick_n = 0;
+volatile uint32_t systick_n= 0;
+
+
+void systick_int_handler()
+{
+	systick_n ++;
+}
+
+void enable_systick()
+{
+//	AP_send_msg("enabling systick");
+//	SysTickPeriodSet(160000);
+//	SysTickIntRegister(&systick_int_handler);
+//	SysTickIntEnable();
+//	SysTickEnable();
+    SysTickPeriodSet(160000);
+    SysTickIntEnable();
+    SysTickEnable();
+}
+
+// Delay for a specified number of milliseconds
+//void delay_ms(unsigned long num_ms){
+//	int systick_n1 = systick_n;
+//	while (systick_n < (systick_n1 + num_ms));
+//}
+
+void delay_ms (unsigned  long time  )
+{
+    SysCtlDelay(time * (SysCtlClockGet() / 3 / 1000));
+}
+
+
+// Returns the current time in milliseconds
+long get_ms()
+{
+	return systick_n;
+}
+
+// Pauses until the time (in milliseconds) given in the argument
+void wait_until(long t)
+{
+	while (systick_n < t);
+}
+
+void test_invensense()
+{
+//    i2c_common_setup();
+//    i2c_read_bytes(104, 117, 1, &data, f);
+//    UARTprintf("Who am I : %04x\r\n",&data[0]);
+	mpu_open(200,1);
+	EulerAngles_outputs angs;
+	MPU_MPL_outputs mpu_mpl_outputs;
+	RotationMatrix_outputs R;
+    while (1)
+    {
+    	long _t = get_ms();
+		int data_updated = mpu_update(&mpu_mpl_outputs);
+        read_scaled_imu_data(&b);
+//        b.acc1_data[0], b.acc1_data[1], b.acc1_data[2], b.gyro_data[0], b.gyro_data[1], b.gyro_data[2],  b.mag_data[0],  b.mag_data[1], b.mag_data[2]
+//		UARTprintf("Update: %d\r\n",data_updated);
+		mpu_get_euler(&angs); // angs.angles[3] now has Euler angles (in radians)
+	       UARTprintf("Euler : ");
+	       print_float(angs.angles[0]* 180/PI);
+	       UARTprintf(";");
+	       print_float(angs.angles[1]* 180/PI);
+	       UARTprintf(";");
+	       print_float(angs.angles[2]* 180/PI);
+	       UARTprintf("\r\n");
+	       UARTprintf("LSM_RAW:");
+	       print_float(b.acc1_data[0]);
+	       UARTprintf(" ; ");
+	       print_float(b.acc1_data[1]);
+	       UARTprintf(" ; ");
+           print_float(b.acc1_data[2]);
+           UARTprintf(" ; ");
+           print_float(b.gyro_data[0]);
+           UARTprintf(" ; ");
+           print_float(b.gyro_data[1]);
+           UARTprintf(" ; ");
+           print_float(b.gyro_data[2]);
+           UARTprintf(" ; ");
+           print_float(b.mag_data[0]);
+           UARTprintf(" ; ");
+           print_float(b.mag_data[1]);
+           UARTprintf(" ; ");
+           print_float(b.mag_data[2]);
+           UARTprintf("\r\n");
+		mpu_get_rot_mat(&R);  // R.R[9] now has rotation matrix elements
+    	wait_until(_t + 5);   // wait for 5 milliseconds
+    }
+}
+
+void print_float(double v)
+{
+  int decimal = 2;
+  int i = 1;
+  int intPart, fractPart;
+  for (;decimal!=0; i*=10, decimal--);
+  intPart = (int)v;
+  fractPart = (int)((v-(double)(int)v)*i);
+  if(fractPart < 0) fractPart *= -1;
+  UARTprintf("%i.%i", intPart, fractPart);
+}
+
+
+//*****************************************************************************
+//
+// The UART interrupt handlers.
+//
+//*****************************************************************************
+
+void
+UARTIntHandler(void)
+{
+    uint32_t ui32Status;
+    ui32Status = UARTIntStatus(UART0_BASE, true);   // Get the interrrupt status
+    UARTIntClear(UART0_BASE, ui32Status);    // Clear the asserted interrupts.
+}
+
+
+void ConfigureUART(void)
+{
+    //UART0
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);// Enable the GPIO Peripheral used by the UART.
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0); // Enable UART0
+
+    // Configure GPIO Pins for UART mode.
+    GPIOPinConfigure(GPIO_PA0_U0RX);
+    GPIOPinConfigure(GPIO_PA1_U0TX);
+    GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+
+    UARTClockSourceSet(UART0_BASE, UART_CLOCK_PIOSC);    // Use the internal 16MHz oscillator as the UART clock source.
+    UARTStdioConfig(0, 115200, 16000000);    // Initialize the UART for console I/O.
+}
+
+//int main(void) {
+////    #ifdef USE_PLL_CLOCK
+////        ROM_SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+////    #else
+////        ROM_SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+////    #endif
+//    SysCtlClockSet(SYSCTL_SYSDIV_4 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+//
+//    // Enable the peripherals used by this example.
+//    ConfigureUART();
+//    enable_systick();
+//
+//    // Enable processor interrupts.
+//    IntMasterEnable();
+//
+//    i2c_common_setup();
+//    UARTprintf("######################## MPU-9150 ########################\n");
+//    i2c_read(104, 117, 1, &data);
+//    UARTprintf("Who am I : %04x\r\n",&data[0]);
+//
+//    mpu_open(1000,1);
+////    initMPU9150();
+//
+//    EulerAngles_outputs angs;
+//    MPU_MPL_outputs mpu_mpl_outputs;
+//    RotationMatrix_outputs R;
+//
+//    UARTprintf("MPU initialized \n");
+//    delay_ms(50);
+//    UARTprintf("######################## LSM9DS0 ########################\n");
+//    UARTprintf("Who_am_I: %04x\n",I2CReceive(ADDR_ACCEL_LSM9,0x0f));
+//
+//    delay_ms(50);
+//    init_imu_scaledStruct(&b, SCALE_2G, SCALE_2GAUSS, SCALE_250_DPS, UNIT_M_SQUARED);
+//    init_imu(&b);
+//
+//    UARTprintf("LSM initialized \n");
+//    delay_ms(50);
+//    UARTprintf("\n\n\nStarting...");
+//
+//    int x = 0;
+//
+//    while (1) {
+////        long _t = get_ms();
+//          int data_updated = mpu_update(&mpu_mpl_outputs);
+////          read_scaled_imu_data(&b);
+////          mpu_get_euler(&angs); // angs.angles[3] now has Euler angles (in radians)
+//
+//          if(data_updated){
+//                data_ctr += 1;
+////                sprintf (BUFFER, "\n%s%i\n", BUFFER, data_ctr);
+////
+////                buff = "LSM_raw: \t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\r\n";
+////                sprintf (buff2, buff, b.acc1_data[0], b.acc1_data[1], b.acc1_data[2],
+////                                      b.gyro_data[0], b.gyro_data[1], b.gyro_data[2],
+////                                      b.mag_data[0], b.mag_data[1], b.mag_data[2]);
+////                sprintf (BUFFER, "%s%s", BUFFER, buff2);
+////
+////                buff = "MPU_raw: \t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\t%5.3f\r\n";
+////                sprintf (buff2, buff, mpu_mpl_outputs.acc[0], mpu_mpl_outputs.acc[1], mpu_mpl_outputs.acc[2],
+////                                      mpu_mpl_outputs.gyr[0], mpu_mpl_outputs.gyr[1], mpu_mpl_outputs.gyr[2],
+////                                      mpu_mpl_outputs.mag[0], mpu_mpl_outputs.mag[1], mpu_mpl_outputs.mag[2]);
+////                sprintf (BUFFER, "%s%s", BUFFER, buff2);
+////
+////                buff = "MPU_ypr: \t%5.3f\t%5.3f\t%5.3f\r\n";
+////                sprintf (buff2, buff, angs.angles[2]* 180/PI, angs.angles[0]* 180/PI, angs.angles[1]* 180/PI);
+////                sprintf (BUFFER, "%s%s", BUFFER, buff2);
+//          }
+//          x += 1;
+//
+//          if(data_ctr % 500 == 0 && data_ctr > 0 && x > 50){
+////                  Print out the buffer
+////              UARTprintf(BUFFER);
+//              UARTprintf("\n %i data points done.\n", data_ctr);
+//              x = 0 ;
+////                  Clear the buffer
+////              memset(BUFFER, 0, sizeof(BUFFER));
+//          }
+////          delay_ms (150);
+////          print_float(SysCtlClockGet());
+////          mpu_get_rot_mat(&R);  // R.R[9] now has rotation matrix elements
+////          wait_until(_t + 5);   // wait for 5 milliseconds
+//
+////          UARTprintf("\n\nExiting main while loop..\n");
+////          break;
+//    }
+//
+//}
+
+int main(void)
+{
+  // initialize communications structures
+//    init_AP_comms();
+
+    //
+    // Enable lazy stacking for interrupt handlers.  This allows floating-point
+    // instructions to be used within interrupt handlers, but at the expense of
+    // extra stack usage.
+    //
+//    ROM_FPULazyStackingEnable();
+
+//#ifdef USE_PLL_CLOCK
+//    ROM_SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+//#else
+//    ROM_SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+//#endif
+    SysCtlClockSet(SYSCTL_SYSDIV_4 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+
+    // Enable the peripherals used by this example.
+    //
+    ConfigureUART();
+    enable_systick();
+    //
+    // Enable processor interrupts.
+    //
+    IntMasterEnable();
+//    IntEnable(INT_UART0);
+
+//    UARTprintf("Hi\r\n");
+    i2c_common_setup();
+    UARTprintf("######################## MPU-9150 ########################\n");
+    i2c_read(104, 117, 1, &data);
+    UARTprintf("Who am I : %04x\r\n",&data[0]);
+
+    mpu_open(200,1);
+
+    EulerAngles_outputs angs;
+    MPU_MPL_outputs mpu_mpl_outputs;
+    RotationMatrix_outputs R;
+
+    UARTprintf("MPU initialized \n");
+    delay_ms(100);
+    UARTprintf("######################## LSM9DS0 ########################\n");
+    UARTprintf("Who_am_I: %04x\n",I2CReceive(ADDR_ACCEL_LSM9,0x0f));
+
+    delay_ms(100);
+    init_imu_scaledStruct(&b, SCALE_2G, SCALE_2GAUSS, SCALE_250_DPS, UNIT_M_SQUARED);
+    init_imu(&b);
+    UARTprintf("LSM initialized \n");
+    delay_ms(100);
+
+
+      while (1)
+      {
+         long _t = get_ms();
+         //UARTprintf("S: \t");
+         //print_float(get_ms());
+         //UARTprintf("\n");
+
+        int data_updated = mpu_update(&mpu_mpl_outputs);
+        read_scaled_imu_data(&b);
+        mpu_get_euler(&angs);                               // angs.angles[3] now has Euler angles (in radians)
+
+        //UARTprintf("\n");
+        //data_ctr += 1;
+        //print_float(data_ctr);
+        //
+        //UARTprintf("\n");
+        //print_float(get_ms());
+        //UARTprintf("\n");
+        //
+        //UARTprintf("\n");
+        //UARTprintf("\t\t ax \t ay \t az \t gx \t gy \t gz \t mx \t my \t mz");
+        //UARTprintf("\n");
+
+        //UARTprintf("LSM_raw: \t");
+        //print_float(b.acc1_data[0]);
+        //UARTprintf("\t");
+        //print_float(b.acc1_data[1]);
+        //UARTprintf("\t");
+        //print_float(b.acc1_data[2]);
+        //UARTprintf("\t");
+        //print_float(b.gyro_data[0]);
+        //UARTprintf("\t");
+        //print_float(b.gyro_data[1]);
+        //UARTprintf("\t");
+        //print_float(b.gyro_data[2]);
+        //UARTprintf("\t");
+        //print_float(b.mag_data[0]);
+        //UARTprintf("\t");
+        //print_float(b.mag_data[1]);
+        //UARTprintf("\t");
+        //print_float(b.mag_data[2]);
+        //UARTprintf("\r\n");
+        //
+        //UARTprintf("MPU_raw: \t");
+        //print_float(mpu_mpl_outputs.acc[0]);
+        //UARTprintf("\t");
+        //print_float(mpu_mpl_outputs.acc[1]);
+        //UARTprintf("\t");
+        //print_float(mpu_mpl_outputs.acc[2]);
+        //UARTprintf("\t");
+        //print_float(mpu_mpl_outputs.gyr[0]);
+        //UARTprintf("\t");
+        //print_float(mpu_mpl_outputs.gyr[1]);
+        //UARTprintf("\t");
+        //print_float(mpu_mpl_outputs.gyr[2]);
+        //UARTprintf("\t");
+        //print_float(mpu_mpl_outputs.mag[0]);
+        //UARTprintf("\t");
+        //print_float(mpu_mpl_outputs.mag[1]);
+        //UARTprintf("\t");
+        //print_float(mpu_mpl_outputs.mag[2]);
+        //UARTprintf("\r\n");
+
+        //UARTprintf("\n");
+        //UARTprintf("\t\t Yaw \t Pitch \t Roll");
+        //UARTprintf("\n");
+        //
+        //The euler angles are output with the following convention
+        //by inv_get_sensor_type_euler() in the file eMPL_outputs.c:
+        // *  Pitch: -180 to 180
+        // *  Roll: -90 to 90
+        // *  Yaw: -180 to 180
+        // therefore,
+
+        UARTprintf("MPU_ypr: \t");              // YPR angles output by the MPL (in degrees)
+        print_float(angs.angles[2]);            // * 180/PI
+        UARTprintf("\t");
+        print_float(angs.angles[0]);
+        UARTprintf("\t");
+        print_float(angs.angles[1]);
+        UARTprintf("\r\n");
+
+        //UARTprintf("\n");
+        //UARTprintf("E: \t");
+        //print_float(get_ms());
+        //UARTprintf("\n");
+
+        mpu_get_rot_mat(&R);  // R.R[9] now has rotation matrix elements
+        wait_until(_t + 5);   // wait for 5 milliseconds
+      }
+
+}
+

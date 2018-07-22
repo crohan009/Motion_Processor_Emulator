@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="mag_scale_factor_xy" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="mag_scale_factor_xy"/>
+			<item value="mRes"/>
+			<item value="print_float"/>
+			<item value="mpu_set_lpf"/>
+			<item value="mpl_rate"/>
+			<item value="st"/>
+			<item value="chip_cfg"/>
+			<item value="motion_int_cache_s"/>
+			<item value="sample_rate"/>
+			<item value="fifo_rate"/>
+			<item value="0x1A"/>
+			<item value="MPU9150"/>
+			<item value="UARTprintf("/>
+			<item value="gyro_fsr"/>
+			<item value="data_ctr"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="290" key="DIALOG_WIDTH"/>
+		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
+		<item value="409" key="DIALOG_HEIGHT"/>
+		<item value="1011" key="DIALOG_X_ORIGIN"/>
+		<item value="115" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

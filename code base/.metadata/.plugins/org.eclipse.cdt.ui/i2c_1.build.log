@@ -1,0 +1,21 @@
+
+**** Build of configuration Debug for project i2c_1 ****
+
+/Applications/ti/ccsv8/utils/bin/gmake -k -j 7 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/i2c_1" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/i2c_1/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GE6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 359: warning #225-D: function "InitI2C0" declared implicitly
+"../main.c", line 385: warning #225-D: function "I2CReceive" declared implicitly
+"../main.c", line 425: warning #169-D: argument of type "float (*)[3]" is incompatible with parameter of type "float *"
+Finished building: "../main.c"
+ 
+Building target: "i2c_1.out"
+Invoking: ARM Linker
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GE6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"i2c_1.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="i2c_1_linkInfo.xml" --rom_model -o "i2c_1.out" "./main.obj" "./tm4c123ge6pm_startup_ccs.obj" "./include/LPS25.obj" "./include/i2c_tm4c.obj" "./include/imu.obj" "./include/mpu_9150.obj" "./include/uartstdio.obj" "../tm4c123ge6pm.cmd"  -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -llibc.a 
+<Linking>
+Finished building target: "i2c_1.out"
+ 
+
+**** Build Finished ****

@@ -1,0 +1,8 @@
+1528222960105	Delete resource 'blinky'
+1528316361684	Delete resource 'i2c'
+1528323063773	Delete resource 'blinky'
+1528323351746	Delete resource 'blinky'
+1528482125600	Delete resource 'LM4F_TM4C_uart'
+1528488444195	Delete resource 'bap_raw_imu_i2c'
+1528491734029	Delete resource 'LM4F_TM4C_uart/target_config.ccxml'
+1528491738279	Delete resource 'LM4F_TM4C_uart/Stellaris LM4F232H5QD.ccxml'
