@@ -1,61 +1,41 @@
 
 **** Build of configuration Debug for project LM4F_TM4C_uart ****
 
-/Applications/ti/ccsv8/utils/bin/gmake -j4 -k all 
- 
-Building file: "../uart_echo.c"
-Invoking: ARM Compiler
-"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --fp_mode=relaxed --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="A:/ti/StellarisWare" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=ccs="ccs" --define=EMPL_TARGET_TM4C --define=MPU9150 --define=EMPL --define=MPL_LOG_NDEBUG=1 --define=USE_DMP --define=ARM_MATH_CM4 --define=__FPU_PRESENT=1 --define=PART_LM4F232H5QD --define=TARGET_IS_BLIZZARD_RA1 --define=PART_TM4C123GE6PM -g --gcc --diag_warning=225 --display_error_number --gen_func_subsections=on --abi=eabi --ual --preproc_with_compile --preproc_dependency="uart_echo.d_raw"  "../uart_echo.c"
-"../include/mpu_9150.h", line 143: warning #303-D: typedef name has already been declared (with same type)
-"../uart_echo.c", line 74: warning #303-D: typedef name has already been declared (with same type)
-"../uart_echo.c", line 171: warning #225-D: function "print_float" declared implicitly
-"../uart_echo.c", line 201: warning #161-D: declaration is incompatible with previous "print_float" (declared at line 171)
-"../uart_echo.c", line 282: warning #225-D: function "i2c_read" declared implicitly
-"../uart_echo.c", line 295: warning #225-D: function "I2CReceive" declared implicitly
-"../uart_echo.c", line 289: warning #179-D: variable "R" was declared but never referenced
-Finished building: "../uart_echo.c"
+/Applications/ti/ccsv8/utils/bin/gmake -j4 all 
  
 Building target: "LM4F_TM4C_uart.out"
 Invoking: ARM Linker
-"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --fp_mode=relaxed --define=ccs="ccs" --define=EMPL_TARGET_TM4C --define=MPU9150 --define=EMPL --define=MPL_LOG_NDEBUG=1 --define=USE_DMP --define=ARM_MATH_CM4 --define=__FPU_PRESENT=1 --define=PART_LM4F232H5QD --define=TARGET_IS_BLIZZARD_RA1 --define=PART_TM4C123GE6PM -g --gcc --diag_warning=225 --display_error_number --gen_func_subsections=on --abi=eabi --ual -z -m"uart_echo_ccs.map" --heap_size=24000 --stack_size=4096 -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --reread_libs --display_error_number --warn_sections --xml_link_info="LM4F_TM4C_uart_linkInfo.xml" --rom_model --unused_section_elimination=on -o "LM4F_TM4C_uart.out" "./startup_ccs.obj" "./uart_echo.obj" "./MPU/core/driver/eMPL/inv_mpu.obj" "./MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "./MPU/core/driver/stm32L/log_stm32.obj" "./MPU/core/eMPL-hal/eMPL_outputs.obj" "./MPU/core/mllite/data_builder.obj" "./MPU/core/mllite/hal_outputs.obj" "./MPU/core/mllite/message_layer.obj" "./MPU/core/mllite/ml_math_func.obj" "./MPU/core/mllite/mlmath.obj" "./MPU/core/mllite/mpl.obj" "./MPU/core/mllite/results_holder.obj" "./MPU/core/mllite/start_manager.obj" "./MPU/core/mllite/storage_manager.obj" "./MPU_interface/mpu_interface.obj" "./i2c_functions/i2c_TM4C.obj" "./i2c_functions/i2c_functions.obj" "./include/i2c_tm4c.obj" "./include/imu.obj" "./include/mpu_9150.obj" "./include/uartstdio.obj" "../uart_echo_ccs.cmd"  -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -llibc.a -l"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/liblibmplmpu-m4-hardfp.a"  
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi -z -m"app_TM4C123GE6PM_ccs.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --reread_libs --warn_sections --rom_model -o "LM4F_TM4C_uart.out" "./startup_ccs.obj" "./uart_echo.obj" "./MPU/core/driver/eMPL/inv_mpu.obj" "./MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "./MPU/core/driver/stm32L/log_stm32.obj" "./MPU/core/eMPL-hal/eMPL_outputs.obj" "./MPU/core/mllite/data_builder.obj" "./MPU/core/mllite/hal_outputs.obj" "./MPU/core/mllite/message_layer.obj" "./MPU/core/mllite/ml_math_func.obj" "./MPU/core/mllite/mlmath.obj" "./MPU/core/mllite/mpl.obj" "./MPU/core/mllite/results_holder.obj" "./MPU/core/mllite/start_manager.obj" "./MPU/core/mllite/storage_manager.obj" "./MPU_interface/mpu_interface.obj" "./i2c_functions/i2c_TM4C.obj" "./i2c_functions/i2c_functions.obj" "./include/imu.obj" "./include/uartstdio.obj" "../uart_echo_ccs.cmd" "../LM4F_TM4C_libs/LM4F_TM4C_libs.lib"  -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -llibc.a   ../MPU/core/mpl/liblibmplmpu-m4-hardfp.a 
 <Linking>
-warning #16032-D: object files have incompatible wchar_t types
-   ("/Users/crohan009/Documents/Stuff/USR18/code
-   base/LM4F_TM4C_uart/MPU/core/mpl/liblibmplmpu-m4-hardfp.a<accel_auto_cal.o>"
-   = --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
-warning #16032-D: object files have incompatible wchar_t types
-   ("/Users/crohan009/Documents/Stuff/USR18/code
-   base/LM4F_TM4C_uart/MPU/core/mpl/liblibmplmpu-m4-hardfp.a<compass_vec_cal.o>
-   " = --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
-warning #16032-D: object files have incompatible wchar_t types
-   ("/Users/crohan009/Documents/Stuff/USR18/code
-   base/LM4F_TM4C_uart/MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fast_no_motion.o>"
-   = --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
-warning #16032-D: object files have incompatible wchar_t types
-   ("/Users/crohan009/Documents/Stuff/USR18/code
-   base/LM4F_TM4C_uart/MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fusion_9axis.o>" =
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<accel_auto_cal.o>" =
    --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
-warning #16032-D: object files have incompatible wchar_t types
-   ("/Users/crohan009/Documents/Stuff/USR18/code
-   base/LM4F_TM4C_uart/MPU/core/mpl/liblibmplmpu-m4-hardfp.a<gyro_tc.o>" =
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<compass_vec_cal.o>" =
    --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
-warning #16032-D: object files have incompatible wchar_t types
-   ("/Users/crohan009/Documents/Stuff/USR18/code
-   base/LM4F_TM4C_uart/MPU/core/mpl/liblibmplmpu-m4-hardfp.a<heading_from_gyro.
-   o>" = --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
-warning #16032-D: object files have incompatible wchar_t types
-   ("/Users/crohan009/Documents/Stuff/USR18/code
-   base/LM4F_TM4C_uart/MPU/core/mpl/liblibmplmpu-m4-hardfp.a<mag_disturb.o>" =
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fast_no_motion.o>" =
    --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
-warning #16032-D: object files have incompatible wchar_t types
-   ("/Users/crohan009/Documents/Stuff/USR18/code
-   base/LM4F_TM4C_uart/MPU/core/mpl/liblibmplmpu-m4-hardfp.a<quaternion_supervi
-   sor.o>" = --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
-warning #10247-D: creating output section ".rodata.str1.4" without a SECTIONS
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fusion_9axis.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<gyro_tc.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<mag_disturb.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<quaternion_supervisor.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+error: symbol "float" redefined: first defined in "./uart_echo.obj"; redefined
+   in "./include/imu.obj"
+warning: creating output section ".rodata.str1.4" without a SECTIONS
    specification
-Finished building target: "LM4F_TM4C_uart.out"
+error: errors encountered during linking; "LM4F_TM4C_uart.out" not built
+gmake: *** [LM4F_TM4C_uart.out] Error 1
  
-"/Applications/ti/ccsv8/utils/tiobj2bin/tiobj2bin" "LM4F_TM4C_uart.out" "LM4F_TM4C_uart.bin" "/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armofd" "/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armhex" "/Applications/ti/ccsv8/utils/tiobj2bin/mkhex4bin"
- 
+>> Compilation failure
+makefile:178: recipe for target 'LM4F_TM4C_uart.out' failed
 
 **** Build Finished ****

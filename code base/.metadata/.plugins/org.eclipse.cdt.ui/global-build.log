@@ -3329,3 +3329,709 @@ Finished building target: "i2c_1.out"
  
 
 **** Build Finished ****
+
+**** Clean-only build of configuration Debug for project LM4F_TM4C_uart ****
+
+/Applications/ti/ccsv8/utils/bin/gmake -j4 clean 
+ 
+rm -rf  "LM4F_TM4C_uart.bin"  "LM4F_TM4C_uart.out" 
+rm -rf "startup_ccs.obj" "uart_echo.obj" "MPU/core/driver/eMPL/inv_mpu.obj" "MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "MPU/core/driver/stm32L/log_stm32.obj" "MPU/core/eMPL-hal/eMPL_outputs.obj" "MPU/core/mllite/data_builder.obj" "MPU/core/mllite/hal_outputs.obj" "MPU/core/mllite/message_layer.obj" "MPU/core/mllite/ml_math_func.obj" "MPU/core/mllite/mlmath.obj" "MPU/core/mllite/mpl.obj" "MPU/core/mllite/results_holder.obj" "MPU/core/mllite/start_manager.obj" "MPU/core/mllite/storage_manager.obj" "MPU_interface/mpu_interface.obj" "i2c_functions/i2c_TM4C.obj" "i2c_functions/i2c_functions.obj" "include/imu.obj" "include/uartstdio.obj" 
+rm -rf "startup_ccs.d" "uart_echo.d" "MPU/core/driver/eMPL/inv_mpu.d" "MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.d" "MPU/core/driver/stm32L/log_stm32.d" "MPU/core/eMPL-hal/eMPL_outputs.d" "MPU/core/mllite/data_builder.d" "MPU/core/mllite/hal_outputs.d" "MPU/core/mllite/message_layer.d" "MPU/core/mllite/ml_math_func.d" "MPU/core/mllite/mlmath.d" "MPU/core/mllite/mpl.d" "MPU/core/mllite/results_holder.d" "MPU/core/mllite/start_manager.d" "MPU/core/mllite/storage_manager.d" "MPU_interface/mpu_interface.d" "i2c_functions/i2c_TM4C.d" "i2c_functions/i2c_functions.d" "include/imu.d" "include/uartstdio.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LM4F_TM4C_uart ****
+
+/Applications/ti/ccsv8/utils/bin/gmake -j4 all 
+ 
+Building file: "../startup_ccs.c"
+Building file: "../uart_echo.c"
+Building file: "../MPU/core/driver/eMPL/inv_mpu.c"
+Building file: "../MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "../startup_ccs.c"
+Invoking: ARM Compiler
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="uart_echo.d_raw"  "../uart_echo.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.d_raw" --obj_directory="MPU/core/driver/eMPL"  "../MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.c"
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/driver/eMPL/inv_mpu.d_raw" --obj_directory="MPU/core/driver/eMPL"  "../MPU/core/driver/eMPL/inv_mpu.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+Finished building: "../startup_ccs.c"
+ 
+Building file: "../MPU/core/driver/stm32L/log_stm32.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/driver/stm32L/log_stm32.d_raw" --obj_directory="MPU/core/driver/stm32L"  "../MPU/core/driver/stm32L/log_stm32.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../uart_echo.c", line 66: warning: typedef name has already been declared (with same type)
+"../uart_echo.c", line 117: warning: function "send" declared implicitly
+"../uart_echo.c", line 117: warning: function "strlen" declared implicitly
+"../uart_echo.c", line 126: warning: declaration is incompatible with previous "send" (declared at line 117)
+"../uart_echo.c", line 138: warning: function "strlen" declared implicitly
+"../uart_echo.c", line 312: warning: function "i2c_read" declared implicitly
+"../uart_echo.c", line 319: warning: variable "R" was declared but never referenced
+Finished building: "../MPU/core/driver/stm32L/log_stm32.c"
+ 
+Building file: "../MPU/core/eMPL-hal/eMPL_outputs.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/eMPL-hal/eMPL_outputs.d_raw" --obj_directory="MPU/core/eMPL-hal"  "../MPU/core/eMPL-hal/eMPL_outputs.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/eMPL-hal/eMPL_outputs.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"../MPU/core/eMPL-hal/eMPL_outputs.c", line 322: warning: last line of file ends without a newline
+Finished building: "../uart_echo.c"
+ 
+Building file: "../MPU/core/mllite/data_builder.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/data_builder.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/data_builder.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"../MPU/core/mllite/storage_manager.h", line 30: warning: last line of file ends without a newline
+"../MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.c", line 1263: warning: last line of file ends without a newline
+Finished building: "../MPU/core/eMPL-hal/eMPL_outputs.c"
+ 
+Building file: "../MPU/core/mllite/hal_outputs.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/hal_outputs.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/hal_outputs.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/hal_outputs.h", line 45: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"../MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+Finished building: "../MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.c"
+ 
+Building file: "../MPU/core/mllite/message_layer.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/message_layer.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/message_layer.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/message_layer.c"
+ 
+Building file: "../MPU/core/mllite/ml_math_func.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/ml_math_func.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/ml_math_func.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlinclude.h", line 38: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.c", line 780: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/hal_outputs.c"
+ 
+Building file: "../MPU/core/mllite/mlmath.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/mlmath.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/mlmath.c"
+"../MPU/core/mllite/mlmath.c", line 68: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/data_builder.c"
+ 
+Building file: "../MPU/core/mllite/mpl.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/mpl.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/mpl.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/storage_manager.h", line 30: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../MPU/core/mllite/mpl.h", line 24: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"../MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlinclude.h", line 38: warning: last line of file ends without a newline
+"../MPU/core/mllite/mpl.c", line 72: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/mlmath.c"
+ 
+Building file: "../MPU/core/mllite/results_holder.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/results_holder.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/results_holder.c"
+Finished building: "../MPU/core/mllite/mpl.c"
+ 
+Building file: "../MPU/core/mllite/start_manager.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/start_manager.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/start_manager.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.c", line 105: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/start_manager.c"
+ 
+Building file: "../MPU/core/mllite/storage_manager.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/storage_manager.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/storage_manager.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/storage_manager.h", line 30: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"../MPU/core/mllite/storage_manager.c", line 204: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/ml_math_func.c"
+ 
+Building file: "../MPU_interface/mpu_interface.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU_interface/mpu_interface.d_raw" --obj_directory="MPU_interface"  "../MPU_interface/mpu_interface.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/hal_outputs.h", line 45: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/mpl.h", line 24: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/storage_manager.h", line 30: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlinclude.h", line 38: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/invensense.h", line 28: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/fusion_9axis.h", line 38: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/heading_from_gyro.h", line 33: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/mag_disturb.h", line 37: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/motion_no_motion.h", line 28: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/no_gyro_fusion.h", line 34: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/quaternion_supervisor.h", line 27: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/invensense_adv.h", line 27: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal/eMPL_outputs.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mpu.h", line 380: warning: last line of file ends without a newline
+"../MPU_interface/mpu_interface.c", line 910: warning: missing return statement at end of non-void function "mpu_open"
+"../MPU_interface/mpu_interface.c", line 704: warning: variable "timestamp" was set but never used
+"../MPU_interface/mpu_interface.c", line 114: warning: variable "mpl_rate" was declared but never referenced
+"../MPU_interface/mpu_interface.c", line 187: warning: function "read_from_mpl" was declared but never referenced
+"../MPU_interface/mpu_interface.c", line 448: warning: function "handle_input" was declared but never referenced
+"../MPU_interface/mpu_interface.c", line 913: warning: variable "next_send_time" was set but never used
+Finished building: "../MPU/core/mllite/results_holder.c"
+ 
+Building file: "../i2c_functions/i2c_TM4C.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="i2c_functions/i2c_TM4C.d_raw" --obj_directory="i2c_functions"  "../i2c_functions/i2c_TM4C.c"
+Finished building: "../MPU/core/mllite/storage_manager.c"
+ 
+Building file: "../i2c_functions/i2c_functions.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="i2c_functions/i2c_functions.d_raw" --obj_directory="i2c_functions"  "../i2c_functions/i2c_functions.c"
+Finished building: "../i2c_functions/i2c_functions.c"
+ 
+Building file: "../include/imu.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="include/imu.d_raw" --obj_directory="include"  "../include/imu.c"
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include/sys/_stdint.h", line 56: warning: typedef name has already been declared (with same type)
+"../include/imu.c", line 259: warning: function "delay_ms" declared implicitly
+"../include/imu.c", line 478: warning: missing return statement at end of non-void function "init_imu_raw_data"
+"../include/imu.c", line 686: warning: integer conversion resulted in a change of sign
+"../include/imu.c", line 1012: warning: function "i2c_write_reg_lsm" declared implicitly
+"../include/imu.c", line 1021: warning: function "i2c_write_reg_lsm" declared implicitly
+"../include/imu.c", line 1030: warning: function "i2c_write_reg_lsm" declared implicitly
+"../include/imu.c", line 1052: warning: function "I2CReceive" declared implicitly
+"../include/imu.c", line 1077: warning: function "I2CReceive" declared implicitly
+"../include/imu.c", line 1094: warning: function "I2CReceive" declared implicitly
+"../include/imu.c", line 178: warning: variable "disable_accel" was set but never used
+Finished building: "../MPU/core/driver/eMPL/inv_mpu.c"
+ 
+Building file: "../include/uartstdio.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="include/uartstdio.d_raw" --obj_directory="include"  "../include/uartstdio.c"
+"../i2c_functions/i2c_TM4C.c", line 22: warning: variable "i" was declared but never referenced
+Finished building: "../i2c_functions/i2c_TM4C.c"
+ 
+Finished building: "../MPU_interface/mpu_interface.c"
+ 
+Finished building: "../include/imu.c"
+ 
+Finished building: "../include/uartstdio.c"
+ 
+Building target: "LM4F_TM4C_uart.out"
+Invoking: ARM Linker
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi -z -m"app_TM4C123GE6PM_ccs.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --reread_libs --warn_sections --rom_model -o "LM4F_TM4C_uart.out" "./startup_ccs.obj" "./uart_echo.obj" "./MPU/core/driver/eMPL/inv_mpu.obj" "./MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "./MPU/core/driver/stm32L/log_stm32.obj" "./MPU/core/eMPL-hal/eMPL_outputs.obj" "./MPU/core/mllite/data_builder.obj" "./MPU/core/mllite/hal_outputs.obj" "./MPU/core/mllite/message_layer.obj" "./MPU/core/mllite/ml_math_func.obj" "./MPU/core/mllite/mlmath.obj" "./MPU/core/mllite/mpl.obj" "./MPU/core/mllite/results_holder.obj" "./MPU/core/mllite/start_manager.obj" "./MPU/core/mllite/storage_manager.obj" "./MPU_interface/mpu_interface.obj" "./i2c_functions/i2c_TM4C.obj" "./i2c_functions/i2c_functions.obj" "./include/imu.obj" "./include/uartstdio.obj" "../uart_echo_ccs.cmd" "../LM4F_TM4C_libs/LM4F_TM4C_libs.lib"  -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -llibc.a   ../MPU/core/mpl/liblibmplmpu-m4-hardfp.a 
+<Linking>
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<accel_auto_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<compass_vec_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fast_no_motion.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fusion_9axis.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<gyro_tc.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<mag_disturb.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<quaternion_supervisor.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+error: symbol "float" redefined: first defined in "./uart_echo.obj"; redefined
+   in "./include/imu.obj"
+warning: creating output section ".rodata.str1.4" without a SECTIONS
+   specification
+error: errors encountered during linking; "LM4F_TM4C_uart.out" not built
+ 
+>> Compilation failure
+makefile:178: recipe for target 'LM4F_TM4C_uart.out' failed
+gmake: *** [LM4F_TM4C_uart.out] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LM4F_TM4C_uart ****
+
+/Applications/ti/ccsv8/utils/bin/gmake -j4 all 
+ 
+Building target: "LM4F_TM4C_uart.out"
+Invoking: ARM Linker
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi -z -m"app_TM4C123GE6PM_ccs.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --reread_libs --warn_sections --rom_model -o "LM4F_TM4C_uart.out" "./startup_ccs.obj" "./uart_echo.obj" "./MPU/core/driver/eMPL/inv_mpu.obj" "./MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "./MPU/core/driver/stm32L/log_stm32.obj" "./MPU/core/eMPL-hal/eMPL_outputs.obj" "./MPU/core/mllite/data_builder.obj" "./MPU/core/mllite/hal_outputs.obj" "./MPU/core/mllite/message_layer.obj" "./MPU/core/mllite/ml_math_func.obj" "./MPU/core/mllite/mlmath.obj" "./MPU/core/mllite/mpl.obj" "./MPU/core/mllite/results_holder.obj" "./MPU/core/mllite/start_manager.obj" "./MPU/core/mllite/storage_manager.obj" "./MPU_interface/mpu_interface.obj" "./i2c_functions/i2c_TM4C.obj" "./i2c_functions/i2c_functions.obj" "./include/imu.obj" "./include/uartstdio.obj" "../uart_echo_ccs.cmd" "../LM4F_TM4C_libs/LM4F_TM4C_libs.lib"  -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -llibc.a   ../MPU/core/mpl/liblibmplmpu-m4-hardfp.a 
+<Linking>
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<accel_auto_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<compass_vec_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fast_no_motion.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fusion_9axis.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<gyro_tc.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<mag_disturb.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<quaternion_supervisor.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+error: symbol "float" redefined: first defined in "./uart_echo.obj"; redefined
+   in "./include/imu.obj"
+warning: creating output section ".rodata.str1.4" without a SECTIONS
+   specification
+error: errors encountered during linking; "LM4F_TM4C_uart.out" not built
+ 
+>> Compilation failure
+makefile:178: recipe for target 'LM4F_TM4C_uart.out' failed
+gmake: *** [LM4F_TM4C_uart.out] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LM4F_TM4C_uart ****
+
+/Applications/ti/ccsv8/utils/bin/gmake -j4 all 
+ 
+Building target: "LM4F_TM4C_uart.out"
+Invoking: ARM Linker
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi -z -m"app_TM4C123GE6PM_ccs.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --reread_libs --warn_sections --rom_model -o "LM4F_TM4C_uart.out" "./startup_ccs.obj" "./uart_echo.obj" "./MPU/core/driver/eMPL/inv_mpu.obj" "./MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "./MPU/core/driver/stm32L/log_stm32.obj" "./MPU/core/eMPL-hal/eMPL_outputs.obj" "./MPU/core/mllite/data_builder.obj" "./MPU/core/mllite/hal_outputs.obj" "./MPU/core/mllite/message_layer.obj" "./MPU/core/mllite/ml_math_func.obj" "./MPU/core/mllite/mlmath.obj" "./MPU/core/mllite/mpl.obj" "./MPU/core/mllite/results_holder.obj" "./MPU/core/mllite/start_manager.obj" "./MPU/core/mllite/storage_manager.obj" "./MPU_interface/mpu_interface.obj" "./i2c_functions/i2c_TM4C.obj" "./i2c_functions/i2c_functions.obj" "./include/imu.obj" "./include/uartstdio.obj" "../uart_echo_ccs.cmd" "../LM4F_TM4C_libs/LM4F_TM4C_libs.lib"  -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -llibc.a   ../MPU/core/mpl/liblibmplmpu-m4-hardfp.a 
+<Linking>
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<accel_auto_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<compass_vec_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fast_no_motion.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fusion_9axis.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<gyro_tc.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<mag_disturb.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<quaternion_supervisor.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+error: symbol "float" redefined: first defined in "./uart_echo.obj"; redefined
+   in "./include/imu.obj"
+warning: creating output section ".rodata.str1.4" without a SECTIONS
+   specification
+error: errors encountered during linking; "LM4F_TM4C_uart.out" not built
+ 
+>> Compilation failure
+makefile:178: recipe for target 'LM4F_TM4C_uart.out' failed
+gmake: *** [LM4F_TM4C_uart.out] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LM4F_TM4C_uart ****
+
+/Applications/ti/ccsv8/utils/bin/gmake -j4 all 
+ 
+Building target: "LM4F_TM4C_uart.out"
+Invoking: ARM Linker
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi -z -m"app_TM4C123GE6PM_ccs.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --reread_libs --warn_sections --rom_model -o "LM4F_TM4C_uart.out" "./startup_ccs.obj" "./uart_echo.obj" "./MPU/core/driver/eMPL/inv_mpu.obj" "./MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "./MPU/core/driver/stm32L/log_stm32.obj" "./MPU/core/eMPL-hal/eMPL_outputs.obj" "./MPU/core/mllite/data_builder.obj" "./MPU/core/mllite/hal_outputs.obj" "./MPU/core/mllite/message_layer.obj" "./MPU/core/mllite/ml_math_func.obj" "./MPU/core/mllite/mlmath.obj" "./MPU/core/mllite/mpl.obj" "./MPU/core/mllite/results_holder.obj" "./MPU/core/mllite/start_manager.obj" "./MPU/core/mllite/storage_manager.obj" "./MPU_interface/mpu_interface.obj" "./i2c_functions/i2c_TM4C.obj" "./i2c_functions/i2c_functions.obj" "./include/imu.obj" "./include/uartstdio.obj" "../uart_echo_ccs.cmd" "../LM4F_TM4C_libs/LM4F_TM4C_libs.lib"  -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -llibc.a   ../MPU/core/mpl/liblibmplmpu-m4-hardfp.a 
+<Linking>
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<accel_auto_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<compass_vec_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fast_no_motion.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fusion_9axis.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<gyro_tc.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<mag_disturb.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<quaternion_supervisor.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+error: symbol "float" redefined: first defined in "./uart_echo.obj"; redefined
+   in "./include/imu.obj"
+warning: creating output section ".rodata.str1.4" without a SECTIONS
+   specification
+error: errors encountered during linking; "LM4F_TM4C_uart.out" not built
+ 
+>> Compilation failure
+makefile:178: recipe for target 'LM4F_TM4C_uart.out' failed
+gmake: *** [LM4F_TM4C_uart.out] Error 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project LM4F_TM4C_uart ****
+
+/Applications/ti/ccsv8/utils/bin/gmake -j4 clean 
+ 
+rm -rf  "LM4F_TM4C_uart.bin"  "LM4F_TM4C_uart.out" 
+rm -rf "startup_ccs.obj" "uart_echo.obj" "MPU/core/driver/eMPL/inv_mpu.obj" "MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "MPU/core/driver/stm32L/log_stm32.obj" "MPU/core/eMPL-hal/eMPL_outputs.obj" "MPU/core/mllite/data_builder.obj" "MPU/core/mllite/hal_outputs.obj" "MPU/core/mllite/message_layer.obj" "MPU/core/mllite/ml_math_func.obj" "MPU/core/mllite/mlmath.obj" "MPU/core/mllite/mpl.obj" "MPU/core/mllite/results_holder.obj" "MPU/core/mllite/start_manager.obj" "MPU/core/mllite/storage_manager.obj" "MPU_interface/mpu_interface.obj" "i2c_functions/i2c_TM4C.obj" "i2c_functions/i2c_functions.obj" "include/imu.obj" "include/uartstdio.obj" 
+rm -rf "startup_ccs.d" "uart_echo.d" "MPU/core/driver/eMPL/inv_mpu.d" "MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.d" "MPU/core/driver/stm32L/log_stm32.d" "MPU/core/eMPL-hal/eMPL_outputs.d" "MPU/core/mllite/data_builder.d" "MPU/core/mllite/hal_outputs.d" "MPU/core/mllite/message_layer.d" "MPU/core/mllite/ml_math_func.d" "MPU/core/mllite/mlmath.d" "MPU/core/mllite/mpl.d" "MPU/core/mllite/results_holder.d" "MPU/core/mllite/start_manager.d" "MPU/core/mllite/storage_manager.d" "MPU_interface/mpu_interface.d" "i2c_functions/i2c_TM4C.d" "i2c_functions/i2c_functions.d" "include/imu.d" "include/uartstdio.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LM4F_TM4C_uart ****
+
+/Applications/ti/ccsv8/utils/bin/gmake -j4 all 
+ 
+Building file: "../startup_ccs.c"
+Building file: "../uart_echo.c"
+Building file: "../MPU/core/driver/eMPL/inv_mpu.c"
+Building file: "../MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="startup_ccs.d_raw"  "../startup_ccs.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="uart_echo.d_raw"  "../uart_echo.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/driver/eMPL/inv_mpu.d_raw" --obj_directory="MPU/core/driver/eMPL"  "../MPU/core/driver/eMPL/inv_mpu.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.d_raw" --obj_directory="MPU/core/driver/eMPL"  "../MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+Finished building: "../startup_ccs.c"
+ 
+Building file: "../MPU/core/driver/stm32L/log_stm32.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/driver/stm32L/log_stm32.d_raw" --obj_directory="MPU/core/driver/stm32L"  "../MPU/core/driver/stm32L/log_stm32.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../uart_echo.c", line 66: warning: typedef name has already been declared (with same type)
+"../uart_echo.c", line 117: warning: function "send" declared implicitly
+"../uart_echo.c", line 117: warning: function "strlen" declared implicitly
+"../uart_echo.c", line 126: warning: declaration is incompatible with previous "send" (declared at line 117)
+"../uart_echo.c", line 138: warning: function "strlen" declared implicitly
+"../uart_echo.c", line 312: warning: function "i2c_read" declared implicitly
+"../uart_echo.c", line 319: warning: variable "R" was declared but never referenced
+Finished building: "../MPU/core/driver/stm32L/log_stm32.c"
+ 
+Building file: "../MPU/core/eMPL-hal/eMPL_outputs.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/eMPL-hal/eMPL_outputs.d_raw" --obj_directory="MPU/core/eMPL-hal"  "../MPU/core/eMPL-hal/eMPL_outputs.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/eMPL-hal/eMPL_outputs.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"../MPU/core/eMPL-hal/eMPL_outputs.c", line 322: warning: last line of file ends without a newline
+Finished building: "../uart_echo.c"
+ 
+Building file: "../MPU/core/mllite/data_builder.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/data_builder.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/data_builder.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"../MPU/core/mllite/storage_manager.h", line 30: warning: last line of file ends without a newline
+"../MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.c", line 1263: warning: last line of file ends without a newline
+Finished building: "../MPU/core/eMPL-hal/eMPL_outputs.c"
+ 
+Building file: "../MPU/core/mllite/hal_outputs.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/hal_outputs.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/hal_outputs.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/hal_outputs.h", line 45: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"../MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+Finished building: "../MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.c"
+ 
+Building file: "../MPU/core/mllite/message_layer.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/message_layer.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/message_layer.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/message_layer.c"
+ 
+Building file: "../MPU/core/mllite/ml_math_func.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/ml_math_func.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/ml_math_func.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlinclude.h", line 38: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.c", line 780: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/hal_outputs.c"
+ 
+Building file: "../MPU/core/mllite/mlmath.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/mlmath.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/mlmath.c"
+"../MPU/core/mllite/mlmath.c", line 68: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/data_builder.c"
+ 
+Building file: "../MPU/core/mllite/mpl.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/mpl.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/mpl.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/storage_manager.h", line 30: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../MPU/core/mllite/mpl.h", line 24: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"../MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlinclude.h", line 38: warning: last line of file ends without a newline
+"../MPU/core/mllite/mpl.c", line 72: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/mlmath.c"
+ 
+Building file: "../MPU/core/mllite/results_holder.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/results_holder.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/results_holder.c"
+Finished building: "../MPU/core/mllite/mpl.c"
+ 
+Building file: "../MPU/core/mllite/start_manager.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/start_manager.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/start_manager.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"../MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"../MPU/core/mllite/start_manager.c", line 105: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/start_manager.c"
+ 
+Building file: "../MPU/core/mllite/storage_manager.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU/core/mllite/storage_manager.d_raw" --obj_directory="MPU/core/mllite"  "../MPU/core/mllite/storage_manager.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"../MPU/core/mllite/storage_manager.h", line 30: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"../MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"../MPU/core/mllite/storage_manager.c", line 204: warning: last line of file ends without a newline
+Finished building: "../MPU/core/mllite/ml_math_func.c"
+ 
+Building file: "../MPU_interface/mpu_interface.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="MPU_interface/mpu_interface.d_raw" --obj_directory="MPU_interface"  "../MPU_interface/mpu_interface.c"
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/stdint_invensense.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mltypes.h", line 262: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/data_builder.h", line 259: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/hal_outputs.h", line 45: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlmath.h", line 95: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/ml_math_func.h", line 132: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/mpl.h", line 24: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/results_holder.h", line 81: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/start_manager.h", line 27: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/storage_manager.h", line 30: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/log.h", line 372: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mlinclude.h", line 38: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite/invensense.h", line 28: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/fusion_9axis.h", line 38: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/heading_from_gyro.h", line 33: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/mag_disturb.h", line 37: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/motion_no_motion.h", line 28: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/no_gyro_fusion.h", line 34: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/quaternion_supervisor.h", line 27: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl/invensense_adv.h", line 27: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal/eMPL_outputs.h", line 44: warning: last line of file ends without a newline
+"/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include/mpu.h", line 380: warning: last line of file ends without a newline
+"../MPU_interface/mpu_interface.c", line 910: warning: missing return statement at end of non-void function "mpu_open"
+"../MPU_interface/mpu_interface.c", line 704: warning: variable "timestamp" was set but never used
+"../MPU_interface/mpu_interface.c", line 114: warning: variable "mpl_rate" was declared but never referenced
+"../MPU_interface/mpu_interface.c", line 187: warning: function "read_from_mpl" was declared but never referenced
+"../MPU_interface/mpu_interface.c", line 448: warning: function "handle_input" was declared but never referenced
+"../MPU_interface/mpu_interface.c", line 913: warning: variable "next_send_time" was set but never used
+Finished building: "../MPU/core/mllite/results_holder.c"
+ 
+Building file: "../i2c_functions/i2c_TM4C.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="i2c_functions/i2c_TM4C.d_raw" --obj_directory="i2c_functions"  "../i2c_functions/i2c_TM4C.c"
+Finished building: "../MPU/core/mllite/storage_manager.c"
+ 
+Building file: "../i2c_functions/i2c_functions.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="i2c_functions/i2c_functions.d_raw" --obj_directory="i2c_functions"  "../i2c_functions/i2c_functions.c"
+Finished building: "../MPU/core/driver/eMPL/inv_mpu.c"
+ 
+Building file: "../include/imu.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="include/imu.d_raw" --obj_directory="include"  "../include/imu.c"
+Finished building: "../i2c_functions/i2c_functions.c"
+ 
+Building file: "../include/uartstdio.c"
+Invoking: ARM Compiler
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/include" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/i2c_functions" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/stm32L" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/eMPL-hal" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mpl" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/eMPL" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/mllite" --include_path="/Users/crohan009/Documents/Stuff/USR18/code base/LM4F_TM4C_uart/MPU/core/driver/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178" --include_path="/Applications/ti/TivaWare_C_Series-2.1.4.178/utils" --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi --preproc_with_compile --preproc_dependency="include/uartstdio.d_raw" --obj_directory="include"  "../include/uartstdio.c"
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include/sys/_stdint.h", line 56: warning: typedef name has already been declared (with same type)
+"../include/imu.c", line 259: warning: function "delay_ms" declared implicitly
+"../include/imu.c", line 478: warning: missing return statement at end of non-void function "init_imu_raw_data"
+"../include/imu.c", line 686: warning: integer conversion resulted in a change of sign
+"../include/imu.c", line 1012: warning: function "i2c_write_reg_lsm" declared implicitly
+"../include/imu.c", line 1021: warning: function "i2c_write_reg_lsm" declared implicitly
+"../include/imu.c", line 1030: warning: function "i2c_write_reg_lsm" declared implicitly
+"../include/imu.c", line 1052: warning: function "I2CReceive" declared implicitly
+"../include/imu.c", line 1077: warning: function "I2CReceive" declared implicitly
+"../include/imu.c", line 1094: warning: function "I2CReceive" declared implicitly
+"../include/imu.c", line 178: warning: variable "disable_accel" was set but never used
+"../i2c_functions/i2c_TM4C.c", line 22: warning: variable "i" was declared but never referenced
+Finished building: "../i2c_functions/i2c_TM4C.c"
+ 
+Finished building: "../MPU_interface/mpu_interface.c"
+ 
+Finished building: "../include/imu.c"
+Finished building: "../include/uartstdio.c"
+ 
+ 
+Building target: "LM4F_TM4C_uart.out"
+Invoking: ARM Linker
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi -z -m"app_TM4C123GE6PM_ccs.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --reread_libs --warn_sections --rom_model -o "LM4F_TM4C_uart.out" "./startup_ccs.obj" "./uart_echo.obj" "./MPU/core/driver/eMPL/inv_mpu.obj" "./MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "./MPU/core/driver/stm32L/log_stm32.obj" "./MPU/core/eMPL-hal/eMPL_outputs.obj" "./MPU/core/mllite/data_builder.obj" "./MPU/core/mllite/hal_outputs.obj" "./MPU/core/mllite/message_layer.obj" "./MPU/core/mllite/ml_math_func.obj" "./MPU/core/mllite/mlmath.obj" "./MPU/core/mllite/mpl.obj" "./MPU/core/mllite/results_holder.obj" "./MPU/core/mllite/start_manager.obj" "./MPU/core/mllite/storage_manager.obj" "./MPU_interface/mpu_interface.obj" "./i2c_functions/i2c_TM4C.obj" "./i2c_functions/i2c_functions.obj" "./include/imu.obj" "./include/uartstdio.obj" "../uart_echo_ccs.cmd" "../LM4F_TM4C_libs/LM4F_TM4C_libs.lib"  -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -llibc.a   ../MPU/core/mpl/liblibmplmpu-m4-hardfp.a 
+<Linking>
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<accel_auto_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<compass_vec_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fast_no_motion.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fusion_9axis.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<gyro_tc.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<mag_disturb.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<quaternion_supervisor.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+error: symbol "float" redefined: first defined in "./uart_echo.obj"; redefined
+   in "./include/imu.obj"
+warning: creating output section ".rodata.str1.4" without a SECTIONS
+   specification
+error: errors encountered during linking; "LM4F_TM4C_uart.out" not built
+gmake: *** [LM4F_TM4C_uart.out] Error 1
+ 
+>> Compilation failure
+makefile:178: recipe for target 'LM4F_TM4C_uart.out' failed
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LM4F_TM4C_uart ****
+
+/Applications/ti/ccsv8/utils/bin/gmake -j4 all 
+ 
+Building target: "LM4F_TM4C_uart.out"
+Invoking: ARM Linker
+"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=__FPU_PRESENT=1 --define=ARM_MATH_CM4 --define=USE_DMP --define=MPL_LOG_NDEBUG=1 --define=EMPL --define=MPU9150 --define=EMPL_TARGET_TM4C --define=ccs="ccs" --define=TARGET_IS_TM4C123_RA3 --define=PART_TM4C123GE6PM --gcc --abi=eabi -z -m"app_TM4C123GE6PM_ccs.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/" -i"/Applications/ti/TivaWare_C_Series-2.1.4.178/" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include" --reread_libs --warn_sections --rom_model -o "LM4F_TM4C_uart.out" "./startup_ccs.obj" "./uart_echo.obj" "./MPU/core/driver/eMPL/inv_mpu.obj" "./MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "./MPU/core/driver/stm32L/log_stm32.obj" "./MPU/core/eMPL-hal/eMPL_outputs.obj" "./MPU/core/mllite/data_builder.obj" "./MPU/core/mllite/hal_outputs.obj" "./MPU/core/mllite/message_layer.obj" "./MPU/core/mllite/ml_math_func.obj" "./MPU/core/mllite/mlmath.obj" "./MPU/core/mllite/mpl.obj" "./MPU/core/mllite/results_holder.obj" "./MPU/core/mllite/start_manager.obj" "./MPU/core/mllite/storage_manager.obj" "./MPU_interface/mpu_interface.obj" "./i2c_functions/i2c_TM4C.obj" "./i2c_functions/i2c_functions.obj" "./include/imu.obj" "./include/uartstdio.obj" "../uart_echo_ccs.cmd" "../LM4F_TM4C_libs/LM4F_TM4C_libs.lib"  -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"/Applications/ti/TivaWare_C_Series-2.1.4.178/sensorlib/ccs/Debug/sensorlib.lib" -llibc.a   ../MPU/core/mpl/liblibmplmpu-m4-hardfp.a 
+<Linking>
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<accel_auto_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<compass_vec_cal.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fast_no_motion.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<fusion_9axis.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<gyro_tc.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<mag_disturb.o>" = --wchar_t=32,
+   "./startup_ccs.obj" = --wchar_t=16)
+warning: object files have incompatible wchar_t types
+   ("../MPU/core/mpl/liblibmplmpu-m4-hardfp.a<quaternion_supervisor.o>" =
+   --wchar_t=32, "./startup_ccs.obj" = --wchar_t=16)
+error: symbol "float" redefined: first defined in "./uart_echo.obj"; redefined
+   in "./include/imu.obj"
+warning: creating output section ".rodata.str1.4" without a SECTIONS
+   specification
+error: errors encountered during linking; "LM4F_TM4C_uart.out" not built
+gmake: *** [LM4F_TM4C_uart.out] Error 1
+ 
+>> Compilation failure
+makefile:178: recipe for target 'LM4F_TM4C_uart.out' failed
+
+**** Build Finished ****

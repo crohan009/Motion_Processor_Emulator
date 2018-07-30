@@ -1,0 +1,1587 @@
+******************************************************************************
+                  TI ARM Linker Unix v16.9.6                   
+******************************************************************************
+>> Linked Mon Jul 23 19:44:01 2018
+
+OUTPUT FILE NAME:   <LM4F_TM4C_uart.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 000107b5
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  0001242a  0000dbd6  R  X
+  SRAM                  20000000   00008000  0000295c  000056a4  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00012438   00012438    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  00000270    00000270    00010c8c   00010c8c    r-x .text
+  00010f00    00010f00    00001496   00001496    r-- .const
+  00012398    00012398    0000000c   0000000c    r-- .rodata.str1.4
+  000123a8    000123a8    00000090   00000090    r-- .cinit
+20000000    20000000    00002960   00000000    rw-
+  20000000    20000000    0000026c   00000000    rw- .vtable
+  20000270    20000270    00001618   00000000    rw- .bss
+  20001888    20001888    00001000   00000000    rw- .stack
+  20002888    20002888    000000d8   00000000    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     startup_ccs.obj (.intvecs)
+
+.text      0    00000270    00010c8c     
+                  00000270    00002430     liblibmplmpu-m4-hardfp.a : compass_vec_cal.o (.text)
+                  000026a0    00001e3c     inv_mpu.obj (.text)
+                  000044dc    0000113e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.obj (.text)
+                  0000561a    00000006     driverlib.lib : sysctl.obj (.text:SysCtlDelay)
+                  00005620    00000d98     liblibmplmpu-m4-hardfp.a : accel_auto_cal.o (.text)
+                  000063b8    00000d90                              : fast_no_motion.o (.text)
+                  00007148    00000d64     ml_math_func.obj (.text)
+                  00007eac    00000b2c     data_builder.obj (.text)
+                  000089d8    00000b0c     inv_mpu_dmp_motion_driver.obj (.text)
+                  000094e4    00000004     driverlib.lib : i2c.obj (.text:I2CMasterControl)
+                  000094e8    00000a78     liblibmplmpu-m4-hardfp.a : quaternion_supervisor.o (.text)
+                  00009f60    00000760                              : fusion_9axis.o (.text)
+                  0000a6c0    00000738     rtsv7M4_T_le_v4SPD16_eabi.lib : k_rem_pio2.obj (.text)
+                  0000adf8    00000680     liblibmplmpu-m4-hardfp.a : mag_disturb.o (.text)
+                  0000b478    0000067c     mpu_interface.obj (.text)
+                  0000baf4    000005dc     rtsv7M4_T_le_v4SPD16_eabi.lib : s_cos.obj (.text)
+                  0000c0d0    000005b0     hal_outputs.obj (.text)
+                  0000c680    000005a0     liblibmplmpu-m4-hardfp.a : gyro_tc.o (.text)
+                  0000cc20    000004a8     results_holder.obj (.text)
+                  0000d0c8    00000420     rtsv7M4_T_le_v4SPD16_eabi.lib : e_acos.obj (.text)
+                  0000d4e8    000003f0     uart_echo.obj (.text)
+                  0000d8d8    000003c4     rtsv7M4_T_le_v4SPD16_eabi.lib : e_log.obj (.text)
+                  0000dc9c    000003b8     eMPL_outputs.obj (.text)
+                  0000e054    00000350     uartstdio.obj (.text)
+                  0000e3a4    00000290     log_stm32.obj (.text)
+                  0000e634    0000021e     rtsv7M4_T_le_v4SPD16_eabi.lib : ll_div_t2.obj (.text)
+                  0000e852    00000002                                   : i_div0.obj (.text)
+                  0000e854    00000208     i2c_TM4C.obj (.text)
+                  0000ea5c    000001f4     rtsv7M4_T_le_v4SPD16_eabi.lib : ull_div_t2.obj (.text)
+                  0000ec50    000001c4     storage_manager.obj (.text)
+                  0000ee14    000001b6     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_add_t2.obj (.text)
+                  0000efca    00000002                                   : l_div0.obj (.text)
+                  0000efcc    00000194                                   : e_acosf.obj (.text)
+                  0000f160    00000178                                   : e_asinf.obj (.text)
+                  0000f2d8    00000174                                   : k_sin.obj (.text)
+                  0000f44c    00000170                                   : e_sqrt.obj (.text)
+                  0000f5bc    0000016c                                   : k_cos.obj (.text)
+                  0000f728    00000158                                   : e_atan2f.obj (.text)
+                  0000f880    00000150                                   : s_atanf.obj (.text)
+                  0000f9d0    00000136                                   : fd_div_t2.obj (.text)
+                  0000fb06    00000132     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
+                  0000fc38    00000110                   : sysctl.obj (.text:SysCtlClockGet)
+                  0000fd48    000000fc     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_mul_t2.obj (.text)
+                  0000fe44    000000fc                                   : s_scalbn.obj (.text)
+                  0000ff40    000000f8                                   : s_floor.obj (.text)
+                  00010038    000000f4     mpl.obj (.text)
+                  0001012c    000000b4     rtsv7M4_T_le_v4SPD16_eabi.lib : s_cosf.obj (.text)
+                  000101e0    000000a4                                   : s_sinf.obj (.text)
+                  00010284    0000009c                                   : memcpy_t2.obj (.text)
+                  00010320    00000094     start_manager.obj (.text)
+                  000103b4    00000086     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_cmp_t2.obj (.text:__aeabi_cdcmple)
+                  0001043a    00000086                                   : fd_cmp_t2.obj (.text:__aeabi_cdrcmple)
+                  000104c0    0000007a                                   : memset_t2.obj (.text)
+                  0001053a    00000002                                   : mpu_init.obj (.text)
+                  0001053c    00000070                                   : autoinit.obj (.text)
+                  000105ac    0000006e                                   : fd_tos_t2.obj (.text)
+                  0001061a    0000006c                                   : fs_toll_t2.obj (.text)
+                  00010686    00000068                                   : copy_decompress_lzss.obj (.text:decompress:lzss)
+                  000106ee    00000002                                   : startup.obj (.text)
+                  000106f0    00000064                                   : s_frexp.obj (.text)
+                  00010754    00000060                                   : sprintf.obj (.text)
+                  000107b4    00000054                                   : boot.obj (.text)
+                  00010808    00000054                                   : exit.obj (.text)
+                  0001085c    00000054                                   : ltoa.obj (.text)
+                  000108b0    00000050     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralReset)
+                  00010900    0000004c                   : i2c.obj (.text:I2CMasterInitExpClk)
+                  0001094c    0000004c     rtsv7M4_T_le_v4SPD16_eabi.lib : atoi.obj (.text)
+                  00010998    0000004c                                   : cpy_tbl.obj (.text)
+                  000109e4    00000048     driverlib.lib : gpio.obj (.text:GPIOPinConfigure)
+                  00010a2c    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_toi_t2.obj (.text)
+                  00010a74    00000048                                   : ll_tofs_t2.obj (.text)
+                  00010abc    00000048                                   : vsprintf.obj (.text)
+                  00010b04    00000040                                   : u_divt2.obj (.text)
+                  00010b44    00000038                                   : fs_tod_t2.obj (.text)
+                  00010b7c    00000034     driverlib.lib : interrupt.obj (.text:IntRegister)
+                  00010bb0    00000034                   : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  00010be4    0000002e     rtsv7M4_T_le_v4SPD16_eabi.lib : i_tofd_t2.obj (.text)
+                  00010c12    0000002c     i2c_functions.obj (.text)
+                  00010c3e    0000002a     driverlib.lib : gpio.obj (.text:GPIODirModeSet)
+                  00010c68    00000028     rtsv7M4_T_le_v4SPD16_eabi.lib : e_sqrtf.obj (.text)
+                  00010c90    00000024     message_layer.obj (.text)
+                  00010cb4    00000024     rtsv7M4_T_le_v4SPD16_eabi.lib : memcmp.obj (.text)
+                  00010cd8    00000024                                   : memmov.obj (.text)
+                  00010cfc    0000001e                                   : ll_asr_t2.obj (.text)
+                  00010d1a    00000002     --HOLE-- [fill = 0]
+                  00010d1c    0000001c     driverlib.lib : systick.obj (.text:SysTickIntRegister)
+                  00010d38    0000001c     rtsv7M4_T_le_v4SPD16_eabi.lib : memccpy.obj (.text)
+                  00010d54    00000018                                   : args_main.obj (.text)
+                  00010d6c    00000018                                   : ll_mul_t2.obj (.text)
+                  00010d84    00000016                                   : strchr.obj (.text)
+                  00010d9a    00000002     --HOLE-- [fill = 0]
+                  00010d9c    00000014     driverlib.lib : systick.obj (.text:SysTickEnable)
+                  00010db0    00000014                   : systick.obj (.text:SysTickIntEnable)
+                  00010dc4    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.text)
+                  00010dd8    00000014                                   : s_copysign.obj (.text)
+                  00010dec    00000014                                   : strlen.obj (.text)
+                  00010e00    00000012     driverlib.lib : gpio.obj (.text:GPIOPinTypeI2C)
+                  00010e12    00000012                   : gpio.obj (.text:GPIOPinTypeI2CSCL)
+                  00010e24    00000012                   : gpio.obj (.text:GPIOPinTypeUART)
+                  00010e36    00000010                   : interrupt.obj (.text:IntMasterEnable)
+                  00010e46    00000002     --HOLE-- [fill = 0]
+                  00010e48    00000010                   : systick.obj (.text:SysTickPeriodSet)
+                  00010e58    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_eabi_t2.obj (.text:__aeabi_dcmpeq)
+                  00010e66    0000000e                                   : fd_eabi_t2.obj (.text:__aeabi_dcmpgt)
+                  00010e74    0000000e                                   : fd_eabi_t2.obj (.text:__aeabi_dcmple)
+                  00010e82    0000000e                                   : fd_eabi_t2.obj (.text:__aeabi_dcmplt)
+                  00010e90    0000000e                                   : copy_decompress_none.obj (.text:decompress:none)
+                  00010e9e    0000000c     driverlib.lib : cpu.obj (.text:CPUcpsie)
+                  00010eaa    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.obj (.text:decompress:ZI)
+                  00010eb6    0000000c     startup_ccs.obj (.text)
+                  00010ec2    0000000a     driverlib.lib : i2c.obj (.text:I2CMasterEnable)
+                  00010ecc    0000000a                   : uart.obj (.text:UARTIntStatus)
+                  00010ed6    00000008                   : i2c.obj (.text:I2CMasterBusy)
+                  00010ede    00000008                   : i2c.obj (.text:I2CMasterSlaveAddrSet)
+                  00010ee6    00000006                   : uart.obj (.text:UARTClockSourceSet)
+                  00010eec    00000004                   : i2c.obj (.text:I2CMasterDataGet)
+                  00010ef0    00000004                   : i2c.obj (.text:I2CMasterDataPut)
+                  00010ef4    00000004                   : uart.obj (.text:UARTIntClear)
+                  00010ef8    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.obj (.text)
+
+.const     0    00010f00    00001496     
+                  00010f00    00000bf6     inv_mpu_dmp_motion_driver.obj (.const:.string:dmp_memory)
+                  00011af6    00000002     --HOLE-- [fill = 0]
+                  00011af8    00000400     ml_math_func.obj (.const:sin_lookup)
+                  00011ef8    00000158     rtsv7M4_T_le_v4SPD16_eabi.lib : k_rem_pio2.obj (.const:$O1$$)
+                  00012050    00000101                                   : ctype.obj (.const:.string:_ctypes_)
+                  00012151    00000003     inv_mpu_dmp_motion_driver.obj (.const:.string:$P$T0$1)
+                  00012154    00000090     driverlib.lib : gpio.obj (.const:g_pui32GPIOBaseAddrs)
+                  000121e4    0000006c                   : sysctl.obj (.const:g_pui32Xtals)
+                  00012250    00000034     rtsv7M4_T_le_v4SPD16_eabi.lib : s_atanf.obj (.const:$O1$$)
+                  00012284    0000002a     inv_mpu.obj (.const:reg)
+                  000122ae    00000002     --HOLE-- [fill = 0]
+                  000122b0    00000028     inv_mpu.obj (.const:test)
+                  000122d8    00000020     rtsv7M4_T_le_v4SPD16_eabi.lib : e_asinf.obj (.const)
+                  000122f8    00000014     mpl.obj (.const:.string:ml_ver)
+                  0001230c    0000000e     mpl.obj (.const:.string:$P$T1$2)
+                  0001231a    0000000e     inv_mpu.obj (.const:hw)
+                  00012328    0000000d     mpl.obj (.const:.string:$P$T0$1)
+                  00012335    0000000c     inv_mpu_dmp_motion_driver.obj (.const:.string:$P$T4$5)
+                  00012341    00000003     inv_mpu_dmp_motion_driver.obj (.const:.string:$P$T1$2)
+                  00012344    0000000c     uartstdio.obj (.const:g_ui32UARTBase)
+                  00012350    0000000c     uartstdio.obj (.const:g_ui32UARTPeriph)
+                  0001235c    0000000b     inv_mpu_dmp_motion_driver.obj (.const:.string:$P$T7$8)
+                  00012367    0000000b     inv_mpu_dmp_motion_driver.obj (.const:.string:$P$T8$9)
+                  00012372    00000002     --HOLE-- [fill = 0]
+                  00012374    0000000a     mpu_interface.obj (.const:.string)
+                  0001237e    00000009     inv_mpu_dmp_motion_driver.obj (.const:.string:$P$T5$6)
+                  00012387    00000009     inv_mpu_dmp_motion_driver.obj (.const:.string:$P$T6$7)
+                  00012390    00000003     inv_mpu_dmp_motion_driver.obj (.const:.string:$P$T2$3)
+                  00012393    00000003     inv_mpu_dmp_motion_driver.obj (.const:.string:$P$T3$4)
+
+.cinit     0    000123a8    00000090     
+                  000123a8    00000056     (.cinit..data.load) [load image, compression = lzss]
+                  000123fe    00000002     --HOLE-- [fill = 0]
+                  00012400    0000000c     (__TI_handler_table)
+                  0001240c    00000004     --HOLE-- [fill = 0]
+                  00012410    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00012418    00000008     (.cinit..vtable.load) [load image, compression = zero_init]
+                  00012420    00000018     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.vtable    0    20000000    0000026c     UNINITIALIZED
+                  20000000    0000026c     driverlib.lib : interrupt.obj (.vtable)
+
+.bss       0    20000270    00001618     UNINITIALIZED
+                  20000270    000004b8     liblibmplmpu-m4-hardfp.a : accel_auto_cal.o (.bss)
+                  20000728    00000260     (.common:fnm)
+                  20000988    000001c4                              : gyro_tc.o (.bss)
+                  20000b4c    00000004     message_layer.obj (.bss:mh)
+                  20000b50    000001a8     (.common:vc)
+                  20000cf8    00000198     storage_manager.obj (.bss:ds)
+                  20000e90    00000198     data_builder.obj (.bss:sensors)
+                  20001028    00000140     data_builder.obj (.bss:inv_data_builder)
+                  20001168    00000138     (.common:s9axis)
+                  200012a0    000000e8     (.common:cb)
+                  20001388    000000e8     (.common:cb_sim)
+                  20001470    000000e8     (.common:cb_test)
+                  20001558    000000c4     hal_outputs.obj (.bss:hal_out)
+                  2000161c    000000b8     liblibmplmpu-m4-hardfp.a : mag_disturb.o (.bss)
+                  200016d4    00000088     results_holder.obj (.bss:rh)
+                  2000175c    0000006c     liblibmplmpu-m4-hardfp.a : quaternion_supervisor.o (.bss)
+                  200017c8    00000054     start_manager.obj (.bss:inv_start_cb)
+                  2000181c    00000004     mpu_interface.obj (.bss)
+                  20001820    00000040     liblibmplmpu-m4-hardfp.a : fast_no_motion.o (.bss)
+                  20001860    00000028     eMPL_outputs.obj (.bss:eMPL_out)
+
+.data      0    20002888    000000d8     UNINITIALIZED
+                  20002888    00000038     inv_mpu.obj (.data:st)
+                  200028c0    00000024     mpu_interface.obj (.data:hal)
+                  200028e4    00000014     hal_outputs.obj (.data:compass_low_pass_filter_coeff)
+                  200028f8    00000010     inv_mpu_dmp_motion_driver.obj (.data:dmp)
+                  20002908    00000010     liblibmplmpu-m4-hardfp.a : compass_vec_cal.o (.data)
+                  20002918    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.obj (.data:$O1$$)
+                  20002924    00000009     mpu_interface.obj (.data:compass_pdata)
+                  2000292d    00000009     mpu_interface.obj (.data:gyro_pdata)
+                  20002936    00000002     --HOLE--
+                  20002938    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.data:$O1$$)
+                  20002940    00000008     mpu_interface.obj (.data)
+                  20002948    00000008     uart_echo.obj (.data)
+                  20002950    00000005     uartstdio.obj (.data)
+                  20002955    00000003     --HOLE--
+                  20002958    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.obj (.data)
+                  2000295c    00000004                                   : stkdepth_vars.obj (.data)
+
+.stack     0    20001888    00001000     UNINITIALIZED
+                  20001888    00001000     --HOLE--
+
+.rodata.str1.4 
+*          0    00012398    0000000c     
+                  00012398    0000000c     liblibmplmpu-m4-hardfp.a : quaternion_supervisor.o (.rodata.str1.4)
+
+MODULE SUMMARY
+
+       Module                          code    ro data   rw data
+       ------                          ----    -------   -------
+    ./
+       uart_echo.obj                   1008    0         8      
+       startup_ccs.obj                 12      620       0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          1020    620       8      
+                                                                
+    ./MPU/core/driver/eMPL/
+       inv_mpu.obj                     7740    96        56     
+       inv_mpu_dmp_motion_driver.obj   2828    3126      16     
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          10568   3222      72     
+                                                                
+    ./MPU/core/driver/stm32L/
+       log_stm32.obj                   656     0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          656     0         0      
+                                                                
+    ./MPU/core/eMPL-hal/
+       eMPL_outputs.obj                952     0         40     
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          952     0         40     
+                                                                
+    ./MPU/core/mllite/
+       ml_math_func.obj                3428    1024      0      
+       data_builder.obj                2860    0         728    
+       hal_outputs.obj                 1456    0         216    
+       results_holder.obj              1192    0         136    
+       storage_manager.obj             452     0         408    
+       mpl.obj                         244     47        0      
+       start_manager.obj               148     0         84     
+       message_layer.obj               36      0         4      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          9816    1071      1576   
+                                                                
+    ./MPU_interface/
+       mpu_interface.obj               1660    10        66     
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          1660    10        66     
+                                                                
+    ./i2c_functions/
+       i2c_TM4C.obj                    520     0         0      
+       i2c_functions.obj               44      0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          564     0         0      
+                                                                
+    ./include/
+       uartstdio.obj                   848     24        5      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          848     24        5      
+                                                                
+    ../MPU/core/mpl/liblibmplmpu-m4-hardfp.a
+       compass_vec_cal.o               9264    0         1136   
+       accel_auto_cal.o                3480    0         1208   
+       fast_no_motion.o                3472    0         672    
+       quaternion_supervisor.o         2680    12        108    
+       fusion_9axis.o                  1888    0         312    
+       gyro_tc.o                       1440    0         452    
+       mag_disturb.o                   1664    0         184    
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          23888   12        4072   
+                                                                
+    /Applications/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib
+       interrupt.obj                   68      0         620    
+       gpio.obj                        474     144       0      
+       sysctl.obj                      410     108       0      
+       i2c.obj                         114     0         0      
+       systick.obj                     84      0         0      
+       uart.obj                        20      0         0      
+       cpu.obj                         12      0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          1182    252       620    
+                                                                
+    /Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib/rtsv7M4_T_le_v4SPD16_eabi.lib
+       _printfi.obj                    4414    0         0      
+       k_rem_pio2.obj                  1848    344       0      
+       s_cos.obj                       1500    0         0      
+       e_acos.obj                      1056    0         0      
+       e_log.obj                       964     0         0      
+       ll_div_t2.obj                   542     0         0      
+       ull_div_t2.obj                  500     0         0      
+       fd_add_t2.obj                   438     0         0      
+       e_asinf.obj                     376     32        0      
+       e_acosf.obj                     404     0         0      
+       s_atanf.obj                     336     52        0      
+       k_sin.obj                       372     0         0      
+       e_sqrt.obj                      368     0         0      
+       k_cos.obj                       364     0         0      
+       e_atan2f.obj                    344     0         0      
+       fd_div_t2.obj                   310     0         0      
+       fd_cmp_t2.obj                   268     0         0      
+       ctype.obj                       0       257       0      
+       fd_mul_t2.obj                   252     0         0      
+       s_scalbn.obj                    252     0         0      
+       s_floor.obj                     248     0         0      
+       s_cosf.obj                      180     0         0      
+       s_sinf.obj                      164     0         0      
+       memcpy_t2.obj                   156     0         0      
+       memset_t2.obj                   122     0         0      
+       autoinit.obj                    112     0         0      
+       fd_tos_t2.obj                   110     0         0      
+       fs_toll_t2.obj                  108     0         0      
+       copy_decompress_lzss.obj        104     0         0      
+       s_frexp.obj                     100     0         0      
+       exit.obj                        84      0         12     
+       sprintf.obj                     96      0         0      
+       boot.obj                        84      0         0      
+       ltoa.obj                        84      0         0      
+       atoi.obj                        76      0         0      
+       cpy_tbl.obj                     76      0         0      
+       fd_toi_t2.obj                   72      0         0      
+       ll_tofs_t2.obj                  72      0         0      
+       vsprintf.obj                    72      0         0      
+       u_divt2.obj                     64      0         0      
+       fd_eabi_t2.obj                  56      0         0      
+       fs_tod_t2.obj                   56      0         0      
+       i_tofd_t2.obj                   46      0         0      
+       e_sqrtf.obj                     40      0         0      
+       memcmp.obj                      36      0         0      
+       memmov.obj                      36      0         0      
+       ll_asr_t2.obj                   30      0         0      
+       _lock.obj                       20      0         8      
+       memccpy.obj                     28      0         0      
+       args_main.obj                   24      0         0      
+       ll_mul_t2.obj                   24      0         0      
+       strchr.obj                      22      0         0      
+       s_copysign.obj                  20      0         0      
+       strlen.obj                      20      0         0      
+       copy_decompress_none.obj        14      0         0      
+       copy_zero_init.obj              12      0         0      
+       errno.obj                       0       0         4      
+       pre_init.obj                    4       0         0      
+       stkdepth_vars.obj               0       0         4      
+       i_div0.obj                      2       0         0      
+       l_div0.obj                      2       0         0      
+       mpu_init.obj                    2       0         0      
+       startup.obj                     2       0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          17588   685       28     
+                                                                
+       Stack:                          0       0         4096   
+       Linker Generated:               0       138       0      
+    +--+-------------------------------+-------+---------+---------+
+       Grand Total:                    68742   6034      10583  
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00012420 records: 3, size/record: 8, table size: 24
+	.data: load addr=000123a8, load size=00000056 bytes, run addr=20002888, run size=000000d8 bytes, compression=lzss
+	.bss: load addr=00012410, load size=00000008 bytes, run addr=20000270, run size=00001618 bytes, compression=zero_init
+	.vtable: load addr=00012418, load size=00000008 bytes, run addr=20000000, run size=0000026c bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00012400 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                    
+-------   ----                                    
+0000d5d3  AP_send                                 
+0000d7e9  AP_send_char                            
+0000d5f3  AP_send_msg                             
+00010809  C$$EXIT                                 
+00010e9f  CPUcpsie                                
+0000af75  ComputeAngleVelocity                    
+0000d597  ConfigureUART                           
+00010c3f  GPIODirModeSet                          
+0000fb07  GPIOPadConfigSet                        
+000109e5  GPIOPinConfigure                        
+00010e01  GPIOPinTypeI2C                          
+00010e13  GPIOPinTypeI2CSCL                       
+00010e25  GPIOPinTypeUART                         
+00010ed7  I2CMasterBusy                           
+000094e5  I2CMasterControl                        
+00010eed  I2CMasterDataGet                        
+00010ef1  I2CMasterDataPut                        
+00010ec3  I2CMasterEnable                         
+00010901  I2CMasterInitExpClk                     
+00010edf  I2CMasterSlaveAddrSet                   
+00010e37  IntMasterEnable                         
+00010b7d  IntRegister                             
+0000afd5  Mag3ofNormalizedLong                    
+0000b0a9  MagDisturbCheckSettling                 
+0000b029  MagDisturbSetDisturbance                
+00010eb7  ResetISR                                
+UNDEFED   SHT$$INIT_ARRAY$$Base                   
+UNDEFED   SHT$$INIT_ARRAY$$Limit                  
+0000fc39  SysCtlClockGet                          
+0000561b  SysCtlDelay                             
+00010bb1  SysCtlPeripheralEnable                  
+000108b1  SysCtlPeripheralReset                   
+00010d9d  SysTickEnable                           
+00010db1  SysTickIntEnable                        
+00010d1d  SysTickIntRegister                      
+00010e49  SysTickPeriodSet                        
+00010ee7  UARTClockSourceSet                      
+00010ef5  UARTIntClear                            
+0000d7cf  UARTIntHandler                          
+00010ecd  UARTIntStatus                           
+0000e319  UARTStdioConfig                         
+0000e2ff  UARTgetc                                
+0000e27b  UARTgets                                
+0000e261  UARTprintf                              
+0000e095  UARTvprintf                             
+0000e055  UARTwrite                               
+0000e591  _MLPrintLog                             
+20002888  __STACK_END                             
+00001000  __STACK_SIZE                            
+20001a88  __STACK_TOP                             
+00012420  __TI_CINIT_Base                         
+00012438  __TI_CINIT_Limit                        
+00012400  __TI_Handler_Table_Base                 
+0001240c  __TI_Handler_Table_Limit                
+0001053d  __TI_auto_init                          
+20002918  __TI_cleanup_ptr                        
+00010687  __TI_decompress_lzss                    
+00010e91  __TI_decompress_none                    
+2000291c  __TI_dtors_ptr                          
+20002920  __TI_enable_exit_profile_output         
+ffffffff  __TI_pprof_out_hndl                     
+00004d21  __TI_printfi                            
+ffffffff  __TI_prof_data_size                     
+ffffffff  __TI_prof_data_start                    
+00000000  __TI_static_base__                      
+00010eab  __TI_zero_init                          
+000103b5  __aeabi_cdcmpeq                         
+000103b5  __aeabi_cdcmple                         
+0001043b  __aeabi_cdrcmple                        
+000105ad  __aeabi_d2f                             
+00010a2d  __aeabi_d2iz                            
+0000ee1f  __aeabi_dadd                            
+00010e59  __aeabi_dcmpeq                          
+00010e67  __aeabi_dcmpgt                          
+00010e75  __aeabi_dcmple                          
+00010e83  __aeabi_dcmplt                          
+0000f9d1  __aeabi_ddiv                            
+0000fd49  __aeabi_dmul                            
+0000ee15  __aeabi_dsub                            
+00010b45  __aeabi_f2d                             
+0001061b  __aeabi_f2lz                            
+00010be5  __aeabi_i2d                             
+0000e853  __aeabi_idiv0                           
+00010a75  __aeabi_l2f                             
+00010cfd  __aeabi_lasr                            
+0000efcb  __aeabi_ldiv0                           
+0000e635  __aeabi_ldivmod                         
+00010d6d  __aeabi_lmul                            
+000104c1  __aeabi_memclr                          
+000104c1  __aeabi_memclr4                         
+000104c1  __aeabi_memclr8                         
+00010285  __aeabi_memcpy                          
+00010285  __aeabi_memcpy4                         
+00010285  __aeabi_memcpy8                         
+000104c3  __aeabi_memset                          
+000104c3  __aeabi_memset4                         
+000104c3  __aeabi_memset8                         
+00010b05  __aeabi_uidiv                           
+00010b05  __aeabi_uidivmod                        
+0000ea5d  __aeabi_uldivmod                        
+ffffffff  __binit__                               
+ffffffff  __c_args__                              
+0000f5bd  __kernel_cos                            
+0000a6c1  __kernel_rem_pio2                       
+0000f2d9  __kernel_sin                            
+0001053b  __mpu_init                              
+20001888  __stack                                 
+00010d55  _args_main                              
+000107b5  _c_int00                                
+00012050  _ctypes_                                
+20002938  _lock                                   
+00010dd3  _nop                                    
+00010dcb  _register_lock                          
+00010dc5  _register_unlock                        
+000106ef  _system_post_cinit                      
+00010ef9  _system_pre_init                        
+2000293c  _unlock                                 
+0001080d  abort                                   
+0000d0c9  acos                                    
+0000efcd  acosf                                   
+0000d0c9  acosl                                   
+0000f161  asinf                                   
+0000f729  atan2f                                  
+0000f881  atanf                                   
+0001094d  atoi                                    
+ffffffff  binit                                   
+200012a0  cb                                      
+20001388  cb_sim                                  
+20001470  cb_test                                 
+200028e4  compass_low_pass_filter_coeff           
+00010999  copy_in                                 
+00010dd9  copysign                                
+00010dd9  copysignl                               
+0000baf5  cos                                     
+0001012d  cosf                                    
+0000baf5  cosl                                    
+20002948  data                                    
+0000d781  delay                                   
+0000d729  delay2                                  
+0000d621  delay_ms                                
+000092df  dmp_enable_6x_lp_quat                   
+0000931d  dmp_enable_feature                      
+000092bb  dmp_enable_gyro_cal                     
+00009281  dmp_enable_lp_quat                      
+00009275  dmp_get_enabled_features                
+00009269  dmp_get_fifo_rate                       
+00009227  dmp_get_pedometer_step_count            
+000091e5  dmp_get_pedometer_walk_time             
+000091d1  dmp_load_motion_driver_firmware         
+00009045  dmp_read_fifo                           
+00008fe7  dmp_register_android_orient_cb          
+00008fd9  dmp_register_tap_cb                     
+00008eed  dmp_set_accel_bias                      
+00008e8d  dmp_set_fifo_rate                       
+00008dcb  dmp_set_gyro_bias                       
+00008d89  dmp_set_interrupt_mode                  
+00008c39  dmp_set_orientation                     
+00008c13  dmp_set_pedometer_step_count            
+00008be7  dmp_set_pedometer_walk_time             
+00008bb7  dmp_set_shake_reject_thresh             
+00008b97  dmp_set_shake_reject_time               
+00008b77  dmp_set_shake_reject_timeout            
+00008b37  dmp_set_tap_axes                        
+00008b15  dmp_set_tap_count                       
+00008a19  dmp_set_tap_thresh                      
+000089f9  dmp_set_tap_time                        
+000089d9  dmp_set_tap_time_multi                  
+0000e445  eMPL_send_data                          
+0000e3a5  eMPL_send_quat                          
+0000d603  enable_systick                          
+20002958  errno                                   
+00010815  exit                                    
+0000ff41  floor                                   
+0000ff41  floorl                                  
+20000728  fnm                                     
+000106f1  frexp                                   
+000106f1  frexpl                                  
+20000000  g_pfnRAMVectors                         
+00000000  g_pfnVectors                            
+0000d639  get_ms                                  
+20002940  hal_timestamp                           
+0001231a  hw                                      
+0000e9eb  i2c_common_setup                        
+00010c31  i2c_read                                
+0000e931  i2c_read_bytes                          
+00010c13  i2c_write                               
+0000e8a9  i2c_write_bytes                         
+0000e855  i2c_write_reg                           
+000067f5  int_set_fast_nomot_gyro_threshold       
+0000a661  inv_9x_fusion_enable_jitter_reduction   
+0000a651  inv_9x_fusion_set_mag_fb                
+0000a671  inv_9x_fusion_use_timestamps            
+000089a3  inv_accel_was_turned_off                
+000058c9  inv_add_accel_block_data                
+00001925  inv_add_compass_block_data              
+0000597d  inv_add_vector_block_data               
+00007e41  inv_angle_diff                          
+00007f45  inv_apply_calibration                   
+00005bc9  inv_auto_calibrate                      
+00007e35  inv_big8_to_int16                       
+00007e1f  inv_big8_to_int32                       
+00007dc9  inv_biquad_filter_process               
+0000893f  inv_build_accel                         
+000088b7  inv_build_compass                       
+0000888f  inv_build_gyro                          
+00008865  inv_build_quat                          
+00008839  inv_build_temp                          
+00007d9b  inv_calc_state_to_match_output          
+000011c5  inv_center_sum                          
+000004dd  inv_cheap_gaussian                      
+000004a5  inv_cheap_rand                          
+0000b101  inv_check_magnetic_disturbance          
+00005a31  inv_check_sample_balance                
+000019d5  inv_check_sim                           
+00007d7d  inv_checksum                            
+000005a1  inv_combine_compass_data                
+00007cbd  inv_compass_angle                       
+00008829  inv_compass_was_turned_off              
+00000a21  inv_compute_bias                        
+00007c55  inv_convert_to_body                     
+00007bf1  inv_convert_to_body_with_scale          
+00007ba5  inv_convert_to_chip                     
+00007b77  inv_cosf                                
+00006b0d  inv_detect_motion_by_gyro_accel         
+0000a6b1  inv_disable_9x_sensor_fusion            
+00008213  inv_disable_compass_soft_iron_matrix    
+0000aebd  inv_disable_dip_tracking                
+0000e021  inv_disable_eMPL_outputs                
+00007125  inv_disable_fast_nomot                  
+0000cbf1  inv_disable_gyro_tc                     
+0000c657  inv_disable_hal_outputs                 
+0000638d  inv_disable_in_use_auto_calibration     
+0000aea5  inv_disable_magnetic_disturbance        
+00009f41  inv_disable_quaternion                  
+00002685  inv_disable_vector_compass_cal          
+0000a68d  inv_enable_9x_sensor_fusion             
+00008821  inv_enable_compass_soft_iron_matrix     
+0000aecd  inv_enable_dip_tracking                 
+0000e001  inv_enable_eMPL_outputs                 
+0000710d  inv_enable_fast_nomot                   
+0000cbb1  inv_enable_gyro_tc                      
+0000c649  inv_enable_hal_outputs                  
+00006375  inv_enable_in_use_auto_calibration      
+0000ae79  inv_enable_magnetic_disturbance         
+00009f29  inv_enable_quaternion                   
+0000d069  inv_enable_results_holder               
+0000266d  inv_enable_vector_compass_cal           
+0001038d  inv_execute_mpl_start_notification      
+0000879f  inv_execute_on_data                     
+00006965  inv_fast_nomot_get_time_elaps           
+0000662d  inv_fast_nomot_parameter                
+00006639  inv_fast_nomot_parameter_3rd            
+00006971  inv_fast_nomot_parameter_compass        
+00006939  inv_fast_nomot_reset_data_compass       
+00006719  inv_fast_nomot_set_gyro_bias            
+0000684d  inv_fast_nomot_store_data               
+000068ed  inv_fast_nomot_store_data_compass       
+00009f71  inv_filter_correction_angle             
+00007145  inv_fnm_debug_print                     
+00009761  inv_generate_accel_gyro_quaternion      
+00006cf1  inv_generate_fast_nomot                 
+00009725  inv_generate_gyro_quaternion            
+0000c509  inv_generate_hal_outputs                
+0000d05b  inv_generate_results                    
+0000254d  inv_generate_vector_compass_cal         
+0000d04d  inv_get_6axis_quaternion                
+0000d041  inv_get_acc_state                       
+0000cff1  inv_get_accel                           
+000086b9  inv_get_accel_accuracy                  
+00008699  inv_get_accel_bias                      
+000063a9  inv_get_accel_bias_stage                
+0000d005  inv_get_accel_float                     
+0000868f  inv_get_accel_on                        
+00008683  inv_get_accel_orient                    
+00008679  inv_get_accel_sample_rate_ms            
+00008671  inv_get_accel_sensitivity               
+00008641  inv_get_accel_set                       
+000085e9  inv_get_compass_bias                    
+0000cfe7  inv_get_compass_bias_error              
+0000cfd3  inv_get_compass_correction              
+000085e3  inv_get_compass_disturbance             
+000085d7  inv_get_compass_on                      
+000085cd  inv_get_compass_sample_rate_ms          
+000085c5  inv_get_compass_sensitivity             
+00008593  inv_get_compass_set                     
+00008579  inv_get_compass_soft_iron_input_data    
+0000855f  inv_get_compass_soft_iron_matrix_d      
+00008549  inv_get_compass_soft_iron_matrix_f      
+00008531  inv_get_compass_soft_iron_output_data   
+0000cfcd  inv_get_compass_state                   
+00007b21  inv_get_cross_product_vec               
+00005799  inv_get_current_calibrated_accel        
+000018cd  inv_get_current_calibrated_compass      
+0000682d  inv_get_fast_nomot_accel_param          
+0000680d  inv_get_fast_nomot_compass_param        
+00007139  inv_get_fnm_gyro_no_motion_param        
+0000cead  inv_get_gravity                         
+00008525  inv_get_gyro                            
+00008519  inv_get_gyro_accuracy                   
+000084f5  inv_get_gyro_bias                       
+000084df  inv_get_gyro_bias_tc_set                
+0000cf8f  inv_get_gyro_float                      
+000084d5  inv_get_gyro_on                         
+000084c7  inv_get_gyro_orient                     
+000084bd  inv_get_gyro_sample_rate_ms             
+000084b5  inv_get_gyro_sensitivity                
+0000848f  inv_get_gyro_set                        
+00008469  inv_get_gyro_set_raw                    
+00007b07  inv_get_gyro_sum_of_sqr                 
+0000cb61  inv_get_gyro_ts                         
+0000cf87  inv_get_heading_confidence_interval     
+0000cf81  inv_get_large_mag_field                 
+0000841f  inv_get_last_timestamp                  
+0000ceff  inv_get_linear_accel                    
+0000cf45  inv_get_linear_accel_float              
+0000cea3  inv_get_local_field                     
+0000840b  inv_get_mag_accuracy                    
+0000ce99  inv_get_mag_scale                       
+0000b46d  inv_get_magnetic_disturbance_state      
+00010ca1  inv_get_message_level_0                 
+0000ce8d  inv_get_motion_state                    
+0000edff  inv_get_mpl_state_size                  
+0000cd2d  inv_get_quaternion                      
+0000ce31  inv_get_quaternion_float                
+0000cd5d  inv_get_quaternion_set                  
+00006989  inv_get_right_shift_by_rounding         
+0000df49  inv_get_sensor_type_accel               
+0000c4a9  inv_get_sensor_type_accelerometer       
+0000df39  inv_get_sensor_type_compass             
+0000dd99  inv_get_sensor_type_euler               
+0000c435  inv_get_sensor_type_gravity             
+0000dd87  inv_get_sensor_type_gyro                
+0000c3d3  inv_get_sensor_type_gyroscope           
+0000c37b  inv_get_sensor_type_gyroscope_raw       
+0000dce9  inv_get_sensor_type_heading             
+0000c30b  inv_get_sensor_type_linear_acceleration 
+0000c2d5  inv_get_sensor_type_magnetic_field      
+0000c2bf  inv_get_sensor_type_orientation         
+0000dcc9  inv_get_sensor_type_quat                
+0000dca9  inv_get_sensor_type_rot_mat             
+0000c107  inv_get_sensor_type_rotation_vector     
+000083e9  inv_get_temp_set                        
+000100e3  inv_get_version                         
+0000cd25  inv_got_accel_bias                      
+0000cd1d  inv_got_compass_bias                    
+000083dd  inv_gyro_was_turned_off                 
+0000a615  inv_init_9x_fusion                      
+00005741  inv_init_accel_maxmin                   
+00007ae3  inv_init_biquad_filter                  
+00005881  inv_init_check_sample_balance           
+0000589d  inv_init_check_sample_balance_parameter 
+000083af  inv_init_data_builder                   
+0000708d  inv_init_fast_nomot                     
+0000caf9  inv_init_gyro_ts                        
+0000c0e3  inv_init_hal_outputs                    
+000062d1  inv_init_in_use_auto_calibration        
+0000ae21  inv_init_magnetic_disturbance           
+00006555  inv_init_maxmin                         
+00010065  inv_init_mpl                            
+00009f05  inv_init_quaternion                     
+0000ccf5  inv_init_results_holder                 
+0001037d  inv_init_start_manager                  
+0000ede9  inv_init_storage_manager                
+00002601  inv_init_vector_compass_cal             
+00007ad9  inv_int16_to_big8                       
+00007ac7  inv_int32_to_big8                       
+00007abb  inv_little8_to_int16                    
+0000ed5f  inv_load_mpl_states                     
+0000b435  inv_magnetic_disturbance_process        
+00007a29  inv_matrix_det                          
+000079c7  inv_matrix_det_inc                      
+000078a7  inv_matrix_det_incd                     
+0000790d  inv_matrix_detd                         
+00008335  inv_matrix_vector_mult                  
+00007881  inv_orientation_matrix_to_scalar        
+0000a161  inv_perform_9x_fusion                   
+0000cba1  inv_print_gtc_data                      
+0000a57d  inv_process_9x_sensor_fusion_cb         
+00002431  inv_process_compass_only_cal            
+0000734d  inv_q29_mult                            
+00007833  inv_q30_div                             
+000071a5  inv_q30_mult                            
+0000780f  inv_q_add                               
+000077cd  inv_q_addf                              
+00007521  inv_q_invert                            
+000077af  inv_q_invertf                           
+00007451  inv_q_mult                              
+000076dd  inv_q_multf                             
+00007669  inv_q_norm4                             
+00007655  inv_q_normalize                         
+00007599  inv_q_normalizef                        
+00007549  inv_q_rotate                            
+00007439  inv_q_shift_mult                        
+00008327  inv_quaternion_sensor_was_turned_off    
+00007359  inv_quaternion_to_rotation              
+0000731f  inv_quaternion_to_rotation_vector       
+00005761  inv_record_good_accel_maxmin            
+00006a71  inv_record_max_moment_in_no_motion_accel
+00006a3d  inv_record_max_moment_in_no_motion_gyro 
+00006ad9  inv_record_min_moment_in_motion_accel   
+00006aa5  inv_record_min_moment_in_motion_gyro    
+00008279  inv_register_data_cb                    
+0000eccf  inv_register_load_store                 
+00010361  inv_register_mpl_start_notification     
+00008221  inv_reset_compass_soft_iron_matrix      
+00001b41  inv_reset_data_collection               
+00006a09  inv_reset_min_max_gyro_accel_statistics 
+0000ec51  inv_save_mpl_states                     
+00006c51  inv_sensor_data_preprocess              
+0000cced  inv_set_acc_state                       
+000081fd  inv_set_accel_accuracy                  
+000081ef  inv_set_accel_bandwidth                 
+000081ad  inv_set_accel_bias                      
+0000cce5  inv_set_accel_bias_found                
+00008167  inv_set_accel_bias_mask                 
+00008159  inv_set_accel_orientation_and_scale     
+00008137  inv_set_accel_sample_rate               
+0000812f  inv_set_compass_bandwidth               
+000080ef  inv_set_compass_bias                    
+0000ccd9  inv_set_compass_bias_error              
+0000ccd1  inv_set_compass_bias_found              
+0000ccb3  inv_set_compass_correction              
+000080e7  inv_set_compass_disturbance             
+000080db  inv_set_compass_orientation_and_scale   
+000080b5  inv_set_compass_sample_rate             
+00008067  inv_set_compass_soft_iron_input_data    
+00008039  inv_set_compass_soft_iron_matrix_d      
+00008009  inv_set_compass_soft_iron_matrix_f      
+0000ccab  inv_set_compass_state                   
+0000703d  inv_set_default_number_of_samples       
+00006801  inv_set_fast_nomot_accel_threshold      
+000067e9  inv_set_fast_nomot_compass_threshold    
+0000cb31  inv_set_gtc_max_temp                    
+0000cb51  inv_set_gtc_min_diff                    
+0000cb41  inv_set_gtc_min_temp                    
+0000cb89  inv_set_gtc_order                       
+00008001  inv_set_gyro_bandwidth                  
+00007fad  inv_set_gyro_bias                       
+00007f37  inv_set_gyro_orientation_and_scale      
+00007f19  inv_set_gyro_sample_rate                
+0000cb85  inv_set_gyro_ts                         
+0000cca1  inv_set_heading_confidence_interval     
+0000cc99  inv_set_large_mag_field                 
+0000cc8d  inv_set_local_field                     
+0000cc81  inv_set_mag_scale                       
+0000ae09  inv_set_magnetic_disturbance            
+00010c91  inv_set_message                         
+0000cc51  inv_set_motion_state                    
+00007f03  inv_set_quat_sample_rate                
+00009731  inv_set_quaternion                      
+00000715  inv_set_terms                           
+000072f3  inv_sinf                                
+000057dd  inv_sort_order_4_T                      
+00009f61  inv_start_9x_sensor_fusion              
+000065ed  inv_start_fast_nomot                    
+0000c681  inv_start_gyro_tc                       
+0000c0d7  inv_start_hal_outputs                   
+00005681  inv_start_in_use_auto_calibration       
+0000adf9  inv_start_magnetic_disturbance          
+00010039  inv_start_mpl                           
+000095b9  inv_start_quaternion                    
+0000cc3f  inv_start_results_holder                
+00000271  inv_start_vector_compass_cal            
+0000a681  inv_stop_9x_sensor_fusion               
+000070f5  inv_stop_fast_nomot                     
+0000cba5  inv_stop_gyro_tc                        
+0000c0d1  inv_stop_hal_outputs                    
+00006369  inv_stop_in_use_auto_calibration        
+0000ae6d  inv_stop_magnetic_disturbance           
+00009ef9  inv_stop_quaternion                     
+000025f5  inv_stop_vector_compass_cal             
+0000cc21  inv_store_gaming_quaternion             
+00007efb  inv_temperature_was_turned_off          
+0000aedd  inv_track_dip_angle                     
+00007eb3  inv_unregister_data_cb                  
+00010321  inv_unregister_mpl_start_notification   
+00000499  inv_vector_compass_cal_sensitivity      
+000072bf  inv_vector_norm                         
+00007219  inv_vector_normalize                    
+000071e3  inv_wrap_angle                          
+0000fe45  ldexp                                   
+0000fe45  ldexpl                                  
+0000d8d9  log                                     
+0000d8d9  logl                                    
+0001085d  ltoa                                    
+2000161c  mag_disturb                             
+0000d63f  main                                    
+2000295c  main_func_sp                            
+00010d39  memccpy                                 
+00010cb5  memcmp                                  
+00010285  memcpy                                  
+00010cd9  memmove                                 
+000104c9  memset                                  
+000071b1  mlMatrixVectorMult                      
+0000d0c9  ml_acos                                 
+0000baf5  ml_cos                                  
+0000ff41  ml_floor                                
+0000d8d9  ml_log                                  
+0000f44d  ml_sqrt                                 
+000122f8  ml_ver                                  
+20002944  mpl_key                                 
+00002aa3  mpu_configure_fifo                      
+00003179  mpu_get_accel_fsr                       
+00004459  mpu_get_accel_reg                       
+00004417  mpu_get_accel_sens                      
+00004407  mpu_get_compass_fsr                     
+00004359  mpu_get_compass_reg                     
+0000434b  mpu_get_compass_sample_rate             
+0000433d  mpu_get_dmp_state                       
+0000ba73  mpu_get_euler                           
+0000320d  mpu_get_fifo_config                     
+00003149  mpu_get_gyro_fsr                        
+000042db  mpu_get_gyro_reg                        
+000042af  mpu_get_gyro_sens                       
+00004279  mpu_get_int_status                      
+000031b3  mpu_get_lpf                             
+0000b5a7  mpu_get_outputs                         
+00004265  mpu_get_power_state                     
+0000ba33  mpu_get_rot_mat                         
+000031f1  mpu_get_sample_rate                     
+000041dd  mpu_get_temperature                     
+00004115  mpu_init                                
+00003ea3  mpu_load_firmware                       
+00002aef  mpu_lp_accel_mode                       
+00003de9  mpu_lp_motion_interrupt                 
+0000b479  mpu_open                                
+0000302f  mpu_read_6050_accel_bias                
+00002f13  mpu_read_6500_accel_bias                
+00003d7d  mpu_read_6500_gyro_bias                 
+00003bdd  mpu_read_fifo                           
+00003b45  mpu_read_fifo_stream                    
+00003aef  mpu_read_mem                            
+00003ac1  mpu_read_reg                            
+00003a69  mpu_reg_dump                            
+0000293b  mpu_reset_fifo                          
+00003955  mpu_run_self_test                       
+0000309b  mpu_set_accel_bias_6050_reg             
+00002f85  mpu_set_accel_bias_6500_reg             
+00002eb5  mpu_set_accel_fsr                       
+00002d4f  mpu_set_bypass                          
+00002b93  mpu_set_compass_sample_rate             
+00002e3f  mpu_set_dmp_state                       
+00002ccb  mpu_set_gyro_bias_reg                   
+00002c69  mpu_set_gyro_fsr                        
+000026f3  mpu_set_int_latched                     
+00002c5f  mpu_set_int_level                       
+00002881  mpu_set_lpf                             
+00002bd9  mpu_set_sample_rate                     
+00002753  mpu_set_sensors                         
+0000b72d  mpu_update                              
+000026a1  mpu_write_mem                           
+0000d53d  print_float                             
+00007149  quaternion_to_rotation_angle            
+00012284  reg                                     
+20001168  s9axis                                  
+0000fe45  scalbn                                  
+0000fe45  scalbnl                                 
+0000d4fd  send                                    
+0000d52d  send_char                               
+0000d51d  send_msg                                
+0000b993  send_status_compass                     
+00007ead  set_sensor_orientation_and_scale        
+00011af8  sin_lookup                              
+000101e1  sinf                                    
+00010755  sprintf                                 
+0000f44d  sqrt                                    
+00010c69  sqrtf                                   
+0000f44d  sqrtl                                   
+00010d85  strchr                                  
+00010ded  strlen                                  
+0000d4f3  systick_int_handler                     
+2000294c  systick_n                               
+000122b0  test                                    
+0000b971  test_mpu                                
+20000b50  vc                                      
+00010abd  vsprintf                                
+0000d4e9  wait_until                              
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                    
+-------   ----                                    
+00000000  __TI_static_base__                      
+00000000  g_pfnVectors                            
+00000271  inv_start_vector_compass_cal            
+00000499  inv_vector_compass_cal_sensitivity      
+000004a5  inv_cheap_rand                          
+000004dd  inv_cheap_gaussian                      
+000005a1  inv_combine_compass_data                
+00000715  inv_set_terms                           
+00000a21  inv_compute_bias                        
+00001000  __STACK_SIZE                            
+000011c5  inv_center_sum                          
+000018cd  inv_get_current_calibrated_compass      
+00001925  inv_add_compass_block_data              
+000019d5  inv_check_sim                           
+00001b41  inv_reset_data_collection               
+00002431  inv_process_compass_only_cal            
+0000254d  inv_generate_vector_compass_cal         
+000025f5  inv_stop_vector_compass_cal             
+00002601  inv_init_vector_compass_cal             
+0000266d  inv_enable_vector_compass_cal           
+00002685  inv_disable_vector_compass_cal          
+000026a1  mpu_write_mem                           
+000026f3  mpu_set_int_latched                     
+00002753  mpu_set_sensors                         
+00002881  mpu_set_lpf                             
+0000293b  mpu_reset_fifo                          
+00002aa3  mpu_configure_fifo                      
+00002aef  mpu_lp_accel_mode                       
+00002b93  mpu_set_compass_sample_rate             
+00002bd9  mpu_set_sample_rate                     
+00002c5f  mpu_set_int_level                       
+00002c69  mpu_set_gyro_fsr                        
+00002ccb  mpu_set_gyro_bias_reg                   
+00002d4f  mpu_set_bypass                          
+00002e3f  mpu_set_dmp_state                       
+00002eb5  mpu_set_accel_fsr                       
+00002f13  mpu_read_6500_accel_bias                
+00002f85  mpu_set_accel_bias_6500_reg             
+0000302f  mpu_read_6050_accel_bias                
+0000309b  mpu_set_accel_bias_6050_reg             
+00003149  mpu_get_gyro_fsr                        
+00003179  mpu_get_accel_fsr                       
+000031b3  mpu_get_lpf                             
+000031f1  mpu_get_sample_rate                     
+0000320d  mpu_get_fifo_config                     
+00003955  mpu_run_self_test                       
+00003a69  mpu_reg_dump                            
+00003ac1  mpu_read_reg                            
+00003aef  mpu_read_mem                            
+00003b45  mpu_read_fifo_stream                    
+00003bdd  mpu_read_fifo                           
+00003d7d  mpu_read_6500_gyro_bias                 
+00003de9  mpu_lp_motion_interrupt                 
+00003ea3  mpu_load_firmware                       
+00004115  mpu_init                                
+000041dd  mpu_get_temperature                     
+00004265  mpu_get_power_state                     
+00004279  mpu_get_int_status                      
+000042af  mpu_get_gyro_sens                       
+000042db  mpu_get_gyro_reg                        
+0000433d  mpu_get_dmp_state                       
+0000434b  mpu_get_compass_sample_rate             
+00004359  mpu_get_compass_reg                     
+00004407  mpu_get_compass_fsr                     
+00004417  mpu_get_accel_sens                      
+00004459  mpu_get_accel_reg                       
+00004d21  __TI_printfi                            
+0000561b  SysCtlDelay                             
+00005681  inv_start_in_use_auto_calibration       
+00005741  inv_init_accel_maxmin                   
+00005761  inv_record_good_accel_maxmin            
+00005799  inv_get_current_calibrated_accel        
+000057dd  inv_sort_order_4_T                      
+00005881  inv_init_check_sample_balance           
+0000589d  inv_init_check_sample_balance_parameter 
+000058c9  inv_add_accel_block_data                
+0000597d  inv_add_vector_block_data               
+00005a31  inv_check_sample_balance                
+00005bc9  inv_auto_calibrate                      
+000062d1  inv_init_in_use_auto_calibration        
+00006369  inv_stop_in_use_auto_calibration        
+00006375  inv_enable_in_use_auto_calibration      
+0000638d  inv_disable_in_use_auto_calibration     
+000063a9  inv_get_accel_bias_stage                
+00006555  inv_init_maxmin                         
+000065ed  inv_start_fast_nomot                    
+0000662d  inv_fast_nomot_parameter                
+00006639  inv_fast_nomot_parameter_3rd            
+00006719  inv_fast_nomot_set_gyro_bias            
+000067e9  inv_set_fast_nomot_compass_threshold    
+000067f5  int_set_fast_nomot_gyro_threshold       
+00006801  inv_set_fast_nomot_accel_threshold      
+0000680d  inv_get_fast_nomot_compass_param        
+0000682d  inv_get_fast_nomot_accel_param          
+0000684d  inv_fast_nomot_store_data               
+000068ed  inv_fast_nomot_store_data_compass       
+00006939  inv_fast_nomot_reset_data_compass       
+00006965  inv_fast_nomot_get_time_elaps           
+00006971  inv_fast_nomot_parameter_compass        
+00006989  inv_get_right_shift_by_rounding         
+00006a09  inv_reset_min_max_gyro_accel_statistics 
+00006a3d  inv_record_max_moment_in_no_motion_gyro 
+00006a71  inv_record_max_moment_in_no_motion_accel
+00006aa5  inv_record_min_moment_in_motion_gyro    
+00006ad9  inv_record_min_moment_in_motion_accel   
+00006b0d  inv_detect_motion_by_gyro_accel         
+00006c51  inv_sensor_data_preprocess              
+00006cf1  inv_generate_fast_nomot                 
+0000703d  inv_set_default_number_of_samples       
+0000708d  inv_init_fast_nomot                     
+000070f5  inv_stop_fast_nomot                     
+0000710d  inv_enable_fast_nomot                   
+00007125  inv_disable_fast_nomot                  
+00007139  inv_get_fnm_gyro_no_motion_param        
+00007145  inv_fnm_debug_print                     
+00007149  quaternion_to_rotation_angle            
+000071a5  inv_q30_mult                            
+000071b1  mlMatrixVectorMult                      
+000071e3  inv_wrap_angle                          
+00007219  inv_vector_normalize                    
+000072bf  inv_vector_norm                         
+000072f3  inv_sinf                                
+0000731f  inv_quaternion_to_rotation_vector       
+0000734d  inv_q29_mult                            
+00007359  inv_quaternion_to_rotation              
+00007439  inv_q_shift_mult                        
+00007451  inv_q_mult                              
+00007521  inv_q_invert                            
+00007549  inv_q_rotate                            
+00007599  inv_q_normalizef                        
+00007655  inv_q_normalize                         
+00007669  inv_q_norm4                             
+000076dd  inv_q_multf                             
+000077af  inv_q_invertf                           
+000077cd  inv_q_addf                              
+0000780f  inv_q_add                               
+00007833  inv_q30_div                             
+00007881  inv_orientation_matrix_to_scalar        
+000078a7  inv_matrix_det_incd                     
+0000790d  inv_matrix_detd                         
+000079c7  inv_matrix_det_inc                      
+00007a29  inv_matrix_det                          
+00007abb  inv_little8_to_int16                    
+00007ac7  inv_int32_to_big8                       
+00007ad9  inv_int16_to_big8                       
+00007ae3  inv_init_biquad_filter                  
+00007b07  inv_get_gyro_sum_of_sqr                 
+00007b21  inv_get_cross_product_vec               
+00007b77  inv_cosf                                
+00007ba5  inv_convert_to_chip                     
+00007bf1  inv_convert_to_body_with_scale          
+00007c55  inv_convert_to_body                     
+00007cbd  inv_compass_angle                       
+00007d7d  inv_checksum                            
+00007d9b  inv_calc_state_to_match_output          
+00007dc9  inv_biquad_filter_process               
+00007e1f  inv_big8_to_int32                       
+00007e35  inv_big8_to_int16                       
+00007e41  inv_angle_diff                          
+00007ead  set_sensor_orientation_and_scale        
+00007eb3  inv_unregister_data_cb                  
+00007efb  inv_temperature_was_turned_off          
+00007f03  inv_set_quat_sample_rate                
+00007f19  inv_set_gyro_sample_rate                
+00007f37  inv_set_gyro_orientation_and_scale      
+00007f45  inv_apply_calibration                   
+00007fad  inv_set_gyro_bias                       
+00008001  inv_set_gyro_bandwidth                  
+00008009  inv_set_compass_soft_iron_matrix_f      
+00008039  inv_set_compass_soft_iron_matrix_d      
+00008067  inv_set_compass_soft_iron_input_data    
+000080b5  inv_set_compass_sample_rate             
+000080db  inv_set_compass_orientation_and_scale   
+000080e7  inv_set_compass_disturbance             
+000080ef  inv_set_compass_bias                    
+0000812f  inv_set_compass_bandwidth               
+00008137  inv_set_accel_sample_rate               
+00008159  inv_set_accel_orientation_and_scale     
+00008167  inv_set_accel_bias_mask                 
+000081ad  inv_set_accel_bias                      
+000081ef  inv_set_accel_bandwidth                 
+000081fd  inv_set_accel_accuracy                  
+00008213  inv_disable_compass_soft_iron_matrix    
+00008221  inv_reset_compass_soft_iron_matrix      
+00008279  inv_register_data_cb                    
+00008327  inv_quaternion_sensor_was_turned_off    
+00008335  inv_matrix_vector_mult                  
+000083af  inv_init_data_builder                   
+000083dd  inv_gyro_was_turned_off                 
+000083e9  inv_get_temp_set                        
+0000840b  inv_get_mag_accuracy                    
+0000841f  inv_get_last_timestamp                  
+00008469  inv_get_gyro_set_raw                    
+0000848f  inv_get_gyro_set                        
+000084b5  inv_get_gyro_sensitivity                
+000084bd  inv_get_gyro_sample_rate_ms             
+000084c7  inv_get_gyro_orient                     
+000084d5  inv_get_gyro_on                         
+000084df  inv_get_gyro_bias_tc_set                
+000084f5  inv_get_gyro_bias                       
+00008519  inv_get_gyro_accuracy                   
+00008525  inv_get_gyro                            
+00008531  inv_get_compass_soft_iron_output_data   
+00008549  inv_get_compass_soft_iron_matrix_f      
+0000855f  inv_get_compass_soft_iron_matrix_d      
+00008579  inv_get_compass_soft_iron_input_data    
+00008593  inv_get_compass_set                     
+000085c5  inv_get_compass_sensitivity             
+000085cd  inv_get_compass_sample_rate_ms          
+000085d7  inv_get_compass_on                      
+000085e3  inv_get_compass_disturbance             
+000085e9  inv_get_compass_bias                    
+00008641  inv_get_accel_set                       
+00008671  inv_get_accel_sensitivity               
+00008679  inv_get_accel_sample_rate_ms            
+00008683  inv_get_accel_orient                    
+0000868f  inv_get_accel_on                        
+00008699  inv_get_accel_bias                      
+000086b9  inv_get_accel_accuracy                  
+0000879f  inv_execute_on_data                     
+00008821  inv_enable_compass_soft_iron_matrix     
+00008829  inv_compass_was_turned_off              
+00008839  inv_build_temp                          
+00008865  inv_build_quat                          
+0000888f  inv_build_gyro                          
+000088b7  inv_build_compass                       
+0000893f  inv_build_accel                         
+000089a3  inv_accel_was_turned_off                
+000089d9  dmp_set_tap_time_multi                  
+000089f9  dmp_set_tap_time                        
+00008a19  dmp_set_tap_thresh                      
+00008b15  dmp_set_tap_count                       
+00008b37  dmp_set_tap_axes                        
+00008b77  dmp_set_shake_reject_timeout            
+00008b97  dmp_set_shake_reject_time               
+00008bb7  dmp_set_shake_reject_thresh             
+00008be7  dmp_set_pedometer_walk_time             
+00008c13  dmp_set_pedometer_step_count            
+00008c39  dmp_set_orientation                     
+00008d89  dmp_set_interrupt_mode                  
+00008dcb  dmp_set_gyro_bias                       
+00008e8d  dmp_set_fifo_rate                       
+00008eed  dmp_set_accel_bias                      
+00008fd9  dmp_register_tap_cb                     
+00008fe7  dmp_register_android_orient_cb          
+00009045  dmp_read_fifo                           
+000091d1  dmp_load_motion_driver_firmware         
+000091e5  dmp_get_pedometer_walk_time             
+00009227  dmp_get_pedometer_step_count            
+00009269  dmp_get_fifo_rate                       
+00009275  dmp_get_enabled_features                
+00009281  dmp_enable_lp_quat                      
+000092bb  dmp_enable_gyro_cal                     
+000092df  dmp_enable_6x_lp_quat                   
+0000931d  dmp_enable_feature                      
+000094e5  I2CMasterControl                        
+000095b9  inv_start_quaternion                    
+00009725  inv_generate_gyro_quaternion            
+00009731  inv_set_quaternion                      
+00009761  inv_generate_accel_gyro_quaternion      
+00009ef9  inv_stop_quaternion                     
+00009f05  inv_init_quaternion                     
+00009f29  inv_enable_quaternion                   
+00009f41  inv_disable_quaternion                  
+00009f61  inv_start_9x_sensor_fusion              
+00009f71  inv_filter_correction_angle             
+0000a161  inv_perform_9x_fusion                   
+0000a57d  inv_process_9x_sensor_fusion_cb         
+0000a615  inv_init_9x_fusion                      
+0000a651  inv_9x_fusion_set_mag_fb                
+0000a661  inv_9x_fusion_enable_jitter_reduction   
+0000a671  inv_9x_fusion_use_timestamps            
+0000a681  inv_stop_9x_sensor_fusion               
+0000a68d  inv_enable_9x_sensor_fusion             
+0000a6b1  inv_disable_9x_sensor_fusion            
+0000a6c1  __kernel_rem_pio2                       
+0000adf9  inv_start_magnetic_disturbance          
+0000ae09  inv_set_magnetic_disturbance            
+0000ae21  inv_init_magnetic_disturbance           
+0000ae6d  inv_stop_magnetic_disturbance           
+0000ae79  inv_enable_magnetic_disturbance         
+0000aea5  inv_disable_magnetic_disturbance        
+0000aebd  inv_disable_dip_tracking                
+0000aecd  inv_enable_dip_tracking                 
+0000aedd  inv_track_dip_angle                     
+0000af75  ComputeAngleVelocity                    
+0000afd5  Mag3ofNormalizedLong                    
+0000b029  MagDisturbSetDisturbance                
+0000b0a9  MagDisturbCheckSettling                 
+0000b101  inv_check_magnetic_disturbance          
+0000b435  inv_magnetic_disturbance_process        
+0000b46d  inv_get_magnetic_disturbance_state      
+0000b479  mpu_open                                
+0000b5a7  mpu_get_outputs                         
+0000b72d  mpu_update                              
+0000b971  test_mpu                                
+0000b993  send_status_compass                     
+0000ba33  mpu_get_rot_mat                         
+0000ba73  mpu_get_euler                           
+0000baf5  cos                                     
+0000baf5  cosl                                    
+0000baf5  ml_cos                                  
+0000c0d1  inv_stop_hal_outputs                    
+0000c0d7  inv_start_hal_outputs                   
+0000c0e3  inv_init_hal_outputs                    
+0000c107  inv_get_sensor_type_rotation_vector     
+0000c2bf  inv_get_sensor_type_orientation         
+0000c2d5  inv_get_sensor_type_magnetic_field      
+0000c30b  inv_get_sensor_type_linear_acceleration 
+0000c37b  inv_get_sensor_type_gyroscope_raw       
+0000c3d3  inv_get_sensor_type_gyroscope           
+0000c435  inv_get_sensor_type_gravity             
+0000c4a9  inv_get_sensor_type_accelerometer       
+0000c509  inv_generate_hal_outputs                
+0000c649  inv_enable_hal_outputs                  
+0000c657  inv_disable_hal_outputs                 
+0000c681  inv_start_gyro_tc                       
+0000caf9  inv_init_gyro_ts                        
+0000cb31  inv_set_gtc_max_temp                    
+0000cb41  inv_set_gtc_min_temp                    
+0000cb51  inv_set_gtc_min_diff                    
+0000cb61  inv_get_gyro_ts                         
+0000cb85  inv_set_gyro_ts                         
+0000cb89  inv_set_gtc_order                       
+0000cba1  inv_print_gtc_data                      
+0000cba5  inv_stop_gyro_tc                        
+0000cbb1  inv_enable_gyro_tc                      
+0000cbf1  inv_disable_gyro_tc                     
+0000cc21  inv_store_gaming_quaternion             
+0000cc3f  inv_start_results_holder                
+0000cc51  inv_set_motion_state                    
+0000cc81  inv_set_mag_scale                       
+0000cc8d  inv_set_local_field                     
+0000cc99  inv_set_large_mag_field                 
+0000cca1  inv_set_heading_confidence_interval     
+0000ccab  inv_set_compass_state                   
+0000ccb3  inv_set_compass_correction              
+0000ccd1  inv_set_compass_bias_found              
+0000ccd9  inv_set_compass_bias_error              
+0000cce5  inv_set_accel_bias_found                
+0000cced  inv_set_acc_state                       
+0000ccf5  inv_init_results_holder                 
+0000cd1d  inv_got_compass_bias                    
+0000cd25  inv_got_accel_bias                      
+0000cd2d  inv_get_quaternion                      
+0000cd5d  inv_get_quaternion_set                  
+0000ce31  inv_get_quaternion_float                
+0000ce8d  inv_get_motion_state                    
+0000ce99  inv_get_mag_scale                       
+0000cea3  inv_get_local_field                     
+0000cead  inv_get_gravity                         
+0000ceff  inv_get_linear_accel                    
+0000cf45  inv_get_linear_accel_float              
+0000cf81  inv_get_large_mag_field                 
+0000cf87  inv_get_heading_confidence_interval     
+0000cf8f  inv_get_gyro_float                      
+0000cfcd  inv_get_compass_state                   
+0000cfd3  inv_get_compass_correction              
+0000cfe7  inv_get_compass_bias_error              
+0000cff1  inv_get_accel                           
+0000d005  inv_get_accel_float                     
+0000d041  inv_get_acc_state                       
+0000d04d  inv_get_6axis_quaternion                
+0000d05b  inv_generate_results                    
+0000d069  inv_enable_results_holder               
+0000d0c9  acos                                    
+0000d0c9  acosl                                   
+0000d0c9  ml_acos                                 
+0000d4e9  wait_until                              
+0000d4f3  systick_int_handler                     
+0000d4fd  send                                    
+0000d51d  send_msg                                
+0000d52d  send_char                               
+0000d53d  print_float                             
+0000d597  ConfigureUART                           
+0000d5d3  AP_send                                 
+0000d5f3  AP_send_msg                             
+0000d603  enable_systick                          
+0000d621  delay_ms                                
+0000d639  get_ms                                  
+0000d63f  main                                    
+0000d729  delay2                                  
+0000d781  delay                                   
+0000d7cf  UARTIntHandler                          
+0000d7e9  AP_send_char                            
+0000d8d9  log                                     
+0000d8d9  logl                                    
+0000d8d9  ml_log                                  
+0000dca9  inv_get_sensor_type_rot_mat             
+0000dcc9  inv_get_sensor_type_quat                
+0000dce9  inv_get_sensor_type_heading             
+0000dd87  inv_get_sensor_type_gyro                
+0000dd99  inv_get_sensor_type_euler               
+0000df39  inv_get_sensor_type_compass             
+0000df49  inv_get_sensor_type_accel               
+0000e001  inv_enable_eMPL_outputs                 
+0000e021  inv_disable_eMPL_outputs                
+0000e055  UARTwrite                               
+0000e095  UARTvprintf                             
+0000e261  UARTprintf                              
+0000e27b  UARTgets                                
+0000e2ff  UARTgetc                                
+0000e319  UARTStdioConfig                         
+0000e3a5  eMPL_send_quat                          
+0000e445  eMPL_send_data                          
+0000e591  _MLPrintLog                             
+0000e635  __aeabi_ldivmod                         
+0000e853  __aeabi_idiv0                           
+0000e855  i2c_write_reg                           
+0000e8a9  i2c_write_bytes                         
+0000e931  i2c_read_bytes                          
+0000e9eb  i2c_common_setup                        
+0000ea5d  __aeabi_uldivmod                        
+0000ec51  inv_save_mpl_states                     
+0000eccf  inv_register_load_store                 
+0000ed5f  inv_load_mpl_states                     
+0000ede9  inv_init_storage_manager                
+0000edff  inv_get_mpl_state_size                  
+0000ee15  __aeabi_dsub                            
+0000ee1f  __aeabi_dadd                            
+0000efcb  __aeabi_ldiv0                           
+0000efcd  acosf                                   
+0000f161  asinf                                   
+0000f2d9  __kernel_sin                            
+0000f44d  ml_sqrt                                 
+0000f44d  sqrt                                    
+0000f44d  sqrtl                                   
+0000f5bd  __kernel_cos                            
+0000f729  atan2f                                  
+0000f881  atanf                                   
+0000f9d1  __aeabi_ddiv                            
+0000fb07  GPIOPadConfigSet                        
+0000fc39  SysCtlClockGet                          
+0000fd49  __aeabi_dmul                            
+0000fe45  ldexp                                   
+0000fe45  ldexpl                                  
+0000fe45  scalbn                                  
+0000fe45  scalbnl                                 
+0000ff41  floor                                   
+0000ff41  floorl                                  
+0000ff41  ml_floor                                
+00010039  inv_start_mpl                           
+00010065  inv_init_mpl                            
+000100e3  inv_get_version                         
+0001012d  cosf                                    
+000101e1  sinf                                    
+00010285  __aeabi_memcpy                          
+00010285  __aeabi_memcpy4                         
+00010285  __aeabi_memcpy8                         
+00010285  memcpy                                  
+00010321  inv_unregister_mpl_start_notification   
+00010361  inv_register_mpl_start_notification     
+0001037d  inv_init_start_manager                  
+0001038d  inv_execute_mpl_start_notification      
+000103b5  __aeabi_cdcmpeq                         
+000103b5  __aeabi_cdcmple                         
+0001043b  __aeabi_cdrcmple                        
+000104c1  __aeabi_memclr                          
+000104c1  __aeabi_memclr4                         
+000104c1  __aeabi_memclr8                         
+000104c3  __aeabi_memset                          
+000104c3  __aeabi_memset4                         
+000104c3  __aeabi_memset8                         
+000104c9  memset                                  
+0001053b  __mpu_init                              
+0001053d  __TI_auto_init                          
+000105ad  __aeabi_d2f                             
+0001061b  __aeabi_f2lz                            
+00010687  __TI_decompress_lzss                    
+000106ef  _system_post_cinit                      
+000106f1  frexp                                   
+000106f1  frexpl                                  
+00010755  sprintf                                 
+000107b5  _c_int00                                
+00010809  C$$EXIT                                 
+0001080d  abort                                   
+00010815  exit                                    
+0001085d  ltoa                                    
+000108b1  SysCtlPeripheralReset                   
+00010901  I2CMasterInitExpClk                     
+0001094d  atoi                                    
+00010999  copy_in                                 
+000109e5  GPIOPinConfigure                        
+00010a2d  __aeabi_d2iz                            
+00010a75  __aeabi_l2f                             
+00010abd  vsprintf                                
+00010b05  __aeabi_uidiv                           
+00010b05  __aeabi_uidivmod                        
+00010b45  __aeabi_f2d                             
+00010b7d  IntRegister                             
+00010bb1  SysCtlPeripheralEnable                  
+00010be5  __aeabi_i2d                             
+00010c13  i2c_write                               
+00010c31  i2c_read                                
+00010c3f  GPIODirModeSet                          
+00010c69  sqrtf                                   
+00010c91  inv_set_message                         
+00010ca1  inv_get_message_level_0                 
+00010cb5  memcmp                                  
+00010cd9  memmove                                 
+00010cfd  __aeabi_lasr                            
+00010d1d  SysTickIntRegister                      
+00010d39  memccpy                                 
+00010d55  _args_main                              
+00010d6d  __aeabi_lmul                            
+00010d85  strchr                                  
+00010d9d  SysTickEnable                           
+00010db1  SysTickIntEnable                        
+00010dc5  _register_unlock                        
+00010dcb  _register_lock                          
+00010dd3  _nop                                    
+00010dd9  copysign                                
+00010dd9  copysignl                               
+00010ded  strlen                                  
+00010e01  GPIOPinTypeI2C                          
+00010e13  GPIOPinTypeI2CSCL                       
+00010e25  GPIOPinTypeUART                         
+00010e37  IntMasterEnable                         
+00010e49  SysTickPeriodSet                        
+00010e59  __aeabi_dcmpeq                          
+00010e67  __aeabi_dcmpgt                          
+00010e75  __aeabi_dcmple                          
+00010e83  __aeabi_dcmplt                          
+00010e91  __TI_decompress_none                    
+00010e9f  CPUcpsie                                
+00010eab  __TI_zero_init                          
+00010eb7  ResetISR                                
+00010ec3  I2CMasterEnable                         
+00010ecd  UARTIntStatus                           
+00010ed7  I2CMasterBusy                           
+00010edf  I2CMasterSlaveAddrSet                   
+00010ee7  UARTClockSourceSet                      
+00010eed  I2CMasterDataGet                        
+00010ef1  I2CMasterDataPut                        
+00010ef5  UARTIntClear                            
+00010ef9  _system_pre_init                        
+00011af8  sin_lookup                              
+00012050  _ctypes_                                
+00012284  reg                                     
+000122b0  test                                    
+000122f8  ml_ver                                  
+0001231a  hw                                      
+00012400  __TI_Handler_Table_Base                 
+0001240c  __TI_Handler_Table_Limit                
+00012420  __TI_CINIT_Base                         
+00012438  __TI_CINIT_Limit                        
+20000000  g_pfnRAMVectors                         
+20000728  fnm                                     
+20000b50  vc                                      
+20001168  s9axis                                  
+200012a0  cb                                      
+20001388  cb_sim                                  
+20001470  cb_test                                 
+2000161c  mag_disturb                             
+20001888  __stack                                 
+20001a88  __STACK_TOP                             
+20002888  __STACK_END                             
+200028e4  compass_low_pass_filter_coeff           
+20002918  __TI_cleanup_ptr                        
+2000291c  __TI_dtors_ptr                          
+20002920  __TI_enable_exit_profile_output         
+20002938  _lock                                   
+2000293c  _unlock                                 
+20002940  hal_timestamp                           
+20002944  mpl_key                                 
+20002948  data                                    
+2000294c  systick_n                               
+20002958  errno                                   
+2000295c  main_func_sp                            
+ffffffff  __TI_pprof_out_hndl                     
+ffffffff  __TI_prof_data_size                     
+ffffffff  __TI_prof_data_start                    
+ffffffff  __binit__                               
+ffffffff  __c_args__                              
+ffffffff  binit                                   
+UNDEFED   SHT$$INIT_ARRAY$$Base                   
+UNDEFED   SHT$$INIT_ARRAY$$Limit                  
+
+[577 symbols]
