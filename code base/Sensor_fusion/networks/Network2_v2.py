@@ -24,10 +24,12 @@ from sklearn.metrics import r2_score, explained_variance_score
 from matplotlib import pyplot as plt
 
 
-class Network3(nn.Module):
+class Network2(nn.Module):
 
     def __init__(self, init_weights=False):
         super(Network3, self).__init__()
+
+        self.name = "Net2_v2"
 
         self.conv1 = nn.Conv2d(1, 6, kernel_size=(5,2), stride=(2,1), padding=(1,1), dilation=1, bias=True)
         self.batchnorm1 = nn.BatchNorm2d(6)
@@ -257,7 +259,7 @@ class Network3(nn.Module):
             loss_data_testing = 0.0
 
             if(Epoch > 0 and Epoch%10 == 0):                                     # Saving network weights every 10 Epochs
-                self.save_checkpoint("/saved_model_weights/", Epoch)
+                sself.save_checkpoint("/saved_model_weights/{}/".format(self.name), Epoch)
 
             y_per_epoch = []
             output_per_epoch = []
@@ -275,7 +277,7 @@ class Network3(nn.Module):
                 
                 
                 
-class Network3_Data_loader(Dataset):
+class Network2_Data_loader(Dataset):
     # Loads data into the Network3 model
 
     def __init__(self, abs_filename, time_window=50, trans=False, sequential_test_mode=False):

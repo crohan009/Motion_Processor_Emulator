@@ -11,12 +11,12 @@ from sklearn.metrics import r2_score, explained_variance_score
 # from matplotlib import pyplot as plt
 
 
-
-
 class Network1(nn.Module):
 
     def __init__(self, init_weights=False):
         super(Network1, self).__init__()
+
+        self.name = "Net1_v1"
 
         # Inputs = 9; Outputs = 3; Hidden = (3 layers) 20, 30 ,10
         self.fc1 = nn.Linear(9, 18)		# 		input layer
@@ -209,7 +209,7 @@ class Network1(nn.Module):
             loss_data_testing = 0.0
 
             if(Epoch > 0 and Epoch%10 == 0):                                     # Saving network weights every 10 Epochs
-                self.save_checkpoint("/saved_model_weights/", Epoch)
+                self.save_checkpoint("/saved_model_weights/{}/".format(self.name), Epoch)
 
             y_per_epoch = []
             output_per_epoch = []

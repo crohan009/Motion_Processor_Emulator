@@ -1,3 +1,17 @@
+# Convolutional Neural Network designed for learning a time sequence of 9-axis IMU raw output signals:
+# 3 axis accelerometer, 3 axis gyrometer, and 3 axis magnetometer data 
+
+# Network3 specifications: 
+# Input: (1, 50, 9) dimensional tensor, 
+    # where 9 -> 9 axis, and 50 -> time window 50 samples of sensor data
+# Output: (1,3) dimensional tensor,
+    # where 3 -> yaw, pitch, and roll in degrees
+# Loss: cosine loss defined as,
+    # loss = (1 - cos(y_hat - y)^2
+# Optimizer: Adam
+
+
+
 import torch
 import torch.nn as nn
 import os
@@ -15,6 +29,8 @@ class Network2(nn.Module):	# W.I.P.
 
     def __init__(self, init_weights=False):
         super(Network2, self).__init__()
+
+        self.name = "Net2_v1"
 
         self.conv1 = nn.Conv2d(1, 6, kernel_size=(5,2), stride=(2,1), padding=(1,1), dilation=1, bias=True)
         self.batchnorm1 = nn.BatchNorm2d(6)
@@ -236,7 +252,7 @@ class Network2(nn.Module):	# W.I.P.
             loss_data_testing = 0.0
 
             if(Epoch > 0 and Epoch%10 == 0):                                     # Saving network weights every 10 Epochs
-                model.save_checkpoint("/saved_model_weights/", Epoch)
+                self.save_checkpoint("/saved_model_weights/{}/".format(self.name), Epoch)
 
             y_per_epoch = []
             output_per_epoch = []
