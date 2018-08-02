@@ -101,6 +101,7 @@ class Network1(nn.Module):
         criterion = lambda x, target: torch.mul((1 - torch.cos(target - x)), (1 - torch.cos(target - x)))
 
         # Optimizer
+        # optimizer = optim.Adam(self.parameters(),lr = 0.00005, betas=(0.9, 0.999), eps=1e-08)
         optimizer = optim.Adam(self.parameters(),lr = 0.0001, betas=(0.9, 0.999), eps=1e-08)
         # optimizer = optim.Adagrad(self.parameters(), lr=0.0001, lr_decay=0, weight_decay=0)
 
@@ -321,40 +322,40 @@ class Network1_Data_loader(Dataset):
 
     
     
-# if __name__ == "__main__":
+if __name__ == "__main__":
     
-#     model = Network1(init_weights=True)
-#     data_enq_trial = Network1_Data_loader("../Datasets/MPU_rawtoypr_data_cleaned_test_data.csv", sequential_test_mode=True)
-#     dsets_enqueuer_trial = torch.utils.data.DataLoader(data_enq_trial, batch_size=1, num_workers=1, drop_last=False)
+    model = Network1(init_weights=True)
+    data_enq_trial = Network1_Data_loader("../Datasets/MPU_rawtoypr_data_cleaned_test_data.csv", sequential_test_mode=True)
+    dsets_enqueuer_trial = torch.utils.data.DataLoader(data_enq_trial, batch_size=1, num_workers=1, drop_last=False)
     
-#     y_lst = []
-#     o_lst = []
-#     data_ctr = 0
+    y_lst = []
+    o_lst = []
+    data_ctr = 0
     
 
-#     print(data_enq_trial.data_matrix.shape)
-#     print(type(data_enq_trial.data_matrix))
-#     print(data_enq_trial.rand_sel_lst[:10])
-#     print(data_enq_trial.data_matrix.shape[0])
-#     print(data_enq_trial.__getitem__(0)['x'])
-#     print(data_enq_trial.__getitem__(0)['y'])
+    print(data_enq_trial.data_matrix.shape)
+    print(type(data_enq_trial.data_matrix))
+    print(data_enq_trial.rand_sel_lst[:10])
+    print(data_enq_trial.data_matrix.shape[0])
+    print(data_enq_trial.__getitem__(0)['x'])
+    print(data_enq_trial.__getitem__(0)['y'])
 
 
 
-#     for idx, data in enumerate(dsets_enqueuer_trial, 1):
-#         x,y = data['x'], data['y']
+    for idx, data in enumerate(dsets_enqueuer_trial, 1):
+        x,y = data['x'], data['y']
 
-#         if torch.cuda.is_available():
-#             x, y = Variable(x.cuda(), requires_grad = False).float(), Variable(y.cuda(), requires_grad = False).float()
-#         else:
-#             x, y = Variable(x, requires_grad = False).float(), Variable(y, requires_grad = False).float()
+        if torch.cuda.is_available():
+            x, y = Variable(x.cuda(), requires_grad = False).float(), Variable(y.cuda(), requires_grad = False).float()
+        else:
+            x, y = Variable(x, requires_grad = False).float(), Variable(y, requires_grad = False).float()
 
-#         model.eval()
-#         output = model(x)
+        model.eval()
+        output = model(x)
         
-#         y_lst.append(y)
-#         o_lst.append(output)
-#         data_ctr += 1
-#         if data_ctr >= 1000:
-#             break
-#         break  
+        y_lst.append(y)
+        o_lst.append(output)
+        data_ctr += 1
+        if data_ctr >= 1000:
+            break
+        break  

@@ -27,7 +27,7 @@ from matplotlib import pyplot as plt
 class Network2(nn.Module):
 
     def __init__(self, init_weights=False):
-        super(Network3, self).__init__()
+        super(Network2, self).__init__()
 
         self.name = "Net2_v2"
 
@@ -86,6 +86,9 @@ class Network2(nn.Module):
         fwd_map = self.relu(self.fc1(fwd_map))
         fwd_map = self.relu(self.fc2(fwd_map))
         fwd_map = self.relu(self.fc3(fwd_map))
+
+        fwd_map = fwd_map % 360
+        fwd_map = fwd_map - 180
 
         return fwd_map.view(1,3)
 
@@ -258,8 +261,8 @@ class Network2(nn.Module):
             var_exp_lst_test.append(var_exp)
             loss_data_testing = 0.0
 
-            if(Epoch > 0 and Epoch%10 == 0):                                     # Saving network weights every 10 Epochs
-                sself.save_checkpoint("/saved_model_weights/{}/".format(self.name), Epoch)
+            if(Epoch > 0 and Epoch%5 == 0):                                     # Saving network weights every 10 Epochs
+                self.save_checkpoint("/saved_model_weights/{}/".format(self.name), Epoch)
 
             y_per_epoch = []
             output_per_epoch = []

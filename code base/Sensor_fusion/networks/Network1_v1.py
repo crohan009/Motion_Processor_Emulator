@@ -45,6 +45,8 @@ class Network1(nn.Module):
         x = self.relu(self.fc8(x))
         x = self.relu(self.fc9(x))
         x = self.relu(self.fc10(x))
+        x = x % 360
+        x = x - 180
         return x
     
     def init_weights(self):
@@ -208,7 +210,7 @@ class Network1(nn.Module):
             var_exp_lst_test.append(var_exp)
             loss_data_testing = 0.0
 
-            if(Epoch > 0 and Epoch%10 == 0):                                     # Saving network weights every 10 Epochs
+            if(Epoch > 0 and Epoch%5 == 0):                                     # Saving network weights every 10 Epochs
                 self.save_checkpoint("/saved_model_weights/{}/".format(self.name), Epoch)
 
             y_per_epoch = []

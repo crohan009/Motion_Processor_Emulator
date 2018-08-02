@@ -79,6 +79,9 @@ class Network2(nn.Module):	# W.I.P.
         fwd_map = self.relu(self.fc2(fwd_map))
         fwd_map = self.relu(self.fc3(fwd_map))
 
+        fwd_map = fwd_map % 360
+        fwd_map = fwd_map - 180
+
         return fwd_map.view(1,3)
 
     def save_checkpoint(self, relative_path, val):
@@ -251,7 +254,7 @@ class Network2(nn.Module):	# W.I.P.
             var_exp_lst_test.append(var_exp)
             loss_data_testing = 0.0
 
-            if(Epoch > 0 and Epoch%10 == 0):                                     # Saving network weights every 10 Epochs
+            if(Epoch > 0 and Epoch%5 == 0):                                     # Saving network weights every 10 Epochs
                 self.save_checkpoint("/saved_model_weights/{}/".format(self.name), Epoch)
 
             y_per_epoch = []
