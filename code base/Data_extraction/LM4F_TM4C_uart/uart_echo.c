@@ -57,11 +57,18 @@
 #include "include/imu.h"
 
 
+
+#include "inc/hw_gpio.h"
+//#include "include/mpu_9150.h"
+
 int *f;
 uint8_t *data = 0;
 imu_scaled_data b;
 int result;
 long gyro[3], accel[3];
+uint32_t i;
+
+
 
 typedef unsigned char uint8;
 
@@ -205,6 +212,18 @@ void wait_until(long t)
 //scale_y = 1.03
 //scale_z = 1.03
 
+void calibrate_lsm_gyro(float gyro_offsets[3]){        // Calibrates the LSM gyrometer data with 500 samples
+    for(i = 0; i<500; i++){
+        read_scaled_imu_data(&b);
+        gyro_offsets[0] += b.gyro_data[0];
+        gyro_offsets[1] += b.gyro_data[1];
+        gyro_offsets[2] += b.gyro_data[2];
+    }
+    gyro_offsets[0] /= 500;
+    gyro_offsets[1] /= 500;
+    gyro_offsets[2] /= 500;
+}
+
 void test_invensense()
 {
     unsigned char _whoami;
@@ -223,8 +242,18 @@ void test_invensense()
         long _t = get_ms();
         int data_updated = mpu_update(&mpu_mpl_outputs);
         mpu_get_euler(&angs); // angs.angles[3] now has Euler angles (in radians)
+
+        //read_scaled_imu_data(&b);
+
         char s[128];
-        sprintf(s, "MPU_raw: \t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\r\nMPU_ypr: \t%.2f\t%.2f\t%.2f\r\n",
+
+//        sprintf(s, "LSM_raw: \t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t|\t",
+//                                                                b.acc1_data[0], b.acc1_data[1], b.acc1_data[2],
+//                                                                b.gyro_data[0], b.gyro_data[1], b.gyro_data[2],
+//                                                                b.mag_data[0], b.mag_data[1], b.mag_data[2]);
+//        send_msg(s);
+
+        sprintf(s, "MPU_raw: \t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t|\tMPU_ypr: \t%.2f\t%.2f\t%.2f\r\n",
                                                 mpu_mpl_outputs.acc[0], mpu_mpl_outputs.acc[1], mpu_mpl_outputs.acc[2],
                                                 mpu_mpl_outputs.gyr[0], mpu_mpl_outputs.gyr[1], mpu_mpl_outputs.gyr[2],
                                                 mpu_mpl_outputs.mag[0]+8.04, mpu_mpl_outputs.mag[1]+1.03, mpu_mpl_outputs.mag[2]-8.64,
@@ -232,6 +261,8 @@ void test_invensense()
                                                 angs.angles[1] * 180.0/3.1415926,
                                                 angs.angles[2] * 180.0/3.1415926);
         send_msg(s);
+
+
 //        sprintf(s,"MPU_ypr: \t%.2f\t%.2f\t%.2f\r\n", angs.angles[0] * 180.0/3.1415926,
 //                                                     angs.angles[1] * 180.0/3.1415926,
 //                                                     angs.angles[2] * 180.0/3.1415926);
@@ -284,15 +315,19 @@ int main(void)
     ConfigureUART();
     enable_systick();
 
-    ////        UARTprintf("######################## LSM9DS0 ########################\n");
-    ////        UARTprintf("Who_am_I: %04x\n",I2CReceive(ADDR_ACCEL_LSM9,0x0f));
-    ////        delay_ms(1000);
-    ////        init_imu_scaledStruct(&b, SCALE_2G, SCALE_2GAUSS, SCALE_250_DPS, UNIT_M_SQUARED);
-    ////        init_imu(&b);
-    ////        UARTprintf("LSM initialized \n");
-    ////        delay_ms(1000);
-    ////
-    //
+    unsigned char _whoami_lsm;
+    UARTprintf("######################## LSM9DS0 ########################\n");
+//  UARTprintf("Who_am_I: %04x\n",I2CReceive(ADDR_ACCEL_LSM9,0x0f));
+    char who_lsm[64];
+    i2c_read(ADDR_ACCEL_LSM9,0x0f,1,&_whoami_lsm);
+    sprintf(who_lsm,"Device ID : 0x%02x \r\n",_whoami_lsm);
+    send_msg(who_lsm);
+    delay_ms(1000);
+    init_imu_scaledStruct(&b, SCALE_2G, SCALE_2GAUSS, SCALE_250_DPS, UNIT_M_SQUARED);
+    init_imu(&b);
+    UARTprintf("LSM initialized \n");
+    delay_ms(1000);
+
 
     test_invensense();
    while (1)

@@ -36,6 +36,7 @@ uart_echo.obj: ../include/uartstdio.h
 uart_echo.obj: ../MPU_interface/mpu_interface.h
 uart_echo.obj: ../i2c_functions/i2c_TM4C.h
 uart_echo.obj: ../include/imu.h
+uart_echo.obj: /Applications/ti/TivaWare_C_Series-2.1.4.178/inc/hw_gpio.h
 
 ../uart_echo.c: 
 /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.1.LTS/include/stdio.h: 
@@ -73,3 +74,4 @@ uart_echo.obj: ../include/imu.h
 ../MPU_interface/mpu_interface.h: 
 ../i2c_functions/i2c_TM4C.h: 
 ../include/imu.h: 
+/Applications/ti/TivaWare_C_Series-2.1.4.178/inc/hw_gpio.h: 

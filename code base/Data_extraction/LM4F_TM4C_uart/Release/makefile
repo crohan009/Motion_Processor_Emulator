@@ -26,6 +26,7 @@ ORDERED_OBJS += \
 "./MPU_interface/mpu_interface.obj" \
 "./i2c_functions/i2c_TM4C.obj" \
 "./i2c_functions/i2c_functions.obj" \
+"./include/imu.obj" \
 "./include/uartstdio.obj" \
 "../uart_echo_ccs.cmd" \
 "../LM4F_TM4C_libs/LM4F_TM4C_libs.lib" \
@@ -192,8 +193,8 @@ LM4F_TM4C_uart.bin: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "startup_ccs.obj" "uart_echo.obj" "MPU/core/driver/eMPL/inv_mpu.obj" "MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "MPU/core/driver/stm32L/log_stm32.obj" "MPU/core/eMPL-hal/eMPL_outputs.obj" "MPU/core/mllite/data_builder.obj" "MPU/core/mllite/hal_outputs.obj" "MPU/core/mllite/message_layer.obj" "MPU/core/mllite/ml_math_func.obj" "MPU/core/mllite/mlmath.obj" "MPU/core/mllite/mpl.obj" "MPU/core/mllite/results_holder.obj" "MPU/core/mllite/start_manager.obj" "MPU/core/mllite/storage_manager.obj" "MPU_interface/mpu_interface.obj" "i2c_functions/i2c_TM4C.obj" "i2c_functions/i2c_functions.obj" "include/uartstdio.obj" 
-	-$(RM) "startup_ccs.d" "uart_echo.d" "MPU/core/driver/eMPL/inv_mpu.d" "MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.d" "MPU/core/driver/stm32L/log_stm32.d" "MPU/core/eMPL-hal/eMPL_outputs.d" "MPU/core/mllite/data_builder.d" "MPU/core/mllite/hal_outputs.d" "MPU/core/mllite/message_layer.d" "MPU/core/mllite/ml_math_func.d" "MPU/core/mllite/mlmath.d" "MPU/core/mllite/mpl.d" "MPU/core/mllite/results_holder.d" "MPU/core/mllite/start_manager.d" "MPU/core/mllite/storage_manager.d" "MPU_interface/mpu_interface.d" "i2c_functions/i2c_TM4C.d" "i2c_functions/i2c_functions.d" "include/uartstdio.d" 
+	-$(RM) "startup_ccs.obj" "uart_echo.obj" "MPU/core/driver/eMPL/inv_mpu.obj" "MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.obj" "MPU/core/driver/stm32L/log_stm32.obj" "MPU/core/eMPL-hal/eMPL_outputs.obj" "MPU/core/mllite/data_builder.obj" "MPU/core/mllite/hal_outputs.obj" "MPU/core/mllite/message_layer.obj" "MPU/core/mllite/ml_math_func.obj" "MPU/core/mllite/mlmath.obj" "MPU/core/mllite/mpl.obj" "MPU/core/mllite/results_holder.obj" "MPU/core/mllite/start_manager.obj" "MPU/core/mllite/storage_manager.obj" "MPU_interface/mpu_interface.obj" "i2c_functions/i2c_TM4C.obj" "i2c_functions/i2c_functions.obj" "include/imu.obj" "include/uartstdio.obj" 
+	-$(RM) "startup_ccs.d" "uart_echo.d" "MPU/core/driver/eMPL/inv_mpu.d" "MPU/core/driver/eMPL/inv_mpu_dmp_motion_driver.d" "MPU/core/driver/stm32L/log_stm32.d" "MPU/core/eMPL-hal/eMPL_outputs.d" "MPU/core/mllite/data_builder.d" "MPU/core/mllite/hal_outputs.d" "MPU/core/mllite/message_layer.d" "MPU/core/mllite/ml_math_func.d" "MPU/core/mllite/mlmath.d" "MPU/core/mllite/mpl.d" "MPU/core/mllite/results_holder.d" "MPU/core/mllite/start_manager.d" "MPU/core/mllite/storage_manager.d" "MPU_interface/mpu_interface.d" "i2c_functions/i2c_TM4C.d" "i2c_functions/i2c_functions.d" "include/imu.d" "include/uartstdio.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
