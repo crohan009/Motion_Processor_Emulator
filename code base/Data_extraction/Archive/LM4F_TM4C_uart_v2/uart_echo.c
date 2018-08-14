@@ -274,14 +274,14 @@ void test_invensense()
         long _t = get_ms();
         read_scaled_imu_data(&b);
         int data_updated = mpu_update(&mpu_mpl_outputs);
-        mpu_get_euler(&angs); // angs.angles[3] now has Euler angles (in radians)
+//        mpu_get_euler(&angs); // angs.angles[3] now has Euler angles (in radians)
 
         char s[200];                // char buffer
 
 
-        lsm_gx = b.gyro_data[0] - gyro_offsets[0];
-		lsm_gy = b.gyro_data[1] - gyro_offsets[1];
-		lsm_gz = b.gyro_data[2] - gyro_offsets[2];
+        lsm_gx = (b.gyro_data[0] - gyro_offsets[0]) * PI/180;
+		lsm_gy = (b.gyro_data[1] - gyro_offsets[1]) * PI/180;
+		lsm_gz = (b.gyro_data[2] - gyro_offsets[2]) * PI/180;
 
 		lsm_mx = (b.mag_data[0]*100 - lsm_magbias[0]) * lsm_mag_sensitivity_scale_factor[0];                     // mag x, y, z in micro-Tesla
 		lsm_my = (b.mag_data[1]*100 - lsm_magbias[1]) * lsm_mag_sensitivity_scale_factor[1];
@@ -308,10 +308,10 @@ void test_invensense()
 												mpu_mpl_outputs.mag[0], mpu_mpl_outputs.mag[1], mpu_mpl_outputs.mag[2]);
         send_msg(s);
 
-        //MPU_pry: \t
-        sprintf(s,"MPU_ypr: \t%.2f\t%.2f\t%.2f\r\n",
-        											angs.angles[0]*180.0/3.1415926, angs.angles[1]*180.0/3.1415926, angs.angles[2]*180.0/3.1415926);
-        send_msg(s);
+//        MPU_pry: \t
+//        sprintf(/s,"MPU_ypr: \t%.2f\t%.2f\t%.2f\r\n",
+//        											angs.angles[0]*180.0/3.1415926, angs.angles[1]*180.0/3.1415926, angs.angles[2]*180.0/3.1415926);
+//        send_msg(s);
 
         mpu_get_rot_mat(&R);  // R.R[9] now has rotation matrix elements
         wait_until(_t + 5);   // wait for 5 milliseconds

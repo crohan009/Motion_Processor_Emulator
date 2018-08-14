@@ -106,7 +106,8 @@ class Network1(nn.Module):
             if torch.cuda.is_available():
                 #use the first gpu
                 print ("Loading model from \n{} \n...onto the first gpu.\n".format(abs_path))
-                return torch.load(abs_path,map_location=lambda storage,loc:storage.cuda(1))
+                #return torch.load(abs_path, map_location=lambda storage,loc:storage.cuda(1))
+                return torch.load(abs_path, map_location={'cuda:0': 'cpu'})
             else:
                 print("Loading model from \n{} \n...onto the CPU. \n".format(abs_path))
                 return torch.load(abs_path)  
@@ -114,14 +115,14 @@ class Network1(nn.Module):
     
     def train_model(self, epochs, dsets_enqueuer_training, dsets_enqueuer_testing):
 
-        criterion = lambda x, target: torch.mul((1 - torch.cos(target - x)), (1 - torch.cos(target - x)))
+        criterion = lambda x, target: torch.mul((1 - torch.cos(target - x)), (1 - torch.cos(target - x)))       # loss function
 
         # Optimizer
         optimizer = optim.Adam(self.parameters(),lr = 0.0001, betas=(0.9, 0.999), eps=1e-08)
         # optimizer = optim.Adagrad(self.parameters(), lr=0.0001, lr_decay=0, weight_decay=0)
 
-        if torch.cuda.is_available():
-            criterion = criterion.cuda()
+        #if torch.cuda.is_available():
+        #    criterion = criterion.cuda()
 
         # Variables to keep track of losses 
         loss_data_training = 0.0
@@ -161,20 +162,26 @@ class Network1(nn.Module):
                 # break
 
                 self.train()
-                output = self(x)
+                output = self(x)                # forward propagation
 
                 # print(output.shape, type(output), output.data.numpy(), type(output.data.numpy()))
                 # print(y.shape, type(y), y.data.numpy(), type(y.data.numpy()))
 
                 optimizer.zero_grad()
+                
                 loss = criterion(output * np.pi/180 , y * np.pi/180)
-                loss.backward(torch.Tensor([1, 1, 1]))
-                optimizer.step()
+                
+                if torch.cuda.is_available():
+                    loss.backward(torch.Tensor([1, 1, 1]).cuda())   # computing gradients (by chain rule)
+                else:
+                    loss.backward(torch.Tensor([1, 1, 1]))
+                
+                optimizer.step()                # weight adjustment (changing network params) based on cumputed gradients
 
                 loss_data_training += loss.data
 
-                y_per_epoch.append(y.data.numpy())
-                output_per_epoch.append(output.data.numpy())
+                y_per_epoch.append(y.cpu().data.numpy())
+                output_per_epoch.append(output.cpu().data.numpy())
 
             R_sq_score = r2_score(np.squeeze(np.array(y_per_epoch)), 
                                   np.squeeze(np.array(output_per_epoch))) 
@@ -217,8 +224,8 @@ class Network1(nn.Module):
                 loss = criterion(output * np.pi/180 , y * np.pi/180 )
                 loss_data_testing += loss.data
 
-                y_per_epoch.append(y.data.numpy())
-                output_per_epoch.append(output.data.numpy())
+                y_per_epoch.append(y.cpu().data.numpy())
+                output_per_epoch.append(output.cpu().data.numpy())
 
             R_sq_score = r2_score(np.squeeze(np.array(y_per_epoch)), 
                                   np.squeeze(np.array(output_per_epoch))) 
@@ -246,7 +253,7 @@ class Network1(nn.Module):
         print("\n\nMax testing R squared value = ", max(r_sq_lst_test))
         print("Max testing variance explained = ", max(var_exp_lst_test))
         
-        return loss_lst_train, loss_lst_test, r_sq_lst, r_sq_lst_test, var_exp_lst, var_exp_lst_test
+        return loss_lst_train, loss_lst_test, r_sq_lst, r_sq_g_test, var_exp_lst, var_exp_lst_test
         
         
         
@@ -336,7 +343,7 @@ class Network1_Data_loader(Dataset):
         return {'x': self.data_matrix[i, :9], 'y': self.data_matrix[i, 9:]}
 
     
-    
+
 # if __name__ == "__main__":
     
 #     model = Network1(init_weights=True)
