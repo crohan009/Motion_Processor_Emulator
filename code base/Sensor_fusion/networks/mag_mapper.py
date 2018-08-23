@@ -16,7 +16,7 @@ class Mag_mapper(nn.Module):
     def __init__(self, init_weights=False, hidden=30):
         super(Mag_mapper, self).__init__()
 
-        self.name = "Mag_map_v1"
+        self.name = "Mag_map_v1_h{}".format(hidden)
 
         # Inputs = 9; Outputs = 3; Hidden = (3 layers) 20, 30 ,10
         self.fc_1 = nn.Linear(3, hidden) 
